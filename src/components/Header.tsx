@@ -5,11 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 
-
 export default function Header() {
     const [theme, setTheme] = useState("light");
 
-    // Detect user's system theme preference (optional)
+    // Detect user's system theme preference
     useEffect(() => {
         const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(isDark ? "dark" : "light");
@@ -23,7 +22,14 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-gray-800 to-gray-900 text-lightText dark:from-gray-700 dark:to-gray-800 dark:text-darkText shadow-lg rounded-full px-8 py-4 flex justify-between items-center w-[90%] max-w-[1400px]">
+        <header
+            className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
+            bg-gradient-to-r ${
+                theme === "light" ? "from-gray-500 to-gray-600" : "from-gray-700 to-gray-700"
+            } text-lightText dark:from-gray-700 dark:to-gray-800 dark:text-darkText 
+            shadow-lg rounded-full px-8 py-4 flex justify-between items-center 
+            w-[90%] max-w-[1400px] transition-all duration-500`}
+        >
             {/* Left Section: Logo */}
             <div className="flex items-center">
                 <Link href="/" className="flex items-center">
@@ -65,13 +71,12 @@ export default function Header() {
                         Contact
                     </Link>
                     <Link
-                        href="/contact"
+                        href="/blog"
                         className="hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition duration-300"
                     >
                         Blog
                     </Link>
                 </nav>
-
 
                 {/* Get in Touch Button */}
                 <Link
@@ -83,7 +88,6 @@ export default function Header() {
 
                 {/* Theme Toggle Button */}
                 <div className="flex items-center space-x-6">
-                    {/* Other Navbar Items */}
                     <ThemeSwitcher />
                 </div>
             </div>
