@@ -12,7 +12,7 @@ const outfit = Outfit({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText">
+      <body suppressHydrationWarning={true} className="bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText">
         <Header />
         <main>{children}</main>
         <Footer />
