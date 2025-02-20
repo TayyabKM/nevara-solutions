@@ -84,3 +84,22 @@ body {
     stroke: #9333ea; /* Purple */
   }
 }
+
+/* 🌟 Mobile-Specific Fixes */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important; /* Adjusts font size to fit in one line */
+    white-space: nowrap !important; /* Prevents wrapping */
+  }
+
+  .hero-arrow {
+    display: none !important; /* Hides arrow on mobile */
+  }
+}
+
+/* 🖥 Laptop-Specific Fixes (Remove Arrow on Laptop, Keep Text Format) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-arrow {
+    display: none !important; /* Removes arrow icon on laptop view */
+  }
+}

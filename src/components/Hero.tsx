@@ -20,7 +20,7 @@ export default function Hero() {
       >
         {/* Title with Arrow Icon */}
         <motion.div
-          className="text-5xl md:text-7xl font-bold text-black dark:text-white flex flex-col items-center"
+          className="text-4xl md:text-7xl font-bold text-black dark:text-white flex flex-col items-center text-center md:text-left"
           initial="hidden"
           animate="visible"
           variants={{
@@ -28,14 +28,25 @@ export default function Hero() {
             visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
           }}
         >
-          <motion.div className="flex items-center gap-4" variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
-            <span>
+          {/* Line 1: "Building your vision" (with and without Arrow based on screen size) */}
+          <motion.div
+            className="flex items-center gap-2 md:gap-4 md:flex-nowrap"
+            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          >
+            <span className="whitespace-nowrap">
               Building your{" "}
-              <motion.span className="text-gradient drop-shadow-lg" variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+              <motion.span
+                className="text-gradient drop-shadow-lg"
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              >
                 vision
               </motion.span>
             </span>
+
+            {/* Arrow Icon (Only visible on Desktop `md:` and larger) */}
+            {/* Arrow Icon (Only visible on DESKTOP, Hidden on Mobile & Laptop) */}
             <motion.div
+              className="hidden md:block lg:block" // Shows only on DESKTOP (`md:` and larger)
               animate={{ rotate: [0, -5, 5, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             >
@@ -43,14 +54,22 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          <motion.span variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+          {/* Line 2: "One byte at a time" */}
+          <motion.span
+            className="text-4xl md:text-7xl md:whitespace-nowrap"
+            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          >
             One{" "}
-            <motion.span className="text-gradient drop-shadow-lg" variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+            <motion.span
+              className="text-gradient drop-shadow-lg"
+              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+            >
               byte
             </motion.span>{" "}
             at a time
           </motion.span>
         </motion.div>
+
 
         {/* Subtitle */}
         <motion.p
