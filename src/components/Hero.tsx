@@ -100,7 +100,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Book A Meeting
+              Take the First Step
             </motion.button>
 
             <motion.button
