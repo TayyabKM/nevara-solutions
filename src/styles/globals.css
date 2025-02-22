@@ -103,3 +103,13 @@ body {
     display: none !important; /* Removes arrow icon on laptop view */
   }
 }
+
+
+.theme-logo {
+  filter: invert(8%) sepia(11%) saturate(600%) hue-rotate(30deg);
+  transition: filter 0.3s ease-in-out;
+}
+
+.dark .theme-logo {
+  filter: invert(92%) sepia(3%) saturate(174%) hue-rotate(184deg);
+}
