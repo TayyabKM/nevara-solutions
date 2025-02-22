@@ -37,6 +37,7 @@ function Header() {
       }}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div variants={textVariants} className="text-gradient font-bold text-4xl md:text-5xl">
         Services We Offer
@@ -103,7 +104,7 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       variants={boxVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="relative flex flex-col items-start justify-between cursor-pointer gap-4 py-4 px-6 bg-gray-200/50 dark:bg-gray-700/50
       border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md rounded-xl overflow-hidden w-full
       group hover:!scale-[1.02] transition-all duration-300"
