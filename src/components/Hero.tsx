@@ -5,11 +5,6 @@ import { motion } from "framer-motion";
 import TrustedBrands from "./TrustedBrands"; // Import the new component
 
 export default function Hero() {
-  const variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
-  };
-
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-white to-lightBg dark:from-black dark:to-darkBg transition-all duration-500 ease-in-out">
       
@@ -18,23 +13,27 @@ export default function Hero() {
         
         {/* Background Image */}
         <motion.div
-          className="absolute inset-0 z-[0] bg-[url('/hero-bg.png')] bg-no-repeat bg-center bg-[length:260%] md:bg-[length:80%] mt-5"
+          className="absolute inset-0 z-[0] bg-[url('/hero-bg.png')] bg-no-repeat bg-center bg-[length:150%] md:bg-[length:80%] mt-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         ></motion.div>
 
-        {/* ⭐ Animated Stars (Always Visible, Only Glimmering) */}
-        <img
+        {/* ⭐ Animated Stars (Now using `next/image`) */}
+        <Image
           src="/star.svg"
           alt="Glowing Star"
-          className="absolute w-8 md:w-12 top-40 left-36 opacity-70 animate-glimmer"
+          width={40}
+          height={40}
+          className="absolute top-40 left-36 opacity-70 animate-glimmer"
         />
 
-        <img
+        <Image
           src="/star.svg"
           alt="Glowing Star"
-          className="absolute w-6 md:w-10 bottom-16 right-24 opacity-50 animate-glimmer"
+          width={32}
+          height={32}
+          className="absolute bottom-16 right-24 opacity-50 animate-glimmer"
         />
 
         {/* Text Container */}
@@ -105,7 +104,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Take the First Step
+              Get Started Today
             </motion.button>
 
             <motion.button
@@ -116,7 +115,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Learn More
+              Discover More
             </motion.button>
           </motion.div>
         </motion.div>

@@ -55,7 +55,7 @@ interface IServiceBox {
   iconSrc: string;
 }
 
-let servicesData: IServiceBox[] = [
+const servicesData: IServiceBox[] = [
   {
     heading: "Website Development",
     description:
