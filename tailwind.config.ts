@@ -6,7 +6,7 @@ const config: Config = {
     extend: {
       colors: {
         lightBg: "#FFFFFF", // Background color for light mode
-        darkBg: "#111204", // Background color for dark mode
+        darkBg: "#000000", // Background color for dark mode
         lightText: "#000000", // Font color for light mode
         darkText: "#FFFFFF", // Font color for dark mode
         gradBlue: "#2794D4",

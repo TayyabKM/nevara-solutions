@@ -123,7 +123,7 @@ const NavLinks = () => (
       <Link
         key={index}
         href={link.href}
-        className="hover:bg-gradient-to-r text-black dark:text-white hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition duration-300"
+        className="hover:bg-gradient-to-r hover:dark:bg-gradient-to-r text-black dark:text-white hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition-all duration-300"
       >
         {link.name}
       </Link>

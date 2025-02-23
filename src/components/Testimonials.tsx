@@ -25,8 +25,8 @@ const reviews: IReview[] = [
 ];
 const Testimonials = () => {
   return (
-    <div className="relative overflow-hidden py-10 backdrop-blur-md">
-      <div className="ecclipse size-[300px] dark:size-[400px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <div className="relative py-10 backdrop-blur-md">
+      <div className="ecclipse size-[350px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="flex flex-col container max-w-screen-xl mx-auto p-4 gap-10 relative">
         {/* Header */}
@@ -80,7 +80,7 @@ const ReviewCard = ({ name, testimonial, company }: IReview) => {
       className="relative w-[300px] md:w-[400px] cursor-pointer overflow-hidden rounded-xl
       p-6 bg-gray-200/50 dark:bg-gray-700/50 border border-black/5 dark:border-white/10
       shadow-sm backdrop-blur-md flex flex-col gap-2
-      hover:bg-gray-300/50 hover:dark:bg-gray-600/50 transition-colors"
+      hover:bg-gray-300/50 hover:dark:bg-gray-600/50 hover:transition-colors"
     >
       <div className="text-gray-800 dark:text-gray-200 text-base md:text-lg">{testimonial}</div>
       <div className="flex flex-col">

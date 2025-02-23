@@ -45,7 +45,7 @@ const timelineItems: ITimelineItem[] = [
 
 export default function HowItWorks() {
   return (
-    <div className="relative overflow-hidden py-10 backdrop-blur-md">
+    <div className="relative py-10 overflow-x-hidden">
       {/* ECCLIPSES */}
       <div className="absolute ecclipse -top-32 -right-[150px] size-[300px]" />
 

@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <div className="relative overflow-hidden py-10 backdrop-blur-md">
+    <div className="relative py-10 overflow-hidden">
       {/* Eclipses left & right */}
-      <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
       <div className="absolute ecclipse -bottom-32 -right-[150px] size-[300px]" />
 
       <div className="flex flex-col container max-w-screen-xl mx-auto p-4 gap-10">
@@ -55,7 +54,7 @@ interface IServiceBox {
   iconSrc: string;
 }
 
-let servicesData: IServiceBox[] = [
+const servicesData: IServiceBox[] = [
   {
     heading: "Website Development",
     description:
