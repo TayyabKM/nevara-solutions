@@ -7,10 +7,10 @@ export default function TrustedBrands() {
   return (
     <motion.section
       className="relative flex flex-col items-center justify-center py-16 w-full px-4 "
-      // initial={{ opacity: 0, y: 50 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true }}
-      // transition={{ duration: 1, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       {/** ECCLIPSES */}
       <div className="ecclipse size-[240px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
