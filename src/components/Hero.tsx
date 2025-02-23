@@ -14,7 +14,10 @@ export default function Hero() {
       className="relative flex flex-col items-center justify-center h-screen text-center backdrop-blur-md
       transition-all duration-500 ease-in-out overflow-hidden"
     >
-      <div className="ecclipse size-[400px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+      {/** ECCLIPSES */}
+      <div className="ecclipse size-[240px] dark:size-[400px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute ecclipse -bottom-32 -left-[150px] size-[300px]" />
+
       {/* Text Container with Background Image */}
       <motion.div
         className="relative bg-no-repeat bg-center 

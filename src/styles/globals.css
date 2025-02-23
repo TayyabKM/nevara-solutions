@@ -6,13 +6,6 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-/* Gradient Text */
-.text-gradient {
-  background: linear-gradient(to right, #3b82f6, #9333ea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Glimmer Effect */
 @keyframes glimmer {
   0% {
@@ -103,6 +96,13 @@ body {
   .hero-arrow {
     display: none !important; /* Removes arrow icon on laptop view */
   }
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ecclipse {

@@ -11,6 +11,8 @@ const config: Config = {
         darkText: "#FFFFFF", // Font color for dark mode
         gradBlue: "#2794D4",
         gradPurple: "#7532E6",
+        textGradBlue: "#3997F3",
+        textGradPurple: "#6C2BF1",
       },
       fontFamily: {
         sans: ["var(--font-outfit)", "sans-serif"], // Use the custom CSS variable
@@ -18,6 +20,20 @@ const config: Config = {
       backgroundImage: {
         "background-gradient": "linear-gradient(to bottom, #7532E6, #2794D4)",
         "gradient-radial": "radial-gradient(circle, rgba(118,162,255,0.5) 0%, rgba(255,255,255,0.7) 70%)",
+      },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
       },
     },
   },

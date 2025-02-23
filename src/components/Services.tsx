@@ -6,8 +6,8 @@ export default function Services() {
   return (
     <div className="relative overflow-hidden py-10 backdrop-blur-md">
       {/* Eclipses left & right */}
-      <div className="absolute ecclipse top-1/2 -translate-y-[90%] -left-[150px] size-[250px]" />
-      <div className="absolute ecclipse bottom-0 -right-[150px] size-[250px]" />
+      <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
+      <div className="absolute ecclipse -bottom-32 -right-[150px] size-[300px]" />
 
       <div className="flex flex-col container max-w-screen-xl mx-auto p-4 gap-10">
         {/* Header */}

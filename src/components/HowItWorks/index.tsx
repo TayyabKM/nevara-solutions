@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import ProjectKickOff from "./StepBox/ProjectKickOff";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 interface ITimelineItem {
   heading: string;
@@ -44,6 +46,9 @@ const timelineItems: ITimelineItem[] = [
 export default function HowItWorks() {
   return (
     <div className="relative overflow-hidden py-10 backdrop-blur-md">
+      {/* ECCLIPSES */}
+      <div className="absolute ecclipse -top-32 -right-[150px] size-[300px]" />
+
       <div className="flex flex-col container max-w-screen-xl mx-auto p-4 gap-10">
         <Header />
         <Timeline />
@@ -55,27 +60,31 @@ export default function HowItWorks() {
 function Header() {
   const textVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.3, ease: "circOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
   };
 
   return (
     <motion.div
-      variants={textVariants}
+      className="flex flex-col w-full items-center text-center gap-3 sm:gap-0"
+      variants={{
+        visible: { transition: { staggerChildren: 0.2 } },
+      }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
-      className="font-bold text-4xl md:text-5xl sm:!leading-loose text-gradient text-center"
+      viewport={{ once: true, amount: 0.1 }}
     >
-      How We Bring Ideas to Life?
+      <motion.div variants={textVariants} className="text-textGradPurple dark:text-textGradBlue font-medium text-lg md:text-xl uppercase tracking-widest">
+        Process of development
+      </motion.div>
+      <motion.div variants={textVariants} className="text-gradient sm:!leading-[1.3] font-bold text-4xl md:text-5xl">
+        How We Bring Ideas to Life?
+      </motion.div>
     </motion.div>
   );
 }
 
 function Timeline() {
+  const isSmallScreen: boolean = useMediaQuery("(max-width: 768px)");
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState<number>(0);
   const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
@@ -117,14 +126,12 @@ function Timeline() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lineHeight, containerHeight]);
 
-  console.log(containerHeight, lineHeight);
-
   return (
     <div ref={containerRef} className="relative">
       {/** LINE ANIMATING DOWNWARDS */}
       <motion.div
-        className="absolute left-4 md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-blue-500 to-purple-500 w-1 rounded-full"
-        style={{ height: lineHeight }}
+        className={`absolute left-4 md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-blue-500 to-purple-500 w-1 rounded-full overflow-hidden`}
+        style={{ height: lineHeight, maxHeight: isSmallScreen ? containerHeight - 250 : containerHeight - 150 }}
       />
 
       <div className="flex flex-col">
@@ -154,17 +161,15 @@ function Timeline() {
 
               {/** CONTENT */}
               <div
-                className={`flex flex-col gap-4 md:w-1/2 py-8 
+                className={`flex flex-col gap-4 md:w-1/2 py-8  
                 ${evenIndex ? "md:order-2 items-start text-left md:pl-12" : "md:items-end md:text-right md:pr-12"}`}
               >
                 <div className="font-bold text-2xl">{item.heading}</div>
                 <div className="dark:text-gray-400 text-lg text-gray-500 md:max-w-md">{item.description}</div>
               </div>
-              <div className="flex-1 w-full -order-1 md:order-none !h-[300px] rounded-lg border border-white/15 bg-white/10 md:mx-12 relative overflow-hidden">
-                <div className="size-full bg-background-gradient absolute inset-0" />
-                <div className="size-full relative z-[1] m-4">
-                  <div className="size-full bg-white absolute inset-0" />
-                </div>
+
+              <div className={`flex-1 w-full -order-1 md:order-none flex ${evenIndex ? "justify-end md:pr-12" : "justify-start md:pl-12"}`}>
+                {index === 0 && <ProjectKickOff />}
               </div>
             </div>
           );
