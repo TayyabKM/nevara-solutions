@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <div className="relative overflow-hidden py-10 backdrop-blur-md dark:bg-black">
+    <div className="relative overflow-hidden py-10 backdrop-blur-md">
       {/* Eclipses left & right */}
       <div className="absolute ecclipse top-1/2 -translate-y-[90%] -left-[150px] size-[250px]" />
       <div className="absolute ecclipse bottom-0 -right-[150px] size-[250px]" />
@@ -107,7 +107,7 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       viewport={{ once: true, amount: 0.1 }}
       className="relative flex flex-col items-start justify-between cursor-pointer gap-4 py-4 px-6 bg-gray-200/50 dark:bg-gray-700/50
       border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md rounded-xl overflow-hidden w-full
-      group hover:!scale-[1.02] transition-all duration-300"
+      group"
     >
       <div className="size-20 bg-background-gradient rounded-full flex items-center justify-center p-5">
         <img src={`/icons/${service.iconSrc}`} className="size-full" />

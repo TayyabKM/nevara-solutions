@@ -28,12 +28,39 @@ export default function Header() {
     };
   }, [menuOpen]);
 
+  const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
+  const [visible, setVisible] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      // Show header when scrolling up or near the top, otherwise hide it.
+      if (currentScrollPos < prevScrollPos || currentScrollPos < 10) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
+  const headerVariants = {
+    hidden: { x: "-50%", y: "-120%", transition: { duration: 0.3, ease: "easeInOut" } },
+    visible: { x: "-50%", y: "0%", transition: { duration: 0.3, ease: "easeInOut" } },
+  };
+
   return (
-    <header
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
-            bg-gray-400/50 dark:bg-gray-600/50 backdrop-blur-md
-            text-lightText dark:text-darkText shadow-lg rounded-full px-8 py-4 
-            flex justify-between items-center w-[90%] xl:w-full max-w-screen-xl"
+    <motion.header
+      variants={headerVariants}
+      animate={visible ? "visible" : "hidden"}
+      initial="visible"
+      className="fixed top-4 left-1/2 z-50 
+      bg-gray-400/50 dark:bg-gray-600/50 backdrop-blur-md
+      text-lightText dark:text-darkText shadow-lg rounded-full px-8 py-2 md:py-4 
+      flex justify-between items-center w-[90%] xl:w-full max-w-screen-xl"
     >
       {/* Left Section: Logo */}
       <div className="flex items-center">
@@ -76,7 +103,7 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
 
