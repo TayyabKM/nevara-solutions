@@ -37,6 +37,7 @@ export default function Header() {
       // Show header when scrolling up or near the top, otherwise hide it.
       if (currentScrollPos < prevScrollPos || currentScrollPos < 10) {
         setVisible(true);
+        setMenuOpen(false);
       } else {
         setVisible(false);
       }
@@ -48,62 +49,63 @@ export default function Header() {
   }, [prevScrollPos]);
 
   const headerVariants = {
-    hidden: { x: "-50%", y: "-120%", transition: { duration: 0.3, ease: "easeInOut" } },
+    hidden: { x: "-50%", y: "-130%", transition: { duration: 0.3, ease: "easeInOut" } },
     visible: { x: "-50%", y: "0%", transition: { duration: 0.3, ease: "easeInOut" } },
   };
 
   return (
-    <motion.header
-      variants={headerVariants}
-      animate={visible ? "visible" : "hidden"}
-      initial="visible"
-      className="fixed top-4 left-1/2 z-50 
+    <>
+      <motion.header
+        variants={headerVariants}
+        animate={visible ? "visible" : "hidden"}
+        initial="visible"
+        className="fixed top-4 left-1/2 z-50
       bg-gray-400/50 dark:bg-gray-600/50 backdrop-blur-md
       text-lightText dark:text-darkText shadow-lg rounded-full px-8 py-2 md:py-4 
       flex justify-between items-center w-[90%] xl:w-full max-w-screen-xl"
-    >
-      {/* Left Section: Logo */}
-      <div className="flex items-center">
-        <Link href="/" className="flex items-center">
-          <Image src={"/logo-dark.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
-          <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
-        </Link>
-      </div>
+      >
+        {/* Left Section: Logo */}
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center">
+            <Image src={"/logo-dark.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
+            <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
+          </Link>
+        </div>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden lg:flex space-x-6 ml-[9%]">
-        <NavLinks />
-      </nav>
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex space-x-6 ml-[9%]">
+          <NavLinks />
+        </nav>
 
-      {/* CTA & Theme Switcher */}
-      <div className="hidden lg:flex items-center space-x-6">
-        <Link href="/contact" className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full shadow hover:opacity-90">
-          Get in Touch
-        </Link>
-        <ThemeSwitcher />
-      </div>
+        {/* CTA & Theme Switcher */}
+        <div className="hidden lg:flex items-center space-x-6">
+          <Link href="/contact" className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full shadow hover:opacity-90">
+            Get in Touch
+          </Link>
+          <ThemeSwitcher />
+        </div>
 
-      {/* Mobile Menu Button (Animated Hamburger) */}
-      <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonRef={buttonRef} />
-
+        {/* Mobile Menu Button (Animated Hamburger) */}
+        <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonRef={buttonRef} />
+      </motion.header>
       {/* Mobile Menu (Animated) */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             ref={menuRef}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -20, x: "-50%", height: 0 }}
+            animate={{ opacity: 1, y: 0, x: "-50%", height: "auto" }}
+            exit={{ opacity: 0, y: -20, x: "-50%", height: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-[100%] left-0 w-full bg-gray-900 text-white 
-                        shadow-lg rounded-lg py-6 px-6 mt-2 flex flex-col items-center space-y-6"
+            className="fixed w-[90%] top-20 md:top-24 left-1/2 -translate-x-1/2 bg-gray-300/80 dark:bg-gray-800/80 backdrop-blur-md text-white z-[1000]
+                      shadow-lg rounded-lg py-6 px-6 mt-2 flex flex-col items-center space-y-6 overflow-hidden"
           >
             <NavLinks />
             <ThemeSwitcher />
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   );
 }
 
@@ -121,7 +123,7 @@ const NavLinks = () => (
       <Link
         key={index}
         href={link.href}
-        className="hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition duration-300"
+        className="hover:bg-gradient-to-r text-black dark:text-white hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition duration-300"
       >
         {link.name}
       </Link>
