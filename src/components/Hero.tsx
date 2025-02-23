@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import TrustedBrands from "./TrustedBrands"; // Import the new component
 
 export default function Hero() {
+  const variants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-white to-lightBg dark:from-black dark:to-darkBg transition-all duration-500 ease-in-out">
       
