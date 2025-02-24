@@ -2,9 +2,6 @@ import getTheme from "@/hooks/getTheme";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-interface Props {
-  name: string;
-}
 
 export default function Deployment() {
   const containerRef = useRef<HTMLDivElement | null>(null);
