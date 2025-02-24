@@ -52,7 +52,7 @@ function Header() {
         <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
       </motion.div>
       <motion.div variants={textVariants} className="md:max-w-sm dark:text-gray-300 text-gray-600">
-        Nevara Solutions - the leading digital agency based in the PK, working with top-tier clients, from start-ups to enterprises.
+        Nevara Solutions – a growing software house in Pakistan, collaborating with top-tier clients, from start-ups to enterprises.
       </motion.div>
     </motion.div>
   );
@@ -72,13 +72,19 @@ function Socials() {
       <motion.div variants={textVariants}>
         <div className="flex items-center gap-4">
           <img src="/icons/email.svg" className="size-7 dark:invert" />
-          <div>info@nevarasolutions.com</div>
+          <div>tayyabkamboh@nevarasolutions.com</div>
         </div>
       </motion.div>
       <motion.div variants={textVariants}>
         <div className="flex items-center gap-4">
           <img src="/icons/phone.svg" className="size-7 dark:invert" />
-          <div>(+92) 300-1234567</div>
+          <div>(+92) 349 8476179 </div>
+        </div>
+      </motion.div>
+      <motion.div variants={textVariants}>
+        <div className="flex items-center gap-4">
+          <img src="/icons/phone.svg" className="size-7 dark:invert" />
+          <div>(+92) 313 4361663 </div>
         </div>
       </motion.div>
 

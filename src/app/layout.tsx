@@ -12,6 +12,10 @@ const outfit = Outfit({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <title>Nevara Homepage</title> 
+        <meta name="description" content="Welcome to Nevara Solutions - Your go-to web solutions partner." />
+      </head>
       <body suppressHydrationWarning={true} className={`${outfit.className} bg-lightBg text-lightText dark:bg-black dark:text-darkText`}>
         <Header />
         <main>{children}</main>

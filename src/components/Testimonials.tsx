@@ -65,10 +65,10 @@ function Header() {
         Testimonials
       </motion.div>
       <motion.div variants={textVariants} className="text-gradient font-bold text-4xl md:text-5xl">
-        Client is Our Top Priority
+        Happy Clients are the Foundation of our Success
       </motion.div>
       <motion.div variants={textVariants} className="font-medium text-2xl max-w-md md:max-w-xl">
-        We survey all of our clients, the results of which go directly to our CEO.
+         From First Impressions to Lasting Partnerships - See why our clients love working with us.
       </motion.div>
     </motion.div>
   );

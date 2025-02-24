@@ -42,7 +42,7 @@ function Header() {
         Services We Offer
       </motion.div>
       <motion.div variants={textVariants} className="font-medium text-2xl md:text-3xl leading-none max-w-md md:max-w-xl">
-        Get a full-scale <span className="text-gradient">marketing team</span> without costing a fortune.
+        Get a full-scale <span className="text-gradient">development team</span> without costing a fortune.
       </motion.div>
     </motion.div>
   );
@@ -72,7 +72,7 @@ const servicesData: IServiceBox[] = [
     iconSrc: "app-dev.svg",
   },
   {
-    heading: "Product Development",
+    heading: " Saas Product Development",
     description: "We create original, production-ready digital ideas wherever you are in the process, from inception.",
     iconSrc: "product-dev.svg",
   },
