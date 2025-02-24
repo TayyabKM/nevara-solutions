@@ -43,17 +43,17 @@ export default function Hero() {
             variants={variants}
           >
             {/* Line 1: "Building your vision" (with and without Arrow based on screen size) */}
-            <div className="flex items-center gap-2 md:gap-4 md:flex-nowrap">
+            <div className="flex items-center gap-2 md:gap-2 lg:gap-4 md:flex-nowrap">
               Building your <span className="text-gradient drop-shadow-lg">vision</span>
               {/* Arrow Icon (Only visible on Desktop `md:` and larger) */}
               {/* Arrow Icon (Only visible on DESKTOP, Hidden on Mobile & Laptop) */}
-              <motion.div
+              <motion.span
                 className="hidden md:block lg:block" // Shows only on DESKTOP (`md:` and larger)
                 animate={{ rotate: [0, -5, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               >
                 <Image src="/arrow-icon.png" alt="Growth Arrow Icon" width={95} height={95} className="w-16 md:w-24" />
-              </motion.div>
+              </motion.span>
             </div>
 
             {/* Line 2: "One byte at a time" */}
@@ -74,7 +74,7 @@ export default function Hero() {
           {/* Call-to-Action Buttons */}
           <motion.div className="mt-8 flex space-x-4" variants={variants}>
             <motion.button
-              className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 
+              className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-base
             rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl"
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
               whileHover={{ scale: 1.05 }}
@@ -84,7 +84,7 @@ export default function Hero() {
             </motion.button>
 
             <motion.button
-              className="px-6 py-3 text-black dark:text-white border border-black 
+              className="px-6 py-3 text-black dark:text-white border border-black text-sm sm:text-base
             dark:border-white rounded-lg hover:bg-black hover:text-white 
             dark:hover:bg-white dark:hover:text-black transition-all duration-300"
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}

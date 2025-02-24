@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { navlinks } from "@/constants/navlinks";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,16 +111,10 @@ export default function Header() {
 }
 
 /* ✅ Navigation Links Component (Reusable for Desktop & Mobile) */
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
-];
+
 const NavLinks = () => (
   <>
-    {links.map((link, index) => (
+    {navlinks.map((link, index) => (
       <Link
         key={index}
         href={link.href}

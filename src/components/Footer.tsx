@@ -1,5 +1,6 @@
 "use client";
 
+import { navlinks } from "@/constants/navlinks";
 import { textVariants } from "@/motion-variants/variants";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -86,16 +87,9 @@ function Socials() {
   );
 }
 
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
-];
 const NavLinks = () => (
   <>
-    {links.map((link, index) => (
+    {navlinks.map((link, index) => (
       <Link
         key={index}
         href={link.href}
