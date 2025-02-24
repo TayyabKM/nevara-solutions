@@ -2,7 +2,7 @@ import getTheme from "@/hooks/getTheme";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function ProjectKickOff() {
+export default function Planning() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { isLight } = getTheme();
 

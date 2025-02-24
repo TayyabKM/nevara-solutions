@@ -2,12 +2,16 @@
 
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import ProjectKickOff from "./StepBox/ProjectKickOff";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ProjectKickOff from "./StepBox/ProjectKickOff";
+import Planning from "./StepBox/Planning";
+import Develop from "./StepBox/Develop";
+import Deployment from "./StepBox/Deployment";
 
 interface ITimelineItem {
   heading: string;
   description: string;
+  sideComponent?: JSX.Element;
 }
 
 const timelineItems: ITimelineItem[] = [
@@ -15,31 +19,38 @@ const timelineItems: ITimelineItem[] = [
     heading: "Project Kickoff",
     description:
       "This starts with a deep-dive discussion and signing the contract. This step guarantees that your vision aligns with our strategy and vice versa.",
+    sideComponent: <ProjectKickOff />,
   },
   {
     heading: "Planning & Milestones",
     description: "All project requirements are defined by our team, we also establish key milestones and set timelines required to keep everything on track.",
+    sideComponent: <Planning />,
   },
   {
     heading: "Develop & Build",
     description: "Our team of experts starts building your solution, and we keep you updated throughout with regular updates and quality checks.",
+    sideComponent: <Develop />,
   },
   {
     heading: "Delivery & Deployment",
     description: "After developing the final product, we carry out testing and optimization for delivery. We help you deploy to make the launch hassle-free.",
+    sideComponent: <Deployment />,
   },
   {
     heading: "Aftercare",
     description: "Our support doesn’t stop when we deliver. We provide post-deployment support, and we help keep things running smoothly.",
+    sideComponent: <Develop />,
   },
   {
     heading: "SEO & PPC",
     description: "We drive traffic through relevant searches searching for similar requirements using custom SEO and PPC campaigns.",
+    sideComponent: <Deployment />,
   },
   {
     heading: "Brand Growth (If Any)",
     description:
       "We build your digital footprint through dedicated social media management and brand-building services that cement your brand identity and boost your engagement online.",
+    sideComponent: <ProjectKickOff />,
   },
 ];
 
@@ -131,7 +142,7 @@ function Timeline() {
       {/** LINE ANIMATING DOWNWARDS */}
       <motion.div
         className={`absolute left-4 md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-blue-500 to-purple-500 w-1 rounded-full overflow-hidden`}
-        style={{ height: lineHeight, maxHeight: isSmallScreen ? containerHeight - 250 : containerHeight - 150 }}
+        style={{ height: lineHeight, maxHeight: isSmallScreen ? containerHeight - 280 : containerHeight - 150 }}
       />
 
       <div className="flex flex-col">
@@ -169,7 +180,7 @@ function Timeline() {
               </div>
 
               <div className={`flex-1 w-full -order-1 md:order-none flex ${evenIndex ? "justify-end md:pr-12" : "justify-start md:pl-12"}`}>
-                {index === 0 && <ProjectKickOff />}
+                {item.sideComponent}
               </div>
             </div>
           );
