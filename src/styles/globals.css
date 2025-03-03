@@ -119,3 +119,21 @@ body {
   filter: blur(174px);
   border-radius: 100%;
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+::-webkit-scrollbar {
+  width: 0px; /* Hide scrollbar width */
+  height: 0px;
+}
+
+/* Optional: Keep smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Ensures vertical scrolling remains */
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+}
