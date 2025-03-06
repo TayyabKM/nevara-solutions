@@ -13,7 +13,7 @@ export default function Services() {
     <div className="min-h-screen px-6 md:px-16">
       <ServicesHero />
       {/* <ServiceCards /> */}
-      {/* <NevaraAdvantage /> */}
+      <NevaraAdvantage />
       {/* <FAQ /> */}
       {/* <ContactCTA /> */}
     </div>
