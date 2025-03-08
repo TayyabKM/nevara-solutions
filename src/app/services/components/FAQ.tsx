@@ -63,7 +63,7 @@ export default function FAQExpandingBoxes() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        Questions We're Often Asked
+        Questions We&apos;re Often Asked
         <br className="hidden md:block" />
         <span className="text-gradient">Frequently Asked Questions</span>
       </motion.h2>

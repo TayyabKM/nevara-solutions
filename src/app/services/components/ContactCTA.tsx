@@ -19,7 +19,7 @@ export default function CTASection() {
             >
                 Ready to <span className="text-gradient">Empower Your Vision?</span>
                 <br className="hidden md:block" />
-                <span className="text-gradient">Let's Talk Now!</span>
+                <span className="text-gradient">Let&apos;s Talk Now!</span>
             </motion.h2>
 
             {/* ✅ CTA Button */}
