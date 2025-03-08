@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Nevara - Homepage",
+  description: "Nevara Solutions - Innovating for the Future",
+};
+
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks/index";

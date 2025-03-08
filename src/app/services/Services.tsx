@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 const ServicesHero = dynamic(() => import("./components/ServicesHero"));
 const NevaraAdvantage = dynamic(() => import("./components/NevaraAdvantge"));
 const NevaraGrowthEngine = dynamic (() => import("./components/NevaraGrowthEngine"));
-// const FAQ = dynamic(() => import("./Services/FAQ"));
-// const ContactCTA = dynamic(() => import("./Services/ContactCTA"));
+const FAQSection = dynamic(() => import("./components/FAQ"));
+const ContactCTA = dynamic(() => import("./components/ContactCTA"));
 
 export default function Services() {
   return (
@@ -14,8 +14,8 @@ export default function Services() {
       <ServicesHero />
       <NevaraAdvantage />
       <NevaraGrowthEngine />
-      {/* <FAQ /> */}
-      {/* <ContactCTA /> */}
+      <FAQSection />
+      <ContactCTA />
     </div>
   );
 }

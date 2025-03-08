@@ -3,6 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outfit } from "next/font/google";
 
+export const metadata = {
+  title: "Nevara - Homepage",  // Default Title
+  description: "Welcome to Nevara Solutions - Your go-to web solutions partner.",
+};
+
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"], // Include weights you need
@@ -12,10 +17,6 @@ const outfit = Outfit({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <title>Nevara Homepage</title> 
-        <meta name="description" content="Welcome to Nevara Solutions - Your go-to web solutions partner." />
-      </head>
       <body suppressHydrationWarning={true} className={`${outfit.className} bg-lightBg text-lightText dark:bg-black dark:text-darkText`}>
         <Header />
         <main>{children}</main>
