@@ -11,16 +11,22 @@ interface IReview {
 
 const reviews: IReview[] = [
   {
-    name: "Dr Donna",
-    company: "",
+    name: "Dr. Donna",
+    company: "Psychologist based in Utah",
     testimonial:
       "Nevara's Team have been so wonderful to work with. They are progressive with their ideas, timely in responsiveness, and growth oriented to help my site more visible.",
   },
   {
-    name: "Dr Donna",
-    company: "",
+    name: "Mr. Teddy",
+    company: "Rocky's Worldwide Chauffered Transportation",
     testimonial:
-      "Nevara's Team have been so wonderful to work with. They are progressive with their ideas, timely in responsiveness, and growth oriented to help my site more visible.",
+      "Working with Nevara's team has been a game-changer for my business. Their expertise, creativity, and commitment to excellence helped turn my vision into reality. From development to digital strategy, they exceeded expectations at every step",
+  },
+  {
+    name: "Mr. Aslam Sharif",
+    company: "Qibla Schools",
+    testimonial:
+      "Nevara Solutions has been instrumental in transforming our online presence. Their innovative approach, seamless communication, and dedication to delivering top-tier solutions have made a significant impact on our school's digital growth. Highly recommended!",
   },
 ];
 const Testimonials = () => {

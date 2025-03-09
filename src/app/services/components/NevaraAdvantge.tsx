@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-// Service Offerings Data
+// Service Offerings Data with Links
 const offerings = [
     {
         title: "Website Development",
@@ -11,7 +12,8 @@ const offerings = [
         description:
             "Your website is your first impression—we ensure it’s lasting. Our team creates visually stunning, responsive, and conversion-driven websites that captivate audiences and drive business success.",
         buttonText: "Explore Our Website Services",
-        icon: "/icons/web-dev.svg", 
+        icon: "/icons/web-dev.svg",
+        link: "/services/web-development", // ✅ Add link to respective service page
     },
     {
         title: "App Development",
@@ -20,6 +22,7 @@ const offerings = [
             "From mobile to web applications, we develop scalable, feature-rich solutions designed to enhance user engagement and streamline business operations.",
         buttonText: "Learn More About App Development",
         icon: "/icons/app-dev.svg",
+        link: "/services/app-development", // ✅ Link added
     },
     {
         title: "Digital Marketing & Brand Building",
@@ -28,6 +31,7 @@ const offerings = [
             "In today’s competitive landscape, digital visibility is everything. Our data-driven marketing strategies and brand-building techniques help businesses grow, connect with their audience, and boost conversions.",
         buttonText: "Grow My Brand Now",
         icon: "/icons/digital-marketing.svg",
+        link: "/services/digital-marketing", // ✅ Link added
     },
     {
         title: "SaaS Product Development",
@@ -36,6 +40,7 @@ const offerings = [
             "We create cloud-based, scalable, and highly secure SaaS products that help businesses optimize their operations, improve customer experiences, and generate consistent revenue.",
         buttonText: "Develop My SaaS Product",
         icon: "/icons/product-dev.svg",
+        link: "/services/saas-product-development", // ✅ Link added
     },
 ];
 
@@ -43,10 +48,8 @@ export default function NevaraAdvantage() {
     return (
         <div className="relative w-full py-20 px-6 md:px-12 lg:px-24">
             {/* Background Glow Effect */}
-            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] max-w-full overflow-hidden size-[300px]" />  
-
+            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] max-w-full overflow-hidden size-[300px]" />
             <div className="absolute ecclipse -top- -left-[190px] size-[300px]" />
-
 
             {/* ✅ Section Heading */}
             <motion.h2
@@ -85,14 +88,15 @@ export default function NevaraAdvantage() {
                         {/* ✅ Description */}
                         <p className="mt-3 text-gray-700 dark:text-gray-300">{offering.description}</p>
 
-                        {/* ✅ CTA Button */}
-                        <button className="mt-6 px-4 py-2 max-w-[300px] text-center bg-gradient-to-r from-blue-500 to-purple-500 
-                         text-white font-medium text-sm md:text-base rounded-md shadow-md 
-                        transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 self-start"
-                        >
-                            {offering.buttonText}
-                        </button>
-
+                        {/* ✅ CTA Button (Now wrapped with Link) */}
+                        <Link href={offering.link}>
+                            <button className="mt-6 px-4 py-2 max-w-[300px] text-center bg-gradient-to-r from-blue-500 to-purple-500 
+                            text-white font-medium text-sm md:text-base rounded-md shadow-md 
+                            transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 self-start"
+                            >
+                                {offering.buttonText}
+                            </button>
+                        </Link>
                     </motion.div>
                 ))}
             </div>
