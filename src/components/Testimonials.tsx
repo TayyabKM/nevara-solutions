@@ -14,7 +14,7 @@ const reviews: IReview[] = [
     name: "Dr. Donna",
     company: "Psychologist based in Utah",
     testimonial:
-      "Nevara's Team have been so wonderful to work with. They are progressive with their ideas, timely in responsiveness, and growth oriented to help my site more visible.",
+      "Nevara's Team have been so wonderful to work with. They are progressive with their ideas, timely in responsiveness, and growth oriented to help my be site more visible.",
   },
   {
     name: "Mr. Teddy",
