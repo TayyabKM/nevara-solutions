@@ -1,13 +1,62 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+// Testimonial Data (You can dynamically fetch this)
+const testimonial = {
+  name: "Teddy",
+  company: "Rocky's Worldwide Chauffeured Transportaion",
+  feedback:
+    "Working with Nevara's team has been a game-changer for my business. Their expertise, creativity, and commitment to excellence helped turn my vision into reality. From development to digital strategy, they exceeded expectations at every step."
+};
+
 export default function TestimonialCTA() {
-    return (
-      <section className="text-center">
-        <blockquote className="italic text-lg text-gray-400">
-          "Every website is a work in progress, a constant evolution."
-        </blockquote>
-        <button className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transition-all hover:scale-105">
-          Get in touch with Nevara
-        </button>
-      </section>
-    );
-  }
-  
+  return (
+    <section className="relative w-full py-20 px-6 md:px-12 lg:px-24 text-center">
+      {/* ✅ Inspirational Quote */}
+      <motion.blockquote
+        className="italic text-2xl md:text-3xl text-lightText dark:text-gray-400 font-medium max-w-3xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        "Every website is a work in progress, a constant evolution."
+      </motion.blockquote>
+
+      {/* ✅ Testimonial Card */}
+      <motion.div
+        className="mt-12 bg-gray-800/50 border border-gray-700 p-6 md:p-8 rounded-xl shadow-lg max-w-2xl mx-auto flex flex-col md:flex-row items-center gap-6"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        {/* ⭐ Client Image */}
+        {/* <div className="size-20 md:size-24 rounded-full overflow-hidden border-2 border-gradient">
+          <Image src={testimonial.image} alt={testimonial.name} width={96} height={96} />
+        </div> */}
+
+        {/* ⭐ Client Testimonial */}
+        <div className="text-left">
+          <p className="text-lg text-lightText dark:text-darkText">"{testimonial.feedback}"</p>
+          <p className="mt-3 font-bold text-lightText dark:text-gray-400">{testimonial.name}</p>
+          <p className="text-sm text-lightText dark:text-gray-400">{testimonial.company}</p>
+        </div>
+      </motion.div>
+
+      {/* ✅ CTA Button */}
+      <motion.button
+              className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-base
+            rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl mt-12"
+              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get in Touch with Us!
+            </motion.button>
+
+    </section>
+  );
+}
