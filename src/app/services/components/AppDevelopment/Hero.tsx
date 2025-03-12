@@ -40,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          At <b>Nevara Solutions</b>, we develop visually appealing, scalable, intuitive, and high-performance mobile and web applications that enhance user engagement, improve business operations, and drive growth.
+          At <span className="text-gradient"><b>Nevara Solutions</b></span> , we develop visually appealing, scalable, intuitive, and high-performance mobile and web applications that enhance user engagement, improve business operations, and drive growth.
         </motion.p>
       </div>
     </section>

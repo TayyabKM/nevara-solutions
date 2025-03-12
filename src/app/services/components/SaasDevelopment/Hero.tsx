@@ -4,24 +4,46 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative text-center py-16 px-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-lg"
-    >
-      <h1 className="text-4xl md:text-5xl font-bold">
-        Build the Future of <br /> <span className="text-gradient">SaaS Software</span>
-      </h1>
-      <p className="mt-4 text-lg max-w-2xl mx-auto">
-        We help businesses build high-performing SaaS products that drive efficiency, improve workflows, and generate consistent revenue.
-      </p>
-      <motion.a
-        href="/contact"
-        className="mt-6 inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
-      >
-        Let's Innovate Together
-      </motion.a>
-    </motion.div>
+    <section className="relative w-full h-screen flex items-center justify-center text-center px-6">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[300px] h-[300px] bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl"></div>
+
+      {/* Hero Content - Absolute Centering */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6 pb-20">
+        {/* Main Heading */}
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-lightText dark:text-darkText leading-tight"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          SaaS Product Development
+          <br /> 
+          <span className="text-gradient">Build the Future of Software</span>
+        </motion.h1>
+
+        {/* Subheading */}
+        <motion.h2
+          className="mt-4 text-2xl md:text-3xl font-semibold text-lightText dark:text-darkText"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Partner with Us to Create Your  
+          <span className="text-gradient"> Your Next SaaS Success Story!</span>
+        </motion.h2>
+
+        {/* Description */}
+        <motion.p
+          className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          At <span className="text-gradient"><b>Nevara Solutions</b></span>, we help businesses build high-performing SaaS products that drive efficiency, improve workflows, and generate consistent revenue.
+
+        </motion.p>
+      </div>
+    </section>
   );
 }
