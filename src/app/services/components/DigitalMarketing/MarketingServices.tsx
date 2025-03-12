@@ -1,43 +1,92 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
+// Marketing Services Data
 const services = [
-  { title: "Search Engine Optimization (SEO)", description: "Improving your website's visibility in search results to drive organic traffic." },
-  { title: "Social Media Marketing (SMM)", description: "Building and engaging your audience on social media platforms." },
-  { title: "Pay-Per-Click (PPC) Advertising", description: "Driving targeted traffic through paid advertising campaigns." },
-  { title: "Content Marketing", description: "Creating valuable and engaging content to attract and retain your audience." },
-  { title: "Email Marketing", description: "Nurturing leads and building customer loyalty through email campaigns." },
-  { title: "Brand Strategy & Development", description: "Crafting a compelling brand identity that resonates with your audience." },
+  { 
+    title: "Search Engine Optimization (SEO)", 
+    description: "Improving your website's visibility in search engine results to drive organic traffic.", 
+    icon: "/icons/seo.png" 
+  },
+  { 
+    title: "Social Media Marketing (SMM)", 
+    description: "Building and engaging your audience on social media platforms.", 
+    icon: "/icons/social.png" 
+  },
+  { 
+    title: "Pay-Per-Click (PPC) Advertising", 
+    description: "Driving targeted traffic to your website through paid advertising campaigns.", 
+    icon: "/icons/ppc.png" 
+  },
+  { 
+    title: "Content Marketing", 
+    description: "Creating valuable and engaging content that attracts and retains your audience.", 
+    icon: "/icons/content.png" 
+  },
+  { 
+    title: "Email Marketing", 
+    description: "Nurturing leads and building customer loyalty through targeted email campaigns.", 
+    icon: "/icons/email.png" 
+  },
+  { 
+    title: "Brand Strategy & Development", 
+    description: "Crafting a compelling brand identity that resonates with your target audience.", 
+    icon: "/icons/brand.png" 
+  },
 ];
 
 export default function MarketingServices() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="max-w-3xl mx-auto py-10"
-    >
-      <h2 className="text-3xl font-bold text-center">Drive Tangible Growth with Data-Driven Marketing</h2>
-      <p className="text-center mt-2 text-gray-600 dark:text-gray-400">
-        We leverage the latest trends and technologies to create innovative marketing experiences.
-      </p>
+    <section className="relative w-full py-0 py-lg-20 px-6 md:px-12 lg:px-24">
+      {/* Background Glow Effects */}
+      <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
+      <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] size-[300px]" />
 
-      <div className="mt-6 space-y-6">
+      {/* ✅ Section Heading */}
+      <motion.h2
+        className="text-3xl md:text-5xl font-bold text-center mb-8 text-lightText dark:text-darkText"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        Drive Tangible Growth with <br />
+        <span className="text-gradient">Data-Driven Marketing</span>
+      </motion.h2>
+
+      <motion.p
+        className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        We stay ahead of the curve, leveraging the latest trends and technologies 
+        to create innovative marketing experiences.
+      </motion.p>
+
+      {/* ✅ Cards Layout - Responsive Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-8xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-gray-200/50 dark:bg-gray-700/50 rounded-lg shadow-md"
-            initial={{ opacity: 0, y: 20 }}
+            className="relative bg-gray-800/50 border border-gray-700 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-blue-500/40"
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <h3 className="text-xl font-semibold">{service.title}</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-300">{service.description}</p>
+            {/* ✅ Service Icon */}
+            <div className="size-20 bg-background-gradient rounded-full flex items-center justify-center p-5 shadow-lg mb-4">
+              <Image src={service.icon} alt={service.title} width={50} height={50} />
+            </div>
+
+            {/* ✅ Service Content */}
+            <h3 className="text-2xl font-bold text-lightText dark:text-darkText">{service.title}</h3>
+            <p className="mt-2 text-lightText dark:text-gray-400">{service.description}</p>
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </section>
   );
 }
