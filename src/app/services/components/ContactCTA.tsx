@@ -7,7 +7,8 @@ export default function CTASection() {
         <div className="relative w-full py-16 px-6 md:px-12 lg:px-24 flex flex-col items-center text-center">
             {/* Background Glow (Hidden on Mobile) */}
             <div className="absolute ecclipse -top-20 -left-[150px] size-[300px] hidden sm:block" />
-            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] max-w-full overflow-hidden size-[300px] hidden sm:block" />
+            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[-20px] size-[300px]" />
+
 
 
             {/* ✅ Call-to-Action Text */}

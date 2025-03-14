@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import TrustedBrands from "./TrustedBrands"; // Import the new component
 
@@ -85,14 +86,15 @@ export default function Hero() {
 
             <motion.button
               className="px-6 py-3 text-black dark:text-white border border-black text-sm sm:text-base
-            dark:border-white rounded-lg hover:bg-black hover:text-white 
-            dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              dark:border-white rounded-lg hover:bg-black hover:text-white 
+              dark:hover:bg-white dark:hover:text-black transition-all duration-300"
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Discover More
+              <Link href="/about">Discover More</Link>
             </motion.button>
+
           </motion.div>
         </motion.div>
       </section>

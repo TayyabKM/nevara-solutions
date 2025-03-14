@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link"; 
+
 import { motion } from "framer-motion";
 
 export default function Services() {
@@ -98,6 +100,15 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       },
     },
   };
+
+  const serviceLinks: Record<string, string> = {
+    "Website Development": "/services/web-development",
+    "Digital marketing and Brand building": "/services/digital-marketing",
+    "App Development": "/services/app-development",
+    " Saas Product Development": "/services/saas-product-development",
+  };
+
+
   return (
     <motion.div
       variants={boxVariants}
@@ -113,20 +124,18 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       </div>
       <div className="font-bold text-2xl">{service.heading}</div>
       <div className="dark:text-gray-400 text-gray-500">{service.description}</div>
-      <div className="mt-2 flex items-center gap-2">
-        <div
-          className="flex items-center justify-center size-10 rounded-full p-2 border border-black/60 dark:border-white/60 group-hover:bg-background-gradient
-        group-hover:border-gradPurple transition-all duration-300"
-        >
-          <svg
-            className="stroke-black dark:stroke-white -rotate-[30deg] group-hover:!stroke-white transition-colors duration-300"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+       <Link href={serviceLinks[service.heading] || "/services"} passHref>
+        <div className="mt-2 flex items-center gap-2">
+          <div
+            className="flex items-center justify-center size-10 rounded-full p-2 border border-black/60 dark:border-white/60 group-hover:bg-background-gradient
+          group-hover:border-gradPurple transition-all duration-300"
           >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
+            <svg
+              className="stroke-black dark:stroke-white -rotate-[30deg] group-hover:!stroke-white transition-colors duration-300"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path d="M2 12.0701H22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
               <path
                 d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19"
@@ -134,11 +143,11 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
                 strokeLinecap="round"
                 strokeLinejoin="round"
               ></path>
-            </g>
-          </svg>
+            </svg>
+          </div>
+          <div className="text-xl">Learn More</div>
         </div>
-        <div className="text-xl">Learn More</div>
-      </div>
+      </Link>
       <img
         src={`/icons/${service.iconSrc}`}
         className="size-14 opacity-0 invert dark:invert-0 absolute bottom-2 right-2 -z-0 group-hover:opacity-[0.2] group-hover:scale-105 transition-all duration-300"

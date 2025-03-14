@@ -48,7 +48,7 @@ export default function NevaraAdvantage() {
     return (
         <div className="relative w-full py-20 px-6 md:px-12 lg:px-24">
             {/* Background Glow Effect */}
-            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] max-w-full overflow-hidden size-[300px]" />
+            <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[-20px] size-[300px]" />
             <div className="absolute ecclipse -top- -left-[190px] size-[300px]" />
 
             {/* ✅ Section Heading */}

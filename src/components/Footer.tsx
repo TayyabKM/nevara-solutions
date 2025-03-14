@@ -70,22 +70,33 @@ function Socials() {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div variants={textVariants}>
-        <div className="flex items-center gap-4">
-          <img src="/icons/email.svg" className="size-7 dark:invert" />
-          <div>tayyabkamboh@nevarasolutions.com</div>
-        </div>
+        <Link href="mailto:tayyabkamboh@nevarasolutions.com">
+          <div className="flex items-center gap-4 cursor-pointer">
+            <img src="/icons/email.svg" className="size-7 dark:invert" />
+            <div>tayyabkamboh@nevarasolutions.com</div>
+          </div>
+        </Link>
       </motion.div>
+
+      {/* ✅ LinkedIn Profile */}
       <motion.div variants={textVariants}>
-        <div className="flex items-center gap-4">
-          <img src="/icons/phone.svg" className="size-7 dark:invert" />
-          <div>(+92) 349 8476179 </div>
-        </div>
+        <Link href="https://www.linkedin.com/company/nevara-solutions" target="_blank" rel="noopener noreferrer">
+          <div className="flex items-center gap-4 cursor-pointer">
+            <img src="/icons/linkedin.svg" className="size-7 dark:invert invert-0" />
+            <div>Connect with us on LinkedIn</div>
+          </div>
+        </Link>
       </motion.div>
+
+
+      {/* ✅ WhatsApp Contact */}
       <motion.div variants={textVariants}>
-        <div className="flex items-center gap-4">
-          <img src="/icons/phone.svg" className="size-7 dark:invert" />
-          <div>(+92) 313 4361663 </div>
-        </div>
+        <Link href="https://wa.me/923498476179" target="_blank" rel="noopener noreferrer">
+          <div className="flex items-center gap-4 cursor-pointer">
+            <img src="/icons/whatsapp.svg" className="size-7 dark:invert" />
+            <div>Chat with us on WhatsApp</div>
+          </div>
+        </Link>
       </motion.div>
 
       <motion.div variants={textVariants} className="md:max-w-sm"></motion.div>
