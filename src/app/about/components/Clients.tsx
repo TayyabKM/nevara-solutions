@@ -13,7 +13,7 @@ export default function Clients() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        Companies <span className="text-gradient">We've Helped Grow</span>
+        Companies <span className="text-gradient">We&apos;ve Helped Grow</span>
       </motion.h2>
 
       {/* ✅ Logos Container - Centered Properly */}

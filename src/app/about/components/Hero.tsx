@@ -28,7 +28,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
             >
-                We're more than a tech agency; we're dedicated to building lasting relationships and driving your business's digital success.
+                We&apos;re more than a tech agency; we&apos;re dedicated to building lasting relationships and driving your business&apos;s digital success.
             </motion.p>
 
             {/* ✅ CTA Button */}

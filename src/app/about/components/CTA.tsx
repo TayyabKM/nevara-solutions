@@ -8,7 +8,7 @@ export default function CTA() {
     <section className="relative w-full py-20 px-6 md:px-12 lg:px-24 text-center">
       {/* ✅ Background Glow Effects */}
       <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
-      <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[150px] size-[300px]" />
+      <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[-20px] size-[300px]" />
 
       {/* ✅ Heading */}
       <motion.h2

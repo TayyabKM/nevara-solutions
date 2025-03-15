@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link"; 
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Services() {
@@ -61,22 +61,22 @@ const servicesData: IServiceBox[] = [
     heading: "Website Development",
     description:
       "We design and develop fast, user-friendly websites to put you at the forefront of your industry and earn you conversions, whether it’s a business site or an e-commerce platform.",
-    iconSrc: "web-dev.svg",
+    iconSrc: "/icons/web-dev.svg",
   },
   {
     heading: "Digital marketing and Brand building",
     description: "We create compelling brand identities and optimize data-driven marketing plans to elevate their visibility, engagement, and conversions.",
-    iconSrc: "digital-marketing.svg",
+    iconSrc: "/icons/digital-marketing.svg",
   },
   {
     heading: "App Development",
     description: "We develop user-friendly, scalable mobile and web applications that make user engagement frictionless and grow businesses.",
-    iconSrc: "app-dev.svg",
+    iconSrc: "/icons/app-dev.svg",
   },
   {
-    heading: " Saas Product Development",
-    description: "We create original, production-ready digital ideas wherever you are in the process, from inception.",
-    iconSrc: "product-dev.svg",
+    heading: "Saas Product Development",
+    description: "We create original, production-ready digital ideas wherever you are in the process, from inception.",
+    iconSrc: "/icons/product-dev.svg",
   },
 ];
 
@@ -105,9 +105,8 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
     "Website Development": "/services/web-development",
     "Digital marketing and Brand building": "/services/digital-marketing",
     "App Development": "/services/app-development",
-    " Saas Product Development": "/services/saas-product-development",
+    "Saas Product Development": "/services/saas-product-development",
   };
-
 
   return (
     <motion.div
@@ -119,12 +118,15 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md rounded-xl overflow-hidden w-full
       group"
     >
+      {/* ✅ Fixed Image Optimization Issue */}
       <div className="size-20 bg-background-gradient rounded-full flex items-center justify-center p-5">
-        <img src={`/icons/${service.iconSrc}`} className="size-full" />
+        <Image src={service.iconSrc} alt={`${service.heading} Icon`} width={60} height={60} />
       </div>
+
       <div className="font-bold text-2xl">{service.heading}</div>
       <div className="dark:text-gray-400 text-gray-500">{service.description}</div>
-       <Link href={serviceLinks[service.heading] || "/services"} passHref>
+      
+      <Link href={serviceLinks[service.heading] || "/services"} passHref>
         <div className="mt-2 flex items-center gap-2">
           <div
             className="flex items-center justify-center size-10 rounded-full p-2 border border-black/60 dark:border-white/60 group-hover:bg-background-gradient
@@ -148,8 +150,13 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
           <div className="text-xl">Learn More</div>
         </div>
       </Link>
-      <img
-        src={`/icons/${service.iconSrc}`}
+
+      {/* ✅ Fixed Image Optimization Issue */}
+      <Image
+        src={service.iconSrc}
+        alt={`${service.heading} Background Icon`}
+        width={60}
+        height={60}
         className="size-14 opacity-0 invert dark:invert-0 absolute bottom-2 right-2 -z-0 group-hover:opacity-[0.2] group-hover:scale-105 transition-all duration-300"
       />
     </motion.div>

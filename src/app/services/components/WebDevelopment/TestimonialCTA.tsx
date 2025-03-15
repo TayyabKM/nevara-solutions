@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 
 // Testimonial Data (You can dynamically fetch this)
 const testimonial = {
@@ -22,7 +22,7 @@ export default function TestimonialCTA() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        "Every website is a work in progress, a constant evolution."
+        &quot;Every website is a work in progress, a constant evolution.&quot;
       </motion.blockquote>
 
       {/* ✅ Testimonial Card */}
@@ -40,7 +40,7 @@ export default function TestimonialCTA() {
 
         {/* ⭐ Client Testimonial */}
         <div className="text-left">
-          <p className="text-lg text-lightText dark:text-darkText">"{testimonial.feedback}"</p>
+          <p className="text-lg text-lightText dark:text-darkText">&quot;{testimonial.feedback}&quot;</p>
           <p className="mt-3 font-bold text-lightText dark:text-gray-400">{testimonial.name}</p>
           <p className="text-sm text-lightText dark:text-gray-400">{testimonial.company}</p>
         </div>

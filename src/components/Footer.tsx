@@ -48,8 +48,8 @@ function Header() {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div variants={textVariants}>
-        <Image src={"/logo-dark.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
-        <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
+        <Image src="/logo-dark.png" alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
+        <Image src="/logo-light.png" alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
       </motion.div>
       <motion.div variants={textVariants} className="md:max-w-sm dark:text-gray-300 text-gray-600">
         Nevara Solutions – a growing software house in Pakistan, collaborating with top-tier clients, from start-ups to enterprises.
@@ -69,37 +69,35 @@ function Socials() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
+      {/* ✅ Email */}
       <motion.div variants={textVariants}>
         <Link href="mailto:tayyabkamboh@nevarasolutions.com">
           <div className="flex items-center gap-4 cursor-pointer">
-            <img src="/icons/email.svg" className="size-7 dark:invert" />
+            <Image src="/icons/email.svg" alt="Email Icon" width={28} height={28} className="dark:invert" />
             <div>tayyabkamboh@nevarasolutions.com</div>
           </div>
         </Link>
       </motion.div>
 
-      {/* ✅ LinkedIn Profile */}
+      {/* ✅ LinkedIn */}
       <motion.div variants={textVariants}>
         <Link href="https://www.linkedin.com/company/nevara-solutions" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center gap-4 cursor-pointer">
-            <img src="/icons/linkedin.svg" className="size-7 dark:invert invert-0" />
+            <Image src="/icons/linkedin.svg" alt="LinkedIn Icon" width={28} height={28} className="dark:invert" />
             <div>Connect with us on LinkedIn</div>
           </div>
         </Link>
       </motion.div>
 
-
-      {/* ✅ WhatsApp Contact */}
+      {/* ✅ WhatsApp */}
       <motion.div variants={textVariants}>
         <Link href="https://wa.me/923498476179" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center gap-4 cursor-pointer">
-            <img src="/icons/whatsapp.svg" className="size-7 dark:invert" />
+            <Image src="/icons/whatsapp.svg" alt="WhatsApp Icon" width={28} height={28} className="dark:invert" />
             <div>Chat with us on WhatsApp</div>
           </div>
         </Link>
       </motion.div>
-
-      <motion.div variants={textVariants} className="md:max-w-sm"></motion.div>
     </motion.div>
   );
 }

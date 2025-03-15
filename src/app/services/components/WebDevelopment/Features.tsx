@@ -32,7 +32,7 @@ export default function Features() {
       </motion.h2>
 
       <p className="text-center text-lg text-gray-400 max-w-2xl mx-auto mb-12">
-        Let's transform your online presence. Here’s how <span className="text-gradient">Nevara Solutions</span> can help:
+        Let&apos;s transform your online presence. Here’s how <span className="text-gradient">Nevara Solutions</span> can help:
       </p>
 
       {/* ✅ Features List */}

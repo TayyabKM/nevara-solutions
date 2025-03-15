@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3 }}
         >
           At <span className="text-gradient"><b>Nevara Solutions</b></span>, we create stunning, user-centric websites that don’t just look great but also convert visitors into customers.  
-          Whether you're a startup, an e-commerce brand, or a corporate giant, we build websites that deliver tangible results.
+          Whether you&apos;re a startup, an e-commerce brand, or a corporate giant, we build websites that deliver tangible results.
         </motion.p>
       </div>
     </section>
