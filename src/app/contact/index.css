@@ -1,0 +1,4 @@
+.react-international-phone-country-selector-dropdown__list-item--selected,
+.react-international-phone-country-selector-dropdown__list-item--focused {
+    color: black !important
+}
