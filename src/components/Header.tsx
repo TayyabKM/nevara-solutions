@@ -6,16 +6,23 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { navlinks } from "@/constants/navlinks";
+import Modal from "@/components/Modal"; // Import the modal
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false); // State for modal
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLLabelElement | null>(null); // Ref for the hamburger icon
 
   // Close menu when clicking outside, but ignore clicks on the hamburger icon
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node) && buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
         setMenuOpen(false);
       }
     };
@@ -35,7 +42,6 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      // Show header when scrolling up or near the top, otherwise hide it.
       if (currentScrollPos < prevScrollPos || currentScrollPos < 10) {
         setVisible(true);
         setMenuOpen(false);
@@ -80,15 +86,24 @@ export default function Header() {
 
         {/* CTA & Theme Switcher */}
         <div className="hidden lg:flex items-center space-x-6">
-          <Link href="/contact" className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full shadow hover:opacity-90">
+          {/* 🟢 Updated button with modal functionality */}
+          <motion.button
+            className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-base
+                      rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setModalOpen(true)}
+          >
             Get in Touch
-          </Link>
+          </motion.button>
+
           <ThemeSwitcher />
         </div>
 
         {/* Mobile Menu Button (Animated Hamburger) */}
         <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonRef={buttonRef} />
       </motion.header>
+
       {/* Mobile Menu (Animated) */}
       <AnimatePresence>
         {menuOpen && (
@@ -106,12 +121,14 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Modal */}
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 }
 
 /* ✅ Navigation Links Component (Reusable for Desktop & Mobile) */
-
 const NavLinks = () => (
   <>
     {navlinks.map((link, index) => (
@@ -126,7 +143,7 @@ const NavLinks = () => (
   </>
 );
 
-/* ✅ Animated Hamburger Component (Preserving Your Icon Styling) */
+/* ✅ Animated Hamburger Component */
 const Hamburger: React.FC<{ menuOpen: boolean; setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>; buttonRef: React.RefObject<HTMLLabelElement> }> = ({
   menuOpen,
   setMenuOpen,

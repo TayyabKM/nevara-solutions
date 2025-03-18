@@ -1,8 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import Modal from "@/components/Modal";
 
 export default function Hero() {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <section className="relative flex flex-col items-center justify-center text-center px-6 min-h-screen">
             {/* Background Glow */}
@@ -31,15 +35,19 @@ export default function Hero() {
                 We&apos;re more than a tech agency; we&apos;re dedicated to building lasting relationships and driving your business&apos;s digital success.
             </motion.p>
 
-            {/* ✅ CTA Button */}
+            {/* ✅ CTA Button (Opens Modal) */}
             <motion.button
                 className="mt-8 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transition-all hover:scale-105"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
+                onClick={() => setModalOpen(true)}
             >
                 Connect with Us
             </motion.button>
+
+            {/* ✅ Modal Component */}
+            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </section>
     );
 }

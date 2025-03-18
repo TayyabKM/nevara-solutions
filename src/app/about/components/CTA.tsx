@@ -43,7 +43,7 @@ export default function CTA() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Connect with Us
+            Contact Us
           </motion.button>
         </Link>
       </motion.div>

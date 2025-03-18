@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-// import Image from "next/image";
+import Modal from "@/components/Modal"; 
 
 // Testimonial Data (You can dynamically fetch this)
 const testimonial = {
@@ -12,6 +13,8 @@ const testimonial = {
 };
 
 export default function TestimonialCTA() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="relative w-full py-20 px-6 md:px-12 lg:px-24 text-center">
       {/* ✅ Inspirational Quote */}
@@ -33,11 +36,6 @@ export default function TestimonialCTA() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        {/* ⭐ Client Image */}
-        {/* <div className="size-20 md:size-24 rounded-full overflow-hidden border-2 border-gradient">
-          <Image src={testimonial.image} alt={testimonial.name} width={96} height={96} />
-        </div> */}
-
         {/* ⭐ Client Testimonial */}
         <div className="text-left">
           <p className="text-lg text-lightText dark:text-darkText">&quot;{testimonial.feedback}&quot;</p>
@@ -46,17 +44,20 @@ export default function TestimonialCTA() {
         </div>
       </motion.div>
 
-      {/* ✅ CTA Button */}
+      {/* ✅ CTA Button (Opens Modal) */}
       <motion.button
-              className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-base
-            rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl mt-12"
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in Touch with Us!
-            </motion.button>
+        className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-base
+          rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 hover:shadow-xl mt-12"
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setModalOpen(true)}
+      >
+        Get in Touch with Us!
+      </motion.button>
 
+      {/* ✅ Modal Component */}
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
