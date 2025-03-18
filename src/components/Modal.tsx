@@ -42,7 +42,7 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
             </button>
 
             {/* Modal Content */}
-            <h2 className="text-2xl font-bold">Let's <span className="text-gradient">Connect!</span></h2>
+            <h2 className="text-2xl font-bold">Let&apos;s <span className="text-gradient">Connect!</span></h2>
             <p className="mt-2 text-gray-300">Give us your email, and we will get in touch with you right away.</p>
 
             {/* Email Input */}
