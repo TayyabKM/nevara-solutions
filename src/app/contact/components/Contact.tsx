@@ -227,7 +227,7 @@ function ContactInfo({ icon, label, value, link }: { icon: string; label: string
             transition={{ duration: 0.3 }}
         >
             <Image src={icon} alt={label} width={30} height={30} className="dark:invert" />
-            <Link href={link || "#"} target="_blank" className="text-lg font-medium hover:underline text-gradient">
+            <Link href={link || "#"} target="_blank" className="text-sm sm:text-lg font-medium hover:underline text-gradient">
                 {value}
             </Link>
         </motion.div>
