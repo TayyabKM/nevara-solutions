@@ -2,12 +2,15 @@
 
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
-
+import { db, collection, addDoc, serverTimestamp } from "@/lib/firebase";
+import { analytics } from "@/lib/firebase";
+import { logEvent } from "firebase/analytics";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import "../index.css"; 
+import "../index.css";
+
 
 export default function ContactPage() {
     return (
@@ -43,6 +46,25 @@ function ContactForm() {
         freeAudit: false,
     });
 
+    const [loading, setLoading] = useState(false);
+
+    const getUserLocation = async () => {
+        try {
+            console.log("🔍 IPINFO TOKEN:", process.env.NEXT_PUBLIC_IPINFO_TOKEN); // Debugging log
+    
+            const res = await fetch(`https://ipinfo.io/json?token=${process.env.NEXT_PUBLIC_IPINFO_TOKEN}`);
+            if (!res.ok) throw new Error("Failed to fetch location");
+    
+            const data = await res.json();
+            console.log("🌍 Location data:", data); // Debugging log
+            return data.country || "Unknown";
+        } catch (error) {
+            console.error("🔥 Location fetch error:", error);
+            return "Unknown";
+        }
+    };
+    
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
 
@@ -53,6 +75,11 @@ function ContactForm() {
             ...prev,
             [name]: value,
         }));
+
+        if (analytics && name === "name") {
+            logEvent(analytics, "contact_form_start");
+            console.log("📊 G4A: Contact form interaction started.");
+        }
     };
 
     // Handle Phone Input Change (Auto-formats the number)
@@ -70,47 +97,70 @@ function ContactForm() {
         }));
     };
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const userLocation = await getUserLocation();
+
+        if (analytics) {
+            logEvent(analytics, "contact_form_submit", { service: formData.service });
+            console.log("📊 G4A: Contact form submitted.");
+        }
+
+        try {
+            // Store data in Firestore
+            await addDoc(collection(db, "contact_submissions"), {
+                ...formData,
+                timestamp: serverTimestamp(),
+                location: userLocation,
+            });
+            console.log("📥 Form submission saved in Firestore.");
+
+            // Send Email Notification
+            const res = await fetch("/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...formData, location: userLocation }),
+            });
+
+            if (!res.ok) throw new Error("Email API request failed");
+
+            const data = await res.json();
+            if (data.success) {
+                alert("✅ Your message has been sent.");
+            } else {
+                alert("❌ There was an error. Try again.");
+            }
+        } catch (error) {
+            console.error("🔥 Error submitting form:", error);
+            alert("❌ There was an error. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     /* Input Styles */
     const inputStyles =
         "form-input bg-gray-900 text-gray-200 p-3 rounded-md outline-none transition-all duration-300 border border-gray-700 focus:ring-0 focus:shadow-[0_0_12px] focus:shadow-blue-500/50 focus:bg-gradient-to-r focus:from-blue-500 focus:to-purple-500";
 
     return (
-        <motion.form
+        <motion.form onSubmit={handleSubmit}
             className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 bg-gray-300/20 dark:bg-gray-800/30 backdrop-blur-md p-6 rounded-xl shadow-lg w-full"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
         >
-            {/* Name & Email Fields */}
             <div className="col-span-2 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Full Name *"
-                    required
-                    className={`${inputStyles} w-full`}
-                />
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email *"
-                    required
-                    pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
-                    title="Please enter a valid email address"
-                    className={`${inputStyles} w-full`}
-                />
+                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name *" required className={`${inputStyles} w-full`} />
+                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email *" required className={`${inputStyles} w-full`} />
             </div>
 
-
-            {/* Phone Number (Fully Fixed) */}
             <div className="col-span-2">
                 <PhoneInput
-                    defaultCountry="pk"
+                    defaultCountry="us"
                     value={formData.phone}
                     onChange={handlePhoneChange}
                     className="w-full h-[50px] [&>*]:!h-full"
@@ -132,20 +182,10 @@ function ContactForm() {
                 />
             </div>
 
-            {/* Company Name (Now Full Width) */}
             <div className="col-span-2">
-                <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="Company Name"
-                    className={`${inputStyles} w-full`}
-                />
+                <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="Company Name" className={`${inputStyles} w-full`} />
             </div>
 
-
-            {/* Service Dropdown (Now Matches Phone Dropdown Styling) */}
             <select name="service" value={formData.service} onChange={handleChange} className={`${inputStyles} col-span-2`}>
                 <option value="">Select Service</option>
                 <option value="web-development">Web Development</option>
@@ -155,34 +195,27 @@ function ContactForm() {
                 <option value="other">Other</option>
             </select>
 
-            {/* Free Audit Checkbox */}
             <div className="flex items-center gap-3 col-span-2">
-                <input
-                    type="checkbox"
-                    name="freeAudit"
-                    checked={formData.freeAudit}
-                    onChange={handleCheckboxChange}
-                    className="size-5 accent-blue-500 cursor-pointer"
-                />
+                <input type="checkbox" name="freeAudit" checked={formData.freeAudit} onChange={handleCheckboxChange} className="size-5 accent-blue-500 cursor-pointer" />
                 <label className="text-gray-700 dark:text-gray-300 text-sm">I’d like a free audit for my website/app</label>
             </div>
 
-            {/* Message */}
-            <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message"
-                required
-                rows={4}
-                className={`${inputStyles} col-span-2`}
-            />
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" required rows={4} className={`${inputStyles} col-span-2`} />
 
-            {/* Submit Button */}
             <div className="col-span-2 flex justify-center">
-                <SubmitButton />
+                <SubmitButton loading={loading} />
             </div>
         </motion.form>
+    );
+}
+
+/* ✅ Submit Button */
+function SubmitButton({ loading }) {
+    return (
+        <motion.button type="submit" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-all"
+            whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
+        </motion.button>
     );
 }
 /* ✅ Contact Info (Email, LinkedIn, WhatsApp) */
@@ -199,20 +232,6 @@ function ContactOptions() {
             <ContactInfo icon="/icons/linkedin.svg" label="LinkedIn" value="Connect with us" link="https://www.linkedin.com/company/nevara-solutions" />
             <ContactInfo icon="/icons/whatsapp.svg" label="WhatsApp" value="Chat with us" link="https://wa.me/923498476179" />
         </motion.div>
-    );
-}
-
-/* ✅ Submit Button */
-function SubmitButton() {
-    return (
-        <motion.button
-            type="submit"
-            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-        >
-            Send Message
-        </motion.button>
     );
 }
 
