@@ -1,7 +1,12 @@
+import { addDoc, analytics, collection, db, logEvent, serverTimestamp } from "@/lib/firebase";
+import getUserLocation from "@/utils/getUserLocation";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const [email, emailSet] = useState("");
+  const [loading, loadingSet] = useState(false);
+
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       const modalContent = document.getElementById("modal-content");
@@ -19,6 +24,37 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
     };
   }, [isOpen, onClose]);
 
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    loadingSet(true);
+    try {
+      const userLocation = await getUserLocation();
+
+      if (analytics) {
+        logEvent(analytics, "lead_form_submit");
+        console.log("📊 G4A: Lead form submitted.");
+      }
+
+      // Store data in Firestore
+      await addDoc(collection(db, "lead_submissions"), {
+        email,
+        timestamp: serverTimestamp(),
+        location: userLocation,
+      });
+      console.log("📥 Form submission saved in Firestore.");
+    } catch (error) {
+      console.error("🔥 Error submitting form:", error.message);
+      alert("❌ There was an error. Please try again later.");
+    } finally {
+      loadingSet(false);
+      emailSet("");
+    }
+  }
+
+  async function handleEmailChange(event: React.ChangeEvent<HTMLInputElement>) {
+    emailSet(event.target.value);
+  }
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -28,7 +64,8 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <motion.div
+          <motion.form
+            onSubmit={handleSubmit}
             id="modal-content"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -42,21 +79,29 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
             </button>
 
             {/* Modal Content */}
-            <h2 className="text-2xl font-bold">Let&apos;s <span className="text-gradient">Connect!</span></h2>
+            <h2 className="text-2xl font-bold">
+              Let&apos;s <span className="text-gradient">Connect!</span>
+            </h2>
             <p className="mt-2 text-gray-300">Give us your email, and we will get in touch with you right away.</p>
 
             {/* Email Input */}
             <input
               type="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
               placeholder="Enter your email"
               className="w-full p-3 mt-4 text-gray-900 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
             {/* Submit Button */}
-            <button className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-lg hover:opacity-90 transition-all duration-300">
-              Send
+            <button
+              type="submit"
+              className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-lg hover:opacity-90 transition-all duration-300"
+            >
+              {loading ? "Sending..." : "Send"}
             </button>
-          </motion.div>
+          </motion.form>
         </motion.div>
       )}
     </AnimatePresence>
