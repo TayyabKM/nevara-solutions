@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     // 4. Send the Email
     const mailOptions = {
       from: `"Nevara Solutions" <${process.env.EMAIL_USER}>`,
-      to: "anakindabir@gmail.com",
+      to: "tayyabkamboh@nevarasolutions.com",
       subject: "📩 New Contact Form Submission",
       html: emailHTML,
     };

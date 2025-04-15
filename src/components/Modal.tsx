@@ -1,3 +1,5 @@
+"use client";
+
 import { addDoc, analytics, collection, db, logEvent, serverTimestamp } from "@/lib/firebase";
 import getUserLocation from "@/utils/getUserLocation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,24 +37,36 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
         console.log("📊 G4A: Lead form submitted.");
       }
 
-      // Store data in Firestore
+      // 1. Save to Firestore
       await addDoc(collection(db, "lead_submissions"), {
         email,
         timestamp: serverTimestamp(),
         location: userLocation,
       });
-      console.log("📥 Form submission saved in Firestore.");
+      console.log("📥 Lead saved in Firestore.");
+
+      // 2. Send email via API
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, location: userLocation }),
+      });
+
+      if (!res.ok) throw new Error("Email API request failed");
+      const data = await res.json();
+
+      if (data.success) {
+        alert("✅ Your lead has been submitted.");
+      } else {
+        alert("❌ There was an error. Try again.");
+      }
     } catch (error) {
-      console.error("🔥 Error submitting form:", error.message);
+      console.error("🔥 Error submitting lead form:", (error as Error).message);
       alert("❌ There was an error. Please try again later.");
     } finally {
       loadingSet(false);
       emailSet("");
     }
-  }
-
-  async function handleEmailChange(event: React.ChangeEvent<HTMLInputElement>) {
-    emailSet(event.target.value);
   }
 
   return (
@@ -88,7 +102,7 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
             <input
               type="email"
               value={email}
-              onChange={handleEmailChange}
+              onChange={(e) => emailSet(e.target.value)}
               required
               placeholder="Enter your email"
               className="w-full p-3 mt-4 text-gray-900 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
@@ -98,6 +112,7 @@ export default function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: (
             <button
               type="submit"
               className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-lg hover:opacity-90 transition-all duration-300"
+              disabled={loading}
             >
               {loading ? "Sending..." : "Send"}
             </button>
