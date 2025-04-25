@@ -23,7 +23,6 @@ if (typeof window !== "undefined") {
   isSupported().then(supported => {
     if (supported) {
       analytics = getAnalytics(app);
-      console.log({ firebaseConfig });
       console.log("✅ Firebase Analytics is running.");
     }
   });
