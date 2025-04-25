@@ -20,9 +20,10 @@ const db = getFirestore(app);
 // ✅ Only enable analytics in browser
 let analytics;
 if (typeof window !== "undefined") {
-  isSupported().then((supported) => {
+  isSupported().then(supported => {
     if (supported) {
       analytics = getAnalytics(app);
+      console.log({ firebaseConfig });
       console.log("✅ Firebase Analytics is running.");
     }
   });
