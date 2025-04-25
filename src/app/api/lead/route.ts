@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { db, collection, addDoc, serverTimestamp } from "@/lib/firebase";
+import nodemailer from "nodemailer";
 
 export const dynamic = "force-dynamic";
 
@@ -9,27 +9,40 @@ export async function POST(req: Request) {
     const { email, location } = body;
 
     if (!email) {
-      return new NextResponse(
-        JSON.stringify({ success: false, error: "Email is required." }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-      );
+      return NextResponse.json({ success: false, error: "Email is required." }, { status: 400 });
     }
 
-    await addDoc(collection(db, "leads"), {
-      email,
-      location: location || "Unknown",
-      createdAt: serverTimestamp(),
+    const auth = {
+      user: process.env.NODEMAILER_EMAIL,
+      pass: process.env.NODEMAILER_PASSWORD,
+    };
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: auth,
     });
 
-    return new NextResponse(
-      JSON.stringify({ success: true, message: "Form submitted to Firestore." }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    console.log({ auth, email, location });
+
+    const emailHTML = `
+      <h2>New Lead Form Submission</h2>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Location:</strong> ${location || "Unknown"}</p>
+    `;
+
+    const mailOptions = {
+      from: `"Nevara Solutions" <${process.env.EMAIL_USER}>`,
+      to: "tayyabkamboh@nevarasolutions.com",
+      subject: "📨 New Lead Submission",
+      html: emailHTML,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    console.log("✅ Lead Email sent:", info.messageId);
+
+    return NextResponse.json({ success: true, message: "Email sent." });
   } catch (error) {
-    console.error("❌ Failed to submit lead form:", error);
-    return new NextResponse(
-      JSON.stringify({ success: false, error: "Submission failed." }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
+    console.error("❌ Failed to send lead email:", error);
+    return NextResponse.json({ success: false, error: "Email sending failed." }, { status: 500 });
   }
 }

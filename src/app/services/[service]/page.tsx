@@ -6,14 +6,13 @@ import SaasDevelopment from "../components/SaasDevelopment";
 import ServiceRenderer from "./ServiceRenderer";
 import type { Metadata } from "next";
 
+// ✅ Define the correct type for `params`
 interface Params {
   service: string;
 }
 
-const serviceData: Record<
-  string,
-  { component: () => JSX.Element; title: string; description: string }
-> = {
+// ✅ Define all valid service pages & metadata
+const serviceData: Record<string, { component: () => JSX.Element; title: string; description: string }> = {
   "web-development": {
     component: WebDevelopment,
     title: "Nevara - Web Development",
@@ -36,18 +35,17 @@ const serviceData: Record<
   },
 };
 
-// ✅ Generate static params
+// ✅ Correctly generate static params
 export function generateStaticParams(): Array<{ service: string }> {
-  return Object.keys(serviceData).map((service) => ({ service }));
+  return Object.keys(serviceData).map(service => ({ service }));
 }
 
-// ✅ Metadata generation
-export async function generateMetadata({
-  params,
-}: {
-  params: { service: string };
-}): Promise<Metadata> {
-  const serviceInfo = serviceData[params.service];
+// ✅ Fix: Correct `generateMetadata` typing
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  if (!resolvedParams?.service) return notFound();
+
+  const serviceInfo = serviceData[resolvedParams.service];
   if (!serviceInfo) return notFound();
 
   return {
@@ -56,15 +54,13 @@ export async function generateMetadata({
   };
 }
 
-// ✅ Page component
-export default function ServicePage({
-  params,
-}: {
-  params: { service: string };
-}) {
-  if (!params?.service || !serviceData[params.service]) {
+// ✅ Fix: Explicitly define `params` as async to match Next.js behavior
+export default async function ServicePage({ params }: { params: Promise<Params> }) {
+  const resolvedParams = await params;
+
+  if (!resolvedParams?.service || !serviceData[resolvedParams.service]) {
     return notFound();
   }
 
-  return <ServiceRenderer service={params.service} />;
+  return <ServiceRenderer service={resolvedParams.service} />;
 }
