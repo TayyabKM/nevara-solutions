@@ -28,7 +28,7 @@ export default function Footer() {
               <NavLinks />
             </div>
 
-            <motion.div variants={textVariants}>© 2024 Nevara Solutions. All Rights Reserved.</motion.div>
+            <motion.div variants={textVariants}>© 2025 Nevara Solutions. All Rights Reserved.</motion.div>
           </div>
         </motion.div>
       </div>

@@ -8,20 +8,20 @@ const steps = [
   {
     number: "01",
     title: "Your Vision",
-    description: "We listen to your ideas and translate them into a clear website strategy.",
+    description: "We collaborate closely to understand your goals and translate them into a strategic, scalable website blueprint — tailored for your brand and market.",
     icon: "/icons/vision.png",
   },
   {
     number: "02",
     title: "Our Expertise",
     description:
-      "Our developers bring your design to life, building a secure, responsive, and high-performing website, keeping you informed and involved throughout the process.",
+      "Using technologies like React, Next.js, and Astro, our developers turn your vision into a fast, secure, and high-performing custom website — with full transparency at every step.",
     icon: "/icons/experiment.png",
   },
   {
     number: "03",
     title: "Your Success",
-    description: "We launch your website and provide ongoing support to ensure your online presence thrives.",
+    description: "We launch your website and provide continuous support, optimization, and performance enhancements to ensure long-term digital growth.",
     icon: "/icons/success.png",
   },
 ];

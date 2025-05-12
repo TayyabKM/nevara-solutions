@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 
 // Features Data
 const features = [
-  "Brand-Reflecting Custom Design",
-  "Robust E-commerce Solutions",
-  "Easy Content Management (CMS)",
-  "SEO for Higher Rankings",
-  "Intuitive User Experiences",
-  "Secure, Scalable Development",
-  "Collaborative Vision Realization",
-  "Ongoing Post-Launch Support",
+  "Custom Website Design & Development for Global Brands",
+  "Scalable Web App Architecture with React, Next.js & Astro",
+  "Headless CMS Integration & Custom Admin Dashboards",
+  "SEO-Ready, High-Performance Codebases Built for Speed",
+  "Pixel-Perfect, Responsive UI/UX Design Across Devices",
+  "Secure, Modular Development with Best Practices",
+  "Collaborative Agile Workflow & Vision Alignment",
+  "Post-Launch Support, Monitoring & Optimization"
 ];
+
 
 export default function Features() {
   return (
