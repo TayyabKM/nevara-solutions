@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Nevara - About Us",
+  title: "Nevara - About Us | Remote Software House & Growth Partner",
   description: "Learn more about Nevara and how we drive business success.",
 };
 

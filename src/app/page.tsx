@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Nevara - Homepage",
-  description: "Nevara Solutions - Innovating for the Future",
+  title:  "Nevara Solutions | Custom Web, App & AI Development Company",
+  description: "We help startups and enterprises scale with powerful custom software, mobile apps, SaaS platforms, digital marketing and AI automation solutions.",
 };
 
 import Hero from "@/components/Hero";

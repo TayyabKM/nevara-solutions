@@ -16,22 +16,22 @@ const serviceData: Record<string, { component: () => JSX.Element; title: string;
   "web-development": {
     component: WebDevelopment,
     title: "Nevara - Web Development",
-    description: "Build high-performance, scalable websites with Nevara's expert development services.",
+    description: "Get custom-built, SEO-optimized websites powered by modern frameworks like Next.js, React and Astro. We deliver scalable solutions for startups and enterprises.",
   },
   "app-development": {
     component: AppDevelopment,
     title: "Nevara - App Development",
-    description: "Craft powerful mobile apps for iOS and Android with our expert development team.",
+    description: "Design and develop cross-platform mobile apps for iOS and Android using cutting-edge tools like React Native and Firebase. Perfect for MVPs and enterprise apps.",
   },
   "digital-marketing": {
     component: DigitalMarketing,
     title: "Nevara - Digital Marketing",
-    description: "Boost your brand visibility and drive conversions with Nevara's data-driven marketing strategies.",
+    description: "Scale your business with data-driven SEO, paid ads, and social media strategies tailored to your goals. Let Nevara drive qualified traffic and real conversions.",
   },
   "saas-product-development": {
     component: SaasDevelopment,
     title: "Nevara - SaaS Development",
-    description: "Develop scalable and secure SaaS solutions tailored to your business needs.",
+    description: "Launch secure and scalable SaaS platforms using Firebase, custom APIs, and clean UI/UX. From MVP to full-scale systems, we build SaaS that performs.",
   },
 };
 
