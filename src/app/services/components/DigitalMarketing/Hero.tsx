@@ -17,7 +17,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          Digital Marketing & Brand Building
+          Digital Marketing & Brand Strategy
           <br /> 
           <span className="text-gradient">Amplify Your Brand&apos;s Voice</span>
         </motion.h1>
@@ -41,8 +41,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-         In today&apos;s digital world, having a strong brand and marketing strategy is essential. At <span className="text-gradient"><b>Nevara Solutions</b></span>, we use data-driven strategies, creative storytelling, and innovative marketing techniques to help businesses achieve their goals. 
-          Whether your&apos;e a startup, an e-commerce brand, or a corporate giant, we build websites that deliver tangible results.
+         At <span className="text-gradient">Nevara Solutions</span> , we use data-driven digital marketing strategies — including SEO, Google Ads, social media marketing, and conversion-focused content — to help brands increase visibility and generate qualified leads. Whether you're a startup or an enterprise, we craft campaigns that engage your audience and accelerate growth.
         </motion.p>
       </div>
     </section>

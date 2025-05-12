@@ -5,11 +5,11 @@ import Image from "next/image";
 
 // Features Data
 const points = [
-  { title: "Data-Driven Marketing for Maximum Impact", icon: "/icons/point.png" },
-  { title: "Creative & Engaging Brand Strategies", icon: "/icons/point.png" },
-  { title: "Proven Track Record of Growth & Success", icon: "/icons/point.png" },
-  { title: "Tailored Solutions for Every Business Size", icon: "/icons/point.png" },
-  { title: "Experienced Team", icon: "/icons/point.png" },
+  { title: "Data-Driven Digital Marketing for Maximum ROI", icon: "/icons/point.png" },
+  { title: "Creative Brand Strategies that Boost Engagement", icon: "/icons/point.png" },
+  { title: "Proven Growth Through SEO, SMM, and Paid Ads", icon: "/icons/point.png" },
+  { title: "Tailored Marketing Solutions for Startups to Enterprises", icon: "/icons/point.png" },
+  { title: "Experienced Team with Multichannel Expertise", icon: "/icons/point.png" },
 ];
 
 export default function WhyChooseUs() {

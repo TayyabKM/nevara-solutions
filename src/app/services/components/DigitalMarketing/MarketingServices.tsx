@@ -7,32 +7,32 @@ import Image from "next/image";
 const services = [
   { 
     title: "Search Engine Optimization (SEO)", 
-    description: "Improving your website's visibility in search engine results to drive organic traffic.", 
+    description: "Boost your search rankings and drive organic traffic with on-page, technical, and local SEO strategies.", 
     icon: "/icons/seo.png" 
   },
   { 
     title: "Social Media Marketing (SMM)", 
-    description: "Building and engaging your audience on social media platforms.", 
+    description: "Engage your audience and grow your brand across platforms like Instagram, Facebook, LinkedIn, and TikTok.", 
     icon: "/icons/social.png" 
   },
   { 
     title: "Pay-Per-Click (PPC) Advertising", 
-    description: "Driving targeted traffic to your website through paid advertising campaigns.", 
+    description: "Generate high-converting traffic through targeted ad campaigns on Google, YouTube, and social platforms.", 
     icon: "/icons/ppc.png" 
   },
   { 
     title: "Content Marketing", 
-    description: "Creating valuable and engaging content that attracts and retains your audience.", 
+    description: "Create SEO-optimized blogs, landing pages, and multimedia content that build authority and drive traffic.", 
     icon: "/icons/content.png" 
   },
   { 
     title: "Email Marketing", 
-    description: "Nurturing leads and building customer loyalty through targeted email campaigns.", 
+    description: "Run automated campaigns and newsletters to nurture leads, boost retention, and increase conversions.", 
     icon: "/icons/email.png" 
   },
   { 
     title: "Brand Strategy & Development", 
-    description: "Crafting a compelling brand identity that resonates with your target audience.", 
+    description: "Define your brand voice, positioning, and visual identity to build recognition and trust in competitive markets.", 
     icon: "/icons/brand.png" 
   },
 ];

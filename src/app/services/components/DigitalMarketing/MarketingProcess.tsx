@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 // Process Steps Data
 const steps = [
-  { title: "Listen & Understand", description: "We begin by listening to your goals and understanding your brand's unique story." },
-  { title: "Plan & Strategize", description: "We develop a customized marketing plan outlining strategies to achieve your objectives." },
-  { title: "Create & Engage", description: "We create engaging content and launch targeted campaigns while keeping you informed." },
-  { title: "Tracking & Optimization", description: "We track performance and optimize campaigns for continuous improvement." },
-  { title: "Reporting & Insights", description: "We provide clear and concise reports, highlighting key insights and results." },
+  { title: "Listen & Understand", description: "We begin by listening to your goals and understanding your brand's unique story to shape your marketing objectives." },
+  { title: "Plan & Strategize", description: "We build a customized digital marketing strategy aligned with your audience, goals, and business needs." },
+  { title: "Create & Engage", description: "We launch targeted campaigns — from content marketing to social media — designed to drive traffic and engagement." },
+  { title: "Tracking & Optimization", description: "We monitor KPIs, analyze metrics, and continuously optimize campaigns to improve conversion rates and ROI." },
+  { title: "Reporting & Insights", description: "We deliver transparent reporting with actionable insights, so you always know your marketing ROI and next steps." },
 ];
 
 export default function MarketingProcess() {
