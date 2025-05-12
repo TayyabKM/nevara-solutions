@@ -29,8 +29,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Build the Future with  
-          <span className="text-gradient"> High-Performance Mobile & Web Apps</span>
+          From Vision to Scalable Code — Built with
+          <span className="text-gradient">  React Native, Flutter & Other Technologies</span>
         </motion.h2>
 
         {/* Description */}
@@ -40,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          At <span className="text-gradient"><b>Nevara Solutions</b></span> , we develop visually appealing, scalable, intuitive, and high-performance mobile and web applications that enhance user engagement, improve business operations, and drive growth.
+          At <span className="text-gradient"><b>Nevara Solutions</b></span> , we develop custom-coded, scalable, and performance-optimized mobile and web apps that enhance user engagement, improve business operations, and drive growth.
         </motion.p>
       </div>
     </section>

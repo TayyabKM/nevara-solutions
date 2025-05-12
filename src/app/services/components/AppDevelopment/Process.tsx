@@ -6,19 +6,19 @@ import { motion } from "framer-motion";
 const processSteps = [
   {
     title: "Discovery & Strategy",
-    description: "Understanding your vision, goals, and defining the app's purpose.",
+    description: "Understanding your vision, goals, and defining the app's purpose.Defining your goals, audience, and tech requirements to craft a clear app development roadmap.",
   },
   {
     title: "Design & Prototyping",
-    description: "Creating intuitive user interfaces and interactive prototypes.",
+    description: "Creating wireframes and high-fidelity UI/UX designs with tools like Figma and building clickable MVP prototypes.",
   },
   {
     title: "Development & Testing",
-    description: "Building the app with the latest tech, followed by rigorous testing.",
+    description: "Coding with modern stacks like React Native and Flutter, followed by thorough QA testing to ensure stability and performance.",
   },
   {
     title: "Launch & Support",
-    description: "Deploying your app and providing ongoing maintenance for success.",
+    description: "Deploying your app to the App Store or Google Play, and offering post-launch monitoring, updates, and maintenance.",
   },
 ];
 

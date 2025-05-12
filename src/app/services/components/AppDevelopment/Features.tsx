@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 // Feature Data
 const features = [
-  { title: "iOS App Development", description: "Building high-performance, feature-rich apps for iPhones and iPads." },
-  { title: "Android App Development", description: "Creating robust and scalable apps for the Android ecosystem." },
-  { title: "Cross-Platform Development", description: "Developing apps that run seamlessly on multiple platforms, saving you time and resources." },
-  { title: "UI/UX Design", description: "Designing intuitive and engaging user interfaces for the best experience." },
+  { title: "iOS App Development", description: "Building high-performance iOS apps with Swift or React Native, tailored for Apple devices." },
+  { title: "Android App Development", description: "Creating scalable Android apps using Kotlin, Java, or cross-platform frameworks.." },
+  { title: "Cross-Platform Development", description: "Developing apps with Flutter or React Native for seamless performance across iOS and Android." },
+  { title: "UI/UX Design", description: "Designing intuitive interfaces with user flows that enhance engagement and retention." },
   { title: "App Testing & Deployment", description: "Rigorous testing and seamless deployment to ensure a bug-free launch." },
 ];
 
