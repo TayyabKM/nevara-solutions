@@ -7,17 +7,17 @@ import Image from "next/image";
 const metrics = [
   {
     title: "Boosted Revenue Streams",
-    description: "Maximizing profitability with optimized SaaS monetization strategies.",
+    description: "Maximize profitability with custom SaaS monetization models, including subscription tiers, usage-based billing, and in-app upsells.",
     icon: "/icons/revenue.png",
   },
   {
     title: "Streamlined Operations",
-    description: "Reducing costs and improving workflows for increased efficiency.",
+    description: "Reduce costs and increase efficiency with automated workflows, dashboard integrations, and centralized admin controls.",
     icon: "/icons/operations.png",
   },
   {
     title: "Enhanced Productivity",
-    description: "Empowering teams with automation and smart tools for peak performance.",
+    description: "Empower teams with real-time collaboration features, smart notifications, and scalable tools designed for operational excellence.",
     icon: "/icons/productivity.png",
   },
 ];

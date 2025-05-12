@@ -40,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          At <span className="text-gradient"><b>Nevara Solutions</b></span>, we help businesses build high-performing SaaS products that drive efficiency, improve workflows, and generate consistent revenue.
+        At <span className="text-gradient"> Nevara Solutions</span>, we help businesses build custom SaaS applications using modern technologies like React, Next.js, and Firebase. Our scalable, cloud-based platforms are designed to streamline operations, enhance productivity, and drive consistent revenue through intuitive UI, secure architecture, and efficient workflows.
 
         </motion.p>
       </div>

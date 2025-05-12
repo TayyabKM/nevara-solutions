@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const features = [
-  { title: "Scalability & Reliability", description: "Designing cloud-based systems that scale securely and reliably." },
-  { title: "Full-Stack Development", description: "Building complete SaaS applications from concept to completion." },
-  { title: "API Development & Integration", description: "Creating APIs for smooth data exchange with other systems." },
-  { title: "Cloud Infrastructure Setup", description: "Managing cloud platforms for optimal performance and cost-effectiveness." },
-  { title: "Security & Compliance", description: "Ensuring rigorous testing and compliance for a smooth SaaS launch." },
-  { title: "Ongoing Maintenance", description: "Providing continuous updates to keep your SaaS running efficiently." },
+  { title: "Scalability & Reliability", description: "Designing cloud-native SaaS architectures that scale securely and handle high user demand with reliability." },
+  { title: "Full-Stack Development", description: "Building complete SaaS applications with frontend (React, Next.js) and backend (Node.js, Firebase) technologies — from MVP to full launch." },
+  { title: "API Development & Integration", description: "Creating and integrating RESTful APIs for seamless data exchange between internal tools and external platforms." },
+  { title: "Cloud Infrastructure Setup", description: "Deploying and managing cloud platforms like Firebase, AWS, or Vercel for performance, flexibility, and cost-efficiency." },
+  { title: "Security & Compliance", description: "Implementing data protection, user authentication, and industry-specific compliance (GDPR, HIPAA) to ensure your SaaS meets all standards." },
+  { title: "Ongoing Maintenance", description: "Providing regular updates, feature rollouts, bug fixes, and monitoring to keep your SaaS product secure and up-to-date." },
 ];
 
 export default function SaaSFeaturesScroll() {

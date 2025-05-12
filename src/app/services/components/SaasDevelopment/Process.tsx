@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 // Process Steps Data
 const processSteps = [
-  { role: "user", title: "How does Nevara develop SaaS products?", description: "Our SaaS product development process is built on agile principles, ensuring flexibility and continuous improvement." },
-  { role: "ai", title: "Discovery & Validation", description: "We begin by deeply understanding your vision, validating market assumptions, and defining core SaaS features." },
-  { role: "user", title: "What about design and user experience?", description: "We create intuitive user interfaces and interactive prototypes, gathering early feedback for a seamless experience." },
-  { role: "ai", title: "Agile Development & Iteration", description: "Our expert team develops in sprints, with regular feedback loops to align with your goals." },
-  { role: "user", title: "How do you ensure quality and security?", description: "We conduct rigorous testing throughout development to ensure a stable, secure, and high-performing product." },
-  { role: "ai", title: "Deployment & Scaling", description: "We deploy your SaaS product to the cloud, ensuring scalability and reliability." },
-  { role: "user", title: "What happens after launch?", description: "We provide ongoing support, monitor performance, and iterate based on user feedback and market trends." },
+  { role: "user", title: "How does Nevara develop SaaS products?", description: "Our SaaS product development process follows agile methodologies, enabling flexibility, faster iterations, and continuous delivery of value." },
+  { role: "ai", title: "Discovery & Validation", description: "We begin with in-depth research to define your product’s goals, validate assumptions, and outline key SaaS features and MVP scope." },
+  { role: "user", title: "What about design and user experience?", description: "We build intuitive UI/UX prototypes using tools like Figma — ensuring a seamless user journey, tested and refined through real feedback." },
+  { role: "ai", title: "Agile Development & Iteration", description: "Our developers work in agile sprints, leveraging CI/CD pipelines and feedback loops to stay aligned with evolving user needs." },
+  { role: "user", title: "How do you ensure quality and security?", description: "We implement continuous testing, secure coding practices, and performance monitoring to deliver stable and compliant SaaS platforms." },
+  { role: "ai", title: "Deployment & Scaling", description: "Your SaaS product is deployed on cloud platforms like Firebase, Vercel, or AWS — optimized for performance, uptime, and growth." },
+  { role: "user", title: "What happens after launch?", description: "We provide post-launch support, analytics, updates, and iteration cycles to evolve your product based on user behavior and market trends." },
 ];
 
 export default function Process() {
