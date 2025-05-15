@@ -8,7 +8,7 @@ const journeySteps = [
     year: "2024",
     title: "The Beginning of Nevara",
     description:
-      "Founded by Tayyab Kamboh and Wajiha, Nevara started with a vision to bridge the gap between digital solutions and real business growth.",
+      "Founded by Tayyab Kamboh, Nevara started with a vision to bridge the gap between digital solutions and real business growth.",
   },
   {
     year: "2024-Present",

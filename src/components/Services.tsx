@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link"; 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -14,12 +14,23 @@ export default function Services() {
         {/* Header */}
         <Header />
 
+        {/* Region-focused intro */}
+        <motion.p
+          className="text-lg text-center max-w-2xl mx-auto text-black dark:text-gray-400"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          Proudly serving businesses across the <span className="font-semibold text-dark dark:text-white">United States, United Kingdom, Europe, the Middle East</span>, and beyond — wherever innovation is needed.
+        </motion.p>
+
         {/* Services */}
         <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
           {servicesData?.map((service, index) => {
             return <ServiceBox key={index} service={service} index={index} />;
           })}
         </div>
+
       </div>
     </div>
   );
@@ -60,22 +71,22 @@ const servicesData: IServiceBox[] = [
   {
     heading: "Website Development",
     description:
-      "We design and develop fast, user-friendly websites to put you at the forefront of your industry and earn you conversions, whether it’s a business site or an e-commerce platform.",
+      "We design and develop custom, SEO-optimized websites using modern stacks like React and Next.js — built to convert and scale for any business or e-commerce platform.",
     iconSrc: "/icons/web-dev.svg",
   },
   {
     heading: "Digital marketing and Brand building",
-    description: "We create compelling brand identities and optimize data-driven marketing plans to elevate their visibility, engagement, and conversions.",
+    description: "We craft compelling brand strategies and execute data-driven SEO, PPC, and social media campaigns to maximize visibility, engagement, and lead generation",
     iconSrc: "/icons/digital-marketing.svg",
   },
   {
     heading: "App Development",
-    description: "We develop user-friendly, scalable mobile and web applications that make user engagement frictionless and grow businesses.",
+    description: "We build responsive, user-friendly mobile and web applications using frameworks like Flutter and React Native — optimized for scalability, performance, and user engagement.",
     iconSrc: "/icons/app-dev.svg",
   },
   {
     heading: "Saas Product Development",
-    description: "We create original, production-ready digital ideas wherever you are in the process, from inception.",
+    description: "From MVP to full launch, we create scalable, secure, and cloud-based SaaS platforms tailored to your workflow, featuring APIs, admin dashboards, and user-first design.",
     iconSrc: "/icons/product-dev.svg",
   },
 ];
@@ -125,7 +136,7 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
 
       <div className="font-bold text-2xl">{service.heading}</div>
       <div className="dark:text-gray-400 text-gray-500">{service.description}</div>
-      
+
       <Link href={serviceLinks[service.heading] || "/services"} passHref>
         <div className="mt-2 flex items-center gap-2">
           <div

@@ -90,6 +90,13 @@ function Header() {
       <motion.div variants={textVariants} className="text-gradient sm:!leading-[1.3] font-bold text-4xl md:text-5xl">
         How We Bring Ideas to Life?
       </motion.div>
+      <motion.div
+        variants={textVariants}
+        className="text-center text-gray-500 dark:text-gray-400 text-base md:text-lg max-w-2xl mt-2"
+      >
+        Our development process is built to be lean, collaborative, and transparent—ensuring on-time delivery whether you're launching a SaaS startup, a business website, or a mobile app. We work with clients worldwide, including in the US, UK, Europe, and the Middle East.
+      </motion.div>
+
     </motion.div>
   );
 }
@@ -161,11 +168,10 @@ function Timeline() {
               <div
                 className={`absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-10 md:size-12
                 rounded-full flex items-center justify-center text-lg font-semibold transition-all
-                ${
-                  activeIndexes.includes(index)
+                ${activeIndexes.includes(index)
                     ? "bg-gradient-to-br from-gradBlue to-gradPurple text-white"
                     : "bg-none bg-gray-600 dark:bg-white text-white dark:text-black"
-                }`}
+                  }`}
               >
                 {index + 1}
               </div>

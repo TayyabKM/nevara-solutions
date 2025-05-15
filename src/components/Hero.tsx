@@ -39,6 +39,9 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
+          <h1 className="sr-only">
+            Custom Web Development, App Development, SaaS Solutions & AI Automation Services — Nevara Solutions
+          </h1>
           {/* Title with Arrow Icon */}
           <motion.div
             className="text-4xl md:text-7xl font-bold text-black dark:text-white flex flex-col items-center text-center md:text-left"
@@ -68,7 +71,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p className="mt-4 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl" variants={variants}>
-            We increase revenue and ensure sustainable long-term growth through powerful web solutions.
+            At Nevara Solutions, we build custom websites, SaaS platforms, mobile apps, and digital marketing systems that increase revenue and drive sustainable business growth.
           </motion.p>
 
           {/* Call-to-Action Buttons */}
@@ -97,6 +100,18 @@ export default function Hero() {
               <Link href="/about">Discover More</Link>
             </motion.button>
           </motion.div>
+          <motion.p
+            className="text-m text-black dark:text-gray-400 mt-8"
+            variants={variants}
+          >
+            Now offering{" "}
+            <span className="text-gradient font-semibold">
+              interest-free installment plans
+            </span>{" "}
+            on select services.
+          </motion.p>
+
+
         </motion.div>
       </section>
 
