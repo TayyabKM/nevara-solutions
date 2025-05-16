@@ -44,6 +44,10 @@ export default function ServicesHero() {
                         <motion.div className="text-2xl md:text-5xl lg:text-7xl whitespace-nowrap mt-2">
                             – <span className="text-gradient drop-shadow-lg">Limitless</span> Possibilities
                         </motion.div>
+                        <h1 className="sr-only">
+                            Software Development, SaaS Solutions & Digital Marketing Services | Nevara Solutions
+                        </h1>
+
                     </motion.div>
 
                     {/* Subheading */}

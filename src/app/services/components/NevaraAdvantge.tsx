@@ -7,43 +7,43 @@ import Link from "next/link";
 // Service Offerings Data with Links
 const offerings = [
     {
-        title: "Website Development",
-        subtitle: "Crafting Digital Experiences",
-        description:
-            "Your website is your first impression—we ensure it’s lasting. Our team creates visually stunning, responsive, and conversion-driven websites that captivate audiences and drive business success.",
-        buttonText: "Explore Our Website Services",
-        icon: "/icons/web-dev.svg",
-        link: "/services/web-development", // ✅ Add link to respective service page
+      title: "Custom Website Development",
+      subtitle: "Responsive, SEO-Friendly Sites for Global Brands",
+      description:
+        "We design fast, visually stunning, and SEO-optimized websites using modern stacks like React and Next.js. Trusted by clients across the US, UK, Europe, and the Middle East. Now offering flexible, interest-free installment plans on select projects.",
+      buttonText: "Explore Our Website Services",
+      icon: "/icons/web-dev.svg",
+      link: "/services/web-development",
     },
     {
-        title: "App Development",
-        subtitle: "Building Apps with an Interactive Digital Design",
-        description:
-            "From mobile to web applications, we develop scalable, feature-rich solutions designed to enhance user engagement and streamline business operations.",
-        buttonText: "Learn More About App Development",
-        icon: "/icons/app-dev.svg",
-        link: "/services/app-development", // ✅ Link added
+      title: "Mobile App Development",
+      subtitle: "iOS & Android Apps Built to Scale",
+      description:
+        "Our team builds responsive, feature-rich mobile and web applications using Flutter and React Native. Ideal for businesses in the Emirates, Europe, and North America seeking scalability and user engagement. Ask about our interest-free monthly installment plans.",
+      buttonText: "Learn More About App Development",
+      icon: "/icons/app-dev.svg",
+      link: "/services/app-development",
     },
     {
-        title: "Digital Marketing & Brand Building",
-        subtitle: "Stand Out in the Digital Crowd",
-        description:
-            "In today’s competitive landscape, digital visibility is everything. Our data-driven marketing strategies and brand-building techniques help businesses grow, connect with their audience, and boost conversions.",
-        buttonText: "Grow My Brand Now",
-        icon: "/icons/digital-marketing.svg",
-        link: "/services/digital-marketing", // ✅ Link added
+      title: "Digital Marketing & Brand Building",
+      subtitle: "Targeted Strategies for Global Visibility",
+      description:
+        "We craft high-conversion SEO campaigns, PPC ads, and social media strategies tailored to the US, UK, and GCC markets. Boost your online visibility with strategic execution. Interest-free payment plans available for selected campaigns.",
+      buttonText: "Grow My Brand Now",
+      icon: "/icons/digital-marketing.svg",
+      link: "/services/digital-marketing",
     },
     {
-        title: "SaaS Product Development",
-        subtitle: "Powering Tomorrow’s Software Solutions",
-        description:
-            "We create cloud-based, scalable, and highly secure SaaS products that help businesses optimize their operations, improve customer experiences, and generate consistent revenue.",
-        buttonText: "Develop My SaaS Product",
-        icon: "/icons/product-dev.svg",
-        link: "/services/saas-product-development", // ✅ Link added
+      title: "SaaS Product Development",
+      subtitle: "Cloud-Based Platforms for Scalable Growth",
+      description:
+        "From MVPs to enterprise-ready SaaS solutions, we build secure and scalable products that streamline operations and boost revenue. Serving clients across the US, UK, Europe, and MENA. Eligible services come with flexible installment options.",
+      buttonText: "Develop My SaaS Product",
+      icon: "/icons/product-dev.svg",
+      link: "/services/saas-product-development",
     },
-];
-
+  ];
+  
 export default function NevaraAdvantage() {
     return (
         <div className="relative w-full py-20 px-6 md:px-12 lg:px-24">
@@ -61,6 +61,9 @@ export default function NevaraAdvantage() {
                 The Nevara Advantage <br className="hidden md:block" />
                 <span className="text-gradient">Our Key Offerings</span>
             </motion.h2>
+            <h2 className="sr-only">
+                    Explore our custom development services including Web Development, App Development, SaaS Products, and Digital Marketing
+                </h2>
 
             {/* ✅ Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

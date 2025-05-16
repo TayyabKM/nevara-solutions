@@ -1,6 +1,6 @@
 export const metadata = {
     title: "Nevara - Services | Web, App & AI Development",
-    description: "Explore our full-service offerings: Web Development, Mobile Apps, SaaS products, AI automation, Digital marketing & Business Analytics tailored for business growth.",
+    description: "Nevara Solutions delivers scalable web, SaaS, mobile, and AI solutions to clients across the US, UK, Europe, and Middle East — driving business growth through expert development and marketing services.",
   };
   
   import Services from "./Services";

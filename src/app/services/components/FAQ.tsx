@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+
 
 // FAQ Data
 const faqs = [
@@ -21,9 +23,14 @@ const faqs = [
       "Absolutely! Every business is unique, so we offer customized development and marketing solutions tailored to your specific needs, industry, and objectives.",
   },
   {
-    question: "How much do your services cost?",
+    question: "Where do you provide your services?",
     answer:
-      "Our pricing varies based on project scope and complexity. We provide flexible pricing options to fit different budgets. Contact us for a personalized quote.",
+      "We work with clients globally, including the US, UK, Europe, and the Middle East. Whether you're based in the Emirates, North America, or anywhere in between, Nevara Solutions delivers custom digital solutions tailored to your region and industry.",
+  },
+  {
+    question: "How much do your services cost, and do you offer installment plans?",
+    answer:
+      "Our pricing varies based on project scope and complexity. We provide flexible pricing options to fit different budgets as well as interest free installment plans!  Contact us for a personalized quote.",
   },
   {
     question: "How long does it take to complete a project?",
@@ -68,6 +75,11 @@ export default function FAQExpandingBoxes() {
         <br className="hidden md:block" />
         <span className="text-gradient">Frequently Asked Questions</span>
       </motion.h2>
+      <div className="sr-only">
+        <h3>Common questions about Nevara’s digital services</h3>
+        <p>From website and app development to SaaS and digital marketing, here are answers to frequently asked questions about working with Nevara Solutions globally.</p>
+      </div>
+
 
       {/* ✅ FAQ Expanding Cards */}
       <div className="max-w-3xl mx-auto space-y-4">
@@ -75,11 +87,10 @@ export default function FAQExpandingBoxes() {
           <motion.div
             key={index}
             className={`cursor-pointer border border-gray-300 dark:border-gray-700/40 backdrop-blur-lg
-            p-4 rounded-lg shadow-lg transition-all duration-300 overflow-hidden ${
-              expandedIndex === index
+            p-4 rounded-lg shadow-lg transition-all duration-300 overflow-hidden ${expandedIndex === index
                 ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
                 : "bg-gray-200 dark:bg-gray-800"
-            }`}
+              }`}
             onClick={() => toggleFAQ(index)}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}

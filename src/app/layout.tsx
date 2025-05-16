@@ -1,7 +1,8 @@
 import "../styles/globals.css"; // Global styles
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FirebaseAnalytics from "../components/FirebaseAnalytic"; // ✅ Import Client Component
+import FirebaseAnalytics from "../components/FirebaseAnalytic"; 
+import { Analytics } from "@vercel/analytics/next"
 import { Outfit } from "next/font/google";
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body suppressHydrationWarning={true} className={`${outfit.className} bg-lightBg text-lightText dark:bg-black dark:text-darkText`}>
         <FirebaseAnalytics /> {/* ✅ Client Component to Handle Analytics */}
+        <Analytics/>
         <Header />
         <main>{children}</main>
         <Footer />
