@@ -3,6 +3,7 @@ export const metadata = {
   description: "Learn more about Nevara and how we drive business success.",
 };
 
+import AboutSchema from "./components/AboutSchema";
 import Hero from "./components/Hero";
 import Ethos from "./components/Ethos";
 import Counter from "./components/Counter";
@@ -13,6 +14,7 @@ import CTA from "./components/CTA";
 export default function AboutPage() {
   return (
     <>
+     <AboutSchema />
       <Hero />
       <Ethos />
       <Counter />
