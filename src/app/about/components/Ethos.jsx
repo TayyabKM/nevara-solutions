@@ -51,6 +51,11 @@ export default function Ethos() {
       >
         The <span className="text-gradient">Nevara Ethos</span>
       </motion.h2>
+      <div className="sr-only">
+        <h3>Our Core Company Values</h3>
+        <p>At Nevara Solutions, our core values guide every website, app, and SaaS project we build. We prioritize growth, transparency, innovation, and lasting client partnerships across global markets.</p>
+      </div>
+
 
       {/* ✅ Ethos Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -71,7 +76,7 @@ export default function Ethos() {
             {/* ✅ Title & Description */}
             <h3 className="text-xl font-bold text-lightText dark:text-darkText">{value.title}</h3>
             <p className="mt-2 text-lightText dark:text-gray-400">{value.description}</p>
-          </motion.div> 
+          </motion.div>
         ))}
       </div>
     </section>

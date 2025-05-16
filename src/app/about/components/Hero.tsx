@@ -24,6 +24,10 @@ export default function Hero() {
                 <div>Your Growth Partner</div>
                 <div className="text-gradient">In The Digital Age</div>
             </motion.h1>
+            <h1 className="sr-only">
+                About Nevara Solutions — Your Strategic Growth Partner in the Digital Age
+            </h1>
+
 
             {/* ✅ Subheading */}
             <motion.p
@@ -32,8 +36,14 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
             >
-                We&apos;re more than a tech agency; we&apos;re dedicated to building lasting relationships and driving your business&apos;s digital success.
+                We&apos;re more than a tech agency; we&apos;re  your strategic partner for web, app, SaaS, and marketing success, serving clients globally with a strong presence in the US, UK, Europe, and the GCC.
             </motion.p>
+            <div className="sr-only">
+                <p>
+                    Nevara Solutions is a full-service digital agency helping businesses in the US, UK, Europe, and GCC scale through web development, mobile apps, SaaS platforms, and digital marketing.
+                </p>
+            </div>
+
 
             {/* ✅ CTA Button (Opens Modal) */}
             <motion.button

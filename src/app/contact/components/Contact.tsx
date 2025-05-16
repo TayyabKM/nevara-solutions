@@ -24,6 +24,17 @@ export default function ContactPage() {
         </h1>
         <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">Tell us about your project. Let’s see how we can help!</p>
       </motion.div>
+      <div className="sr-only">
+  <h3>Contact Nevara Solutions</h3>
+  <p>
+    Reach out to Nevara Solutions for website development, app development, SaaS product builds, or digital marketing.
+    We serve clients globally, including the US, UK, Europe, and GCC.
+  </p>
+  <p>
+    Our team offers free consultations, personalized roadmaps, and interest-free installment plans to make getting started seamless.
+  </p>
+</div>
+
 
       {/* Contact Form & Contact Info */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 max-w-5xl mx-auto items-center">

@@ -27,8 +27,8 @@ const journeySteps = [
 export default function Journey() {
   return (
     <section className="relative w-full py-20 px-6 md:px-12 lg:px-24">
-              <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
-              <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[-20px] size-[300px]" />
+      <div className="absolute ecclipse -top-32 -left-[150px] size-[300px]" />
+      <div className="absolute ecclipse -bottom-32 right-0 sm:-right-[-20px] size-[300px]" />
       {/* Section Heading */}
       <motion.h2
         className="text-3xl md:text-5xl font-bold text-center mb-16 text-lightText dark:text-darkText"
@@ -38,6 +38,17 @@ export default function Journey() {
       >
         The <span className="text-gradient">Nevara Journey</span>
       </motion.h2>
+      <div className="sr-only">
+        <h3>The Story of Nevara Solutions</h3>
+        <p>
+          Nevara Solutions was founded in 2024 by Tayyab Kamboh with a mission to bridge the gap between digital products and business growth.
+          From launching high-performance websites and scalable SaaS platforms to building long-term client partnerships in the US, UK, Europe, and GCC — Nevara has become a strategic tech partner for startups and enterprises alike.
+        </p>
+        <p>
+          Looking ahead, Nevara continues innovating in app development, AI automation, and performance marketing to help businesses thrive in a digital-first world.
+        </p>
+      </div>
+
 
       {/* Timeline Container */}
       <div className="relative max-w-4xl mx-auto">
@@ -49,9 +60,8 @@ export default function Journey() {
           {journeySteps.map((step, index) => (
             <motion.div
               key={index}
-              className={`relative flex flex-col md:flex-row items-start ${
-                index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-              }`}
+              className={`relative flex flex-col md:flex-row items-start ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                }`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

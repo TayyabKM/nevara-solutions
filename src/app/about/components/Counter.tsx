@@ -24,6 +24,11 @@ export default function Counter() {
       >
         Our <span className="text-gradient">Achievements</span>
       </motion.h2>
+      <div className="sr-only">
+        <h3>Key Performance Metrics of Nevara Solutions</h3>
+        <p>We maintain a 95% client satisfaction rate and deliver projects 50% faster than the industry average. Our services are 100% scalable and future-proof, backed by consistent client trust.</p>
+      </div>
+
 
       {/* ✅ Achievement Grid */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
