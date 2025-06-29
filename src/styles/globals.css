@@ -137,3 +137,17 @@ html {
 html {
   scrollbar-width: none; /* Firefox */
 }
+
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-loop {
+  animation: scrollLoop 30s linear infinite;
+}

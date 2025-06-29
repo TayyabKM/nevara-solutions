@@ -28,7 +28,7 @@ export default function Hero() {
         />
 
         {/* ⭐ Animated Stars */}
-        <Image src="/star.svg" alt="Glowing Star" width={40} height={40} className="absolute top-40 left-36 opacity-70 animate-glimmer" />
+        <Image src="/star.svg" alt="Glowing Star" width={40} height={40} className="absolute top-40 left-36 opacity-70 animate-glimmer max-[390px]:top-28 max-[360px]:left-20"/>
         <Image src="/star.svg" alt="Glowing Star" width={32} height={32} className="absolute bottom-16 right-24 opacity-50 animate-glimmer" />
 
         {/* Text Container */}
