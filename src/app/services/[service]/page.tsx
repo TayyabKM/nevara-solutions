@@ -43,16 +43,23 @@ export function generateStaticParams(): Array<{ service: string }> {
 // ✅ Fix: Correct `generateMetadata` typing
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const resolvedParams = await params;
-  if (!resolvedParams?.service) return notFound();
+  const slug = resolvedParams?.service;
 
-  const serviceInfo = serviceData[resolvedParams.service];
+  if (!slug) return notFound();
+
+  const serviceInfo = serviceData[slug];
   if (!serviceInfo) return notFound();
 
   return {
     title: serviceInfo.title,
     description: serviceInfo.description,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
+    metadataBase: new URL("https://www.nevarasolutions.com"),
   };
 }
+
 
 // ✅ Fix: Explicitly define `params` as async to match Next.js behavior
 export default async function ServicePage({ params }: { params: Promise<Params> }) {
