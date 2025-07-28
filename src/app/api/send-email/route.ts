@@ -42,11 +42,11 @@ export async function POST(req: Request) {
     // 4. Send the Email
     const mailOptions = {
       from: `"Nevara Solutions" <${process.env.EMAIL_USER}>`,
-      to: "tayyabkamboh@nevarasolutions.com",
+      to: "info@nevarasolutions.com",
       subject: "📩 New Contact Form Submission",
       html: emailHTML,
     };
-    // tayyabkamboh@nevarasolutions.com
+    // info@nevarasolutions.com
     const info = await transporter.sendMail(mailOptions);
 
     console.log("✅ Email sent:", info.messageId);
