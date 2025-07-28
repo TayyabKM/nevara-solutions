@@ -71,10 +71,10 @@ function Socials() {
     >
       {/* ✅ Email */}
       <motion.div variants={textVariants}>
-        <Link href="mailto:tayyabkamboh@nevarasolutions.com">
+        <Link href="mailto:info@nevarasolutions.com">
           <div className="flex items-center gap-4 cursor-pointer">
             <Image src="/icons/email.svg" alt="Email Icon" width={28} height={28} className="dark:invert" />
-            <div>tayyabkamboh@nevarasolutions.com</div>
+            <div>info@nevarasolutions.com</div>
           </div>
         </Link>
       </motion.div>
