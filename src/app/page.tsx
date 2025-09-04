@@ -14,6 +14,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks/index";
 import Testimonials from "@/components/Testimonials";
+import RecognitionSection from "@/components/RecognitionSection";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Services />
       <HowItWorks />
       <Testimonials />
+      <RecognitionSection />
     </div>
   );
 }
