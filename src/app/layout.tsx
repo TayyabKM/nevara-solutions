@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import FirebaseAnalytics from "../components/FirebaseAnalytic"; 
 import { Analytics } from "@vercel/analytics/next"
 import { Outfit } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Nevara - Homepage",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning={true} className={`${outfit.className} bg-lightBg text-lightText dark:bg-black dark:text-darkText`}>
         <FirebaseAnalytics /> {/* ✅ Client Component to Handle Analytics */}
         <Analytics/>
+        <SpeedInsights />
         <Header />
         <main>{children}</main>
         <Footer />
