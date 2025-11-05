@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Nevara Solutions" <${process.env.EMAIL_USER}>`,
-      to: "tayyabkamboh@nevarasolutions.com",
+      to: "info@nevarasolutions.com",
       subject: "📨 New Lead Submission",
       html: emailHTML,
     };

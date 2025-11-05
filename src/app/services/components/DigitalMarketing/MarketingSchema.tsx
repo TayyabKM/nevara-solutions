@@ -24,13 +24,7 @@ export default function MarketingSchema() {
       },
       "audience": {
         "@type": "Audience",
-        "audienceType": "Small Businesses, Startups, and Enterprises",
-        "geographicArea": [
-          { "@type": "Place", "name": "United States" },
-          { "@type": "Place", "name": "United Kingdom" },
-          { "@type": "Place", "name": "Europe" },
-          { "@type": "Place", "name": "Gulf Cooperation Council" }
-        ]
+        "audienceType": "Small Businesses, Startups, and Enterprises"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",

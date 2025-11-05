@@ -1,7 +1,12 @@
 export const metadata = {
+  metadataBase: new URL("https://www.nevarasolutions.com"),
   title: "Nevara - About Us | Remote Software House & Growth Partner",
   description: "Learn more about Nevara and how we drive business success.",
+  alternates: {
+    canonical: "/about",
+  },
 };
+
 
 import AboutSchema from "./components/AboutSchema";
 import Hero from "./components/Hero";

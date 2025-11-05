@@ -243,7 +243,7 @@ function ContactOptions() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <ContactInfo icon="/icons/email.svg" label="Email" value="tayyabkamboh@nevarasolutions.com" link="mailto:tayyabkamboh@nevarasolutions.com" />
+      <ContactInfo icon="/icons/email.svg" label="Email" value="info@nevarasolutions.com" link="mailto:info@nevarasolutions.com" />
       <ContactInfo icon="/icons/linkedin.svg" label="LinkedIn" value="Connect with us" link="https://www.linkedin.com/company/nevara-solutions" />
       <ContactInfo icon="/icons/whatsapp.svg" label="WhatsApp" value="Chat with us" link="https://wa.me/923498476179" />
     </motion.div>

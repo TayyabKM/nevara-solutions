@@ -24,13 +24,7 @@ export default function WebSchema() {
       },
       "audience": {
         "@type": "Audience",
-        "audienceType": "Startups, Enterprises, and Digital Brands",
-        "geographicArea": [
-          { "@type": "Place", "name": "United States" },
-          { "@type": "Place", "name": "United Kingdom" },
-          { "@type": "Place", "name": "Europe" },
-          { "@type": "Place", "name": "Gulf Cooperation Council" }
-        ]
+        "audienceType": "Startups, Enterprises, and Digital Brands"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",

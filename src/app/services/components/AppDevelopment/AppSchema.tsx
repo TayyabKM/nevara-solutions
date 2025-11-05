@@ -24,29 +24,7 @@ export default function AppSchema() {
       },
       "audience": {
         "@type": "Audience",
-        "audienceType": "Startups, Enterprises, and Tech-Driven Businesses",
-        "geographicArea": [
-          {
-            "@type": "Place",
-            "name": "United States"
-          },
-          {
-            "@type": "Place",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Place",
-            "name": "Europe"
-          },
-          {
-            "@type": "Place",
-            "name": "Middle East"
-          },
-          {
-            "@type": "Place",
-            "name": "GCC"
-          }
-        ]
+        "audienceType": "Startups, Enterprises, and Tech-Driven Businesses"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
