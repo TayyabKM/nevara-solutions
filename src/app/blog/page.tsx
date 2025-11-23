@@ -1,17 +1,31 @@
 export const metadata = {
   metadataBase: new URL("https://www.nevarasolutions.com"),
-  title: "Nevara - Blog | Insights on Software, SaaS & Automation",
+  title: "Nevara Blog | Web, App, SaaS & AI Insights",
   description:
-    "Explore expert tips, case studies, and industry updates on software development, SaaS, AI automation, and business growth from the Nevara team.",
+    "Read expert insights on software development, SaaS architecture, mobile apps, AI automation, digital marketing, and global technology trends from the Nevara Solutions team.",
   alternates: {
     canonical: "/blog",
   },
 };
 
-  
-  import BlogsPage from "./components/Blogs"; 
-  
-  export default function Contact() {
-    return <BlogsPage />;
-  }
-  
+import BlogCard from "@/components/BlogCard";
+import BlogHero from "@/components/BlogHero";
+import { getBlogs } from "@/lib/cms";
+
+export default async function BlogPage() {
+  const posts = await getBlogs();
+
+  return (
+    <div className="w-full">
+      <BlogHero />
+
+      <div className="w-full py-20 px-6 md:px-12 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {posts.map((post: any, index: number) => (
+            <BlogCard key={post._id} post={post} index={index} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
