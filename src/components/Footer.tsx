@@ -18,7 +18,7 @@ const textVariants = {
     y: 0,
     transition: {
       duration: 0.4,
-      ease: ["easeInOut"], // IMPORTANT FIX ✔
+      ease: "easeInOut",
     },
   },
 };
