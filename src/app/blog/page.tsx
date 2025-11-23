@@ -1,3 +1,13 @@
+export const metadata = {
+  metadataBase: new URL("https://www.nevarasolutions.com"),
+  title: "Nevara Blog | Web, App, SaaS & AI Insights",
+  description:
+    "Read expert insights on software development, SaaS architecture, mobile apps, AI automation, digital marketing, and global technology trends from the Nevara Solutions team.",
+  alternates: {
+    canonical: "/blog",
+  },
+};
+
 import BlogCard from "@/components/BlogCard";
 import BlogHero from "@/components/BlogHero";
 import { getBlogs } from "@/lib/cms";

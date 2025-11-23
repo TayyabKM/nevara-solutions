@@ -1,3 +1,13 @@
+export const metadata = {
+  metadataBase: new URL("https://www.nevarasolutions.com"),
+  title: "Nevara News | Company Updates & Announcements",
+  description:
+    "Stay updated with Nevara Solutions — latest company news, milestones, achievements, partnerships, and important announcements from our global operations.",
+  alternates: {
+    canonical: "/news",
+  },
+};
+
 import NewsCard from "@/components/NewsCard";
 import NewsHero from "@/components/NewsHero";
 import { getNews } from "@/lib/cms";
