@@ -1,12 +1,12 @@
 "use client";
 
 import { navlinks } from "@/constants/navlinks";
-import { motion } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 /* -------------------------------------------
-   Fix: Framer Motion-compatible textVariants
+   Fixed: Framer Motion v11-compatible variants
 ------------------------------------------- */
 const textVariants = {
   hidden: {
@@ -18,7 +18,7 @@ const textVariants = {
     y: 0,
     transition: {
       duration: 0.4,
-      ease: "easeInOut",
+      ease: easeInOut,   // <-- FIXED HERE
     },
   },
 };
@@ -71,9 +71,7 @@ function Header() {
   return (
     <motion.div
       className="flex flex-col gap-4"
-      variants={{
-        visible: { transition: { staggerChildren: 0.2 } },
-      }}
+      variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
@@ -113,30 +111,20 @@ function Socials() {
   return (
     <motion.div
       className="flex flex-col gap-4"
-      variants={{
-        visible: { transition: { staggerChildren: 0.2 } },
-      }}
+      variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      {/* Email */}
       <motion.div variants={textVariants}>
         <Link href="mailto:info@nevarasolutions.com">
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image
-              src="/icons/email.svg"
-              alt="Email Icon"
-              width={28}
-              height={28}
-              className="dark:invert"
-            />
+            <Image src="/icons/email.svg" alt="Email Icon" width={28} height={28} className="dark:invert" />
             <div>info@nevarasolutions.com</div>
           </div>
         </Link>
       </motion.div>
 
-      {/* LinkedIn */}
       <motion.div variants={textVariants}>
         <Link
           href="https://www.linkedin.com/company/nevara-solutions"
@@ -144,33 +132,16 @@ function Socials() {
           rel="noopener noreferrer"
         >
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image
-              src="/icons/linkedin.svg"
-              alt="LinkedIn Icon"
-              width={28}
-              height={28}
-              className="dark:invert"
-            />
+            <Image src="/icons/linkedin.svg" alt="LinkedIn Icon" width={28} height={28} className="dark:invert" />
             <div>Connect with us on LinkedIn</div>
           </div>
         </Link>
       </motion.div>
 
-      {/* WhatsApp */}
       <motion.div variants={textVariants}>
-        <Link
-          href="https://wa.me/923498476179"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://wa.me/923498476179" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image
-              src="/icons/whatsapp.svg"
-              alt="WhatsApp Icon"
-              width={28}
-              height={28}
-              className="dark:invert"
-            />
+            <Image src="/icons/whatsapp.svg" alt="WhatsApp Icon" width={28} height={28} className="dark:invert" />
             <div>Chat with us on WhatsApp</div>
           </div>
         </Link>
