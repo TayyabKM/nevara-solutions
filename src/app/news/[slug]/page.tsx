@@ -1,6 +1,46 @@
 import { getNewsBySlug } from "@/lib/cms";
 import Image from "next/image";
 
+// ✅ Dynamic SEO metadata
+export async function generateMetadata({ params }: any) {
+  const post = await getNewsBySlug(params.slug);
+
+  if (!post) {
+    return {
+      title: "News Not Found | Nevara",
+      description: "This news article does not exist.",
+    };
+  }
+
+  return {
+    title: `${post.title} | Nevara News`,
+    description: post.excerpt ?? "Latest updates from Nevara Solutions.",
+    alternates: {
+      canonical: `/news/${params.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://www.nevarasolutions.com/news/${params.slug}`,
+      type: "article",
+      publishedTime: post.publishedAt,
+      images: [
+        {
+          url: post.coverImage,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
+  };
+}
+
 export default async function NewsDetail({ params }: any) {
   const post = await getNewsBySlug(params.slug);
 

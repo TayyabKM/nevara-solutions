@@ -1,6 +1,46 @@
 import { getBlogBySlug } from "@/lib/cms";
 import Image from "next/image";
 
+// ✅ Dynamic SEO metadata
+export async function generateMetadata({ params }: any) {
+  const post = await getBlogBySlug(params.slug);
+
+  if (!post) {
+    return {
+      title: "Blog Not Found | Nevara",
+      description: "This article does not exist.",
+    };
+  }
+
+  return {
+    title: `${post.title} | Nevara Blog`,
+    description: post.excerpt ?? "Read insights from Nevara Solutions.",
+    alternates: {
+      canonical: `/blog/${params.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://www.nevarasolutions.com/blog/${params.slug}`,
+      type: "article",
+      publishedTime: post.publishedAt,
+      images: [
+        {
+          url: post.coverImage,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
+  };
+}
+
 export default async function BlogDetail({ params }: any) {
   const post = await getBlogBySlug(params.slug);
 
@@ -47,4 +87,3 @@ export default async function BlogDetail({ params }: any) {
     </div>
   );
 }
-
