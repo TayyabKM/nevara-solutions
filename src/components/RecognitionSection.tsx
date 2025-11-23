@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function RecognitionSection() {
     const textVariants = {
         hidden: { opacity: 0, y: 40 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
     };
     return (
         <section className="recognition-section py-12 text-center">

@@ -19,7 +19,7 @@ export default function Services() {
           className="text-lg text-center max-w-2xl mx-auto text-black dark:text-gray-400"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.4 }}
         >
           Proudly serving businesses across the <span className="font-semibold text-dark dark:text-white">United States, United Kingdom, Europe, the Middle East</span>, and beyond — wherever innovation is needed.
         </motion.p>
@@ -37,16 +37,19 @@ export default function Services() {
 }
 
 function Header() {
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
+  };
+
   const textVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
   return (
     <motion.div
       className="flex flex-col w-full items-center text-center gap-3"
-      variants={{
-        visible: { transition: { staggerChildren: 0.2 } },
-      }}
+      variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
@@ -106,7 +109,6 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)",
       transition: {
         duration: 0.5,
-        ease: "easeOut",
         delay: index * 0.1,
       },
     },
