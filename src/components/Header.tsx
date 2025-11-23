@@ -56,8 +56,8 @@ export default function Header() {
   }, [prevScrollPos]);
 
   const headerVariants = {
-    hidden: { x: "-50%", y: "-130%", transition: { duration: 0.3, ease: "linear" } },
-    visible: { x: "-50%", y: "0%", transition: { duration: 0.3, ease: "linear" } },
+    hidden: { x: "-50%", y: "-130%", transition: { duration: 0.3 } },
+    visible: { x: "-50%", y: "0%", transition: { duration: 0.3 } },
   };
 
   return (
