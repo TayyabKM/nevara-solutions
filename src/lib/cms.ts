@@ -4,6 +4,8 @@ import {
   SINGLE_BLOG_QUERY,
   NEWS_LIST_QUERY,
   SINGLE_NEWS_QUERY,
+  JOB_LIST_QUERY,
+  SINGLE_JOB_QUERY
 } from "@/sanity/lib/queries";
 
 const USE_SANITY = true; // future switch point
@@ -25,5 +27,15 @@ export async function getNews() {
 
 export async function getNewsBySlug(slug: string) {
   if (USE_SANITY) return client.fetch(SINGLE_NEWS_QUERY, { slug });
+  return null;
+}
+
+export async function getJobs() {
+   if (USE_SANITY) return client.fetch(JOB_LIST_QUERY); 
+   return [];
+}
+
+export async function getJobBySlug(slug: string) {
+  if (USE_SANITY) return client.fetch(SINGLE_JOB_QUERY, { slug });
   return null;
 }

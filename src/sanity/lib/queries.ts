@@ -43,3 +43,34 @@ export const SINGLE_NEWS_QUERY = `
     content
   }
 `;
+
+export const JOB_LIST_QUERY = `
+*[_type == "job"] | order(postedAt desc) {
+  _id,
+  title,
+  "slug": slug.current,
+  status,
+  type,
+  location,
+  shortDescription,
+  postedAt
+}
+`;
+
+export const SINGLE_JOB_QUERY = `
+  *[_type == "job" && slug.current == $slug][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    status,
+    type,
+    location,
+    shortDescription,
+    description,
+    requirements,
+    responsibilities,
+    postedAt
+  }
+`;
+
+
