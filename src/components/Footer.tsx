@@ -1,23 +1,49 @@
 "use client";
 
 import { navlinks } from "@/constants/navlinks";
-import { textVariants } from "@/motion-variants/variants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
+/* -------------------------------------------
+   Fix: Framer Motion-compatible textVariants
+------------------------------------------- */
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: ["easeInOut"], // IMPORTANT FIX ✔
+    },
+  },
+};
 
 export default function Footer() {
   return (
     <footer className="relative py-6">
       <div className="container mx-auto max-w-screen-xl px-4 flex flex-col gap-8">
+
+        {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-4">
           <Header />
           <Socials />
         </div>
 
+        {/* Bottom Section */}
         <motion.div
           className="flex flex-col gap-4"
-          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.3, delay: 0.5 } } }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { duration: 0.3, delay: 0.5 },
+            },
+          }}
           initial="hidden"
           animate="visible"
         >
@@ -28,7 +54,9 @@ export default function Footer() {
               <NavLinks />
             </div>
 
-            <motion.div variants={textVariants}>© 2025 Nevara Solutions. All Rights Reserved.</motion.div>
+            <motion.div variants={textVariants}>
+              © 2025 Nevara Solutions. All Rights Reserved.
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -36,6 +64,9 @@ export default function Footer() {
   );
 }
 
+/* -------------------------------------------
+   Header Section
+------------------------------------------- */
 function Header() {
   return (
     <motion.div
@@ -48,16 +79,36 @@ function Header() {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div variants={textVariants}>
-        <Image src="/logo-dark.png" alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
-        <Image src="/logo-light.png" alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
+        <Image
+          src="/logo-dark.png"
+          alt="Nevara Solutions Logo"
+          width={100}
+          height={40}
+          className="dark:flex hidden"
+        />
+        <Image
+          src="/logo-light.png"
+          alt="Nevara Solutions Logo"
+          width={100}
+          height={40}
+          className="dark:hidden flex"
+        />
       </motion.div>
-      <motion.div variants={textVariants} className="md:max-w-sm dark:text-gray-300 text-gray-600">
-        Nevara Solutions – a growing software house in Pakistan, collaborating with top-tier clients, from start-ups to enterprises.
+
+      <motion.div
+        variants={textVariants}
+        className="md:max-w-sm dark:text-gray-300 text-gray-600"
+      >
+        Nevara Solutions – a growing software house in Pakistan, collaborating
+        with startups to enterprises worldwide.
       </motion.div>
     </motion.div>
   );
 }
 
+/* -------------------------------------------
+   Social Links
+------------------------------------------- */
 function Socials() {
   return (
     <motion.div
@@ -69,31 +120,57 @@ function Socials() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      {/* ✅ Email */}
+      {/* Email */}
       <motion.div variants={textVariants}>
         <Link href="mailto:info@nevarasolutions.com">
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image src="/icons/email.svg" alt="Email Icon" width={28} height={28} className="dark:invert" />
+            <Image
+              src="/icons/email.svg"
+              alt="Email Icon"
+              width={28}
+              height={28}
+              className="dark:invert"
+            />
             <div>info@nevarasolutions.com</div>
           </div>
         </Link>
       </motion.div>
 
-      {/* ✅ LinkedIn */}
+      {/* LinkedIn */}
       <motion.div variants={textVariants}>
-        <Link href="https://www.linkedin.com/company/nevara-solutions" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://www.linkedin.com/company/nevara-solutions"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image src="/icons/linkedin.svg" alt="LinkedIn Icon" width={28} height={28} className="dark:invert" />
+            <Image
+              src="/icons/linkedin.svg"
+              alt="LinkedIn Icon"
+              width={28}
+              height={28}
+              className="dark:invert"
+            />
             <div>Connect with us on LinkedIn</div>
           </div>
         </Link>
       </motion.div>
 
-      {/* ✅ WhatsApp */}
+      {/* WhatsApp */}
       <motion.div variants={textVariants}>
-        <Link href="https://wa.me/923498476179" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://wa.me/923498476179"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="flex items-center gap-4 cursor-pointer">
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp Icon" width={28} height={28} className="dark:invert" />
+            <Image
+              src="/icons/whatsapp.svg"
+              alt="WhatsApp Icon"
+              width={28}
+              height={28}
+              className="dark:invert"
+            />
             <div>Chat with us on WhatsApp</div>
           </div>
         </Link>
@@ -102,6 +179,9 @@ function Socials() {
   );
 }
 
+/* -------------------------------------------
+   Nav Links
+------------------------------------------- */
 const NavLinks = () => (
   <>
     {navlinks.map((link, index) => (
