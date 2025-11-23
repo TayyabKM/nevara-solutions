@@ -17,23 +17,31 @@ export default async function CareersPage() {
     <div className="w-full">
       <CareersHero />
 
-      <div className="w-full py-20 px-6 md:px-12 lg:px-24">
-        <h2 className="text-3xl font-bold mb-10 text-black dark:text-white">
-          Open Positions
-        </h2>
+      <div className="w-full py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-black dark:text-white leading-tight">
+            Open <span className="text-gradient">Positions</span>
+          </h2>
 
-        {jobs.length === 0 && (
-          <p className="text-gray-600 dark:text-gray-300">
-            No positions are open right now. Please check back soon.
+          <p className="mt-4 mb-5 text-lg md:text-xl text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+            Explore current openings and become a part of our growing team.
           </p>
-        )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {jobs.map((job: any, index: number) => (
-            <JobCard key={job._id} job={job} index={index} />
-          ))}
+
+          {jobs.length === 0 && (
+            <p className="text-gray-600 dark:text-gray-300 text-center">
+              No positions are open right now. Please check back soon.
+            </p>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {jobs.map((job: any) => (
+              <JobCard key={job._id} job={job} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
+
   );
 }

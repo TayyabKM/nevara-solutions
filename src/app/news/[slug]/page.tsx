@@ -1,5 +1,6 @@
 import { getNewsBySlug } from "@/lib/cms";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }: any) {
@@ -46,9 +47,35 @@ export default async function NewsDetail({ params }: any) {
 
   if (!post) return <div>News article not found.</div>;
 
+  const components = {
+    list: {
+      bullet: ({ children }: any) => (
+        <ul className="list-disc pl-6 space-y-2">{children}</ul>
+      ),
+      number: ({ children }: any) => (
+        <ol className="list-decimal pl-6 space-y-2">{children}</ol>
+      ),
+    },
+    block: {
+      h2: ({ children }: any) => (
+        <h2 className="text-3xl font-bold my-6">{children}</h2>
+      ),
+      h3: ({ children }: any) => (
+        <h3 className="text-2xl font-semibold my-4">{children}</h3>
+      ),
+      normal: ({ children }: any) => (
+        <p className="leading-relaxed mb-4">{children}</p>
+      ),
+      blockquote: ({ children }: any) => (
+        <blockquote className="border-l-4 pl-4 italic text-gray-600 dark:text-gray-300 my-4">
+          {children}
+        </blockquote>
+      ),
+    },
+  };
+
   return (
     <div className="w-full pt-32 pb-16 px-6 md:px-12 lg:px-48">
-
       {/* Title */}
       <h1 className="text-4xl font-bold text-black dark:text-white mb-6">
         {post.title}
@@ -74,16 +101,7 @@ export default async function NewsDetail({ params }: any) {
 
       {/* Content */}
       <div className="prose dark:prose-invert max-w-none">
-        {post.content?.map((block: any, index: number) => {
-          if (block._type === "block") {
-            return (
-              <p key={index}>
-                {block.children?.map((c: any) => c.text).join("")}
-              </p>
-            );
-          }
-          return null;
-        })}
+        <PortableText value={post.content} components={components} />
       </div>
     </div>
   );
