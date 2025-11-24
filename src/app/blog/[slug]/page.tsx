@@ -2,6 +2,8 @@ import { getBlogBySlug } from "@/lib/cms";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 
+export const dynamic = "force-dynamic";
+
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }: any) {
