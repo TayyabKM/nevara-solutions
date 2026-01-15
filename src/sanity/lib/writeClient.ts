@@ -1,9 +1,9 @@
 import { createClient } from "@sanity/client";
 
 // ❗ SERVER-SIDE ONLY VARIABLES
-const projectId = process.env.SANITY_PROJECT_ID;
-const dataset = process.env.SANITY_DATASET;
-const apiVersion = process.env.SANITY_API_VERSION || "2023-10-01";
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-10-01";
 const token = process.env.SANITY_WRITE_TOKEN;
 
 if (!projectId) throw new Error("Missing SANITY_PROJECT_ID");
