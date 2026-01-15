@@ -55,14 +55,12 @@ export default Testimonials;
 function Header() {
   const textVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "circOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
   return (
     <motion.div
       className="flex flex-col w-full items-center text-center gap-3"
-      variants={{
-        visible: { transition: { staggerChildren: 0.2 } },
-      }}
+      variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}

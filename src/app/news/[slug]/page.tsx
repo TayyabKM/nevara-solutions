@@ -4,7 +4,8 @@ import { PortableText } from "@portabletext/react";
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }: any) {
-  const post = await getNewsBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getNewsBySlug(slug);
 
   if (!post) {
     return {
@@ -17,12 +18,12 @@ export async function generateMetadata({ params }: any) {
     title: `${post.title} | Nevara News`,
     description: post.excerpt ?? "Latest updates from Nevara Solutions.",
     alternates: {
-      canonical: `/news/${params.slug}`,
+      canonical: `/news/${slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://www.nevarasolutions.com/news/${params.slug}`,
+      url: `https://www.nevarasolutions.com/news/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -43,7 +44,8 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function NewsDetail({ params }: any) {
-  const post = await getNewsBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getNewsBySlug(slug);
 
   if (!post) return <div>News article not found.</div>;
 
