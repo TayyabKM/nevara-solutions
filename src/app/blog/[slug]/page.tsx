@@ -7,7 +7,8 @@ export const dynamic = "force-dynamic";
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }: any) {
-  const post = await getBlogBySlug(params.slug);
+  const { slug } = await params; 
+  const post = await getBlogBySlug(slug);
 
   if (!post) {
     return {
@@ -20,12 +21,12 @@ export async function generateMetadata({ params }: any) {
     title: `${post.title} | Nevara Blog`,
     description: post.excerpt ?? "Read insights from Nevara Solutions.",
     alternates: {
-      canonical: `/blog/${params.slug}`,
+      canonical: `/blog/${slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://www.nevarasolutions.com/blog/${params.slug}`,
+      url: `https://www.nevarasolutions.com/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -46,7 +47,8 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function BlogDetail({ params }: any) {
-  const post = await getBlogBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getBlogBySlug(slug);
 
   if (!post) return <div>Post not found.</div>;
 
