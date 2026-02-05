@@ -1,13 +1,14 @@
 import { getBlogBySlug } from "@/lib/cms";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import BlogBackground from "@/components/BlogBackground";
 
 export const dynamic = "force-dynamic";
 
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }: any) {
-  const { slug } = await params; 
+  const { slug } = await params;
   const post = await getBlogBySlug(slug);
 
   if (!post) {
@@ -18,14 +19,14 @@ export async function generateMetadata({ params }: any) {
   }
 
   return {
-    title: `${post.title} | Nevara Blog`,
-    description: post.excerpt ?? "Read insights from Nevara Solutions.",
+    title: `${post.metaTitle || post.title} | Nevara Blog`,
+    description: post.metaDescription || post.excerpt || "Read insights from Nevara Solutions.",
     alternates: {
       canonical: `/blog/${slug}`,
     },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.excerpt,
       url: `https://www.nevarasolutions.com/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
@@ -39,8 +40,8 @@ export async function generateMetadata({ params }: any) {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.excerpt,
       images: [post.coverImage],
     },
   };
@@ -77,36 +78,61 @@ export default async function BlogDetail({ params }: any) {
         </blockquote>
       ),
     },
+    marks: {
+      link: ({ children, value }: any) => {
+        const rel = !value.href.startsWith("/") ? "noreferrer noopener" : undefined;
+        return (
+          <a
+            href={value.href}
+            rel={rel}
+            target={rel ? "_blank" : undefined}
+            className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-medium"
+          >
+            {children}
+          </a>
+        );
+      },
+    },
   };
 
   return (
-    <div className="w-full pt-32 pb-16 px-6 md:px-12 lg:px-48">
-      {/* Title */}
-      <h1 className="text-4xl font-bold text-black dark:text-white mb-6">
-        {post.title}
-      </h1>
+    <div className="relative w-full overflow-hidden">
+      <BlogBackground />
+      <div className="w-full pt-32 pb-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Title */}
+          <h1 className="text-4xl font-bold text-black dark:text-white mb-6 text-center">
+            {post.title}
+          </h1>
 
-      {/* Date */}
-      <p className="text-sm text-gradient mb-6">
-        {new Date(post.publishedAt).toLocaleDateString()}
-      </p>
+          {/* Date */}
+          <p className="text-sm text-gradient mb-6 text-center">
+            {new Date(post.publishedAt).toLocaleDateString("en-US", {
+              month: "2-digit",
+              day: "2-digit",
+              year: "numeric",
+            })}
+          </p>
 
-      {/* Cover Image */}
-      {post.coverImage && (
-        <div className="rounded-lg overflow-hidden mb-8 shadow-xl">
-          <Image
-            src={post.coverImage}
-            alt={post.title}
-            width={1200}
-            height={700}
-            className="w-full object-cover"
-          />
+          {/* Cover Image */}
+          {post.coverImage && (
+            <div className="max-w-3xl mx-auto rounded-lg overflow-hidden mb-12 shadow-xl border border-gray-200 dark:border-gray-800">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                width={800}
+                height={450}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          )}
+
+          {/* Content */}
+          <div className="prose dark:prose-invert max-w-3xl mx-auto px-2">
+            <PortableText value={post.content} components={components} />
+          </div>
         </div>
-      )}
-
-      {/* Content */}
-      <div className="prose dark:prose-invert max-w-none">
-        <PortableText value={post.content} components={components} />
       </div>
     </div>
   );
