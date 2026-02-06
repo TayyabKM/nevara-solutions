@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
 
             <motion.div variants={textVariants}>
-              © 2025 Nevara Solutions. All Rights Reserved.
+              © 2026 Nevara Solutions. All Rights Reserved.
             </motion.div>
           </div>
         </motion.div>
