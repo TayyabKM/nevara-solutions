@@ -48,5 +48,17 @@ export default defineType({
       type: "array",
       of: [{ type: "string" }],
     }),
+    defineField({
+      name: "metaTitle",
+      title: "Meta Title",
+      type: "string",
+      description: "SEO title (defaults to post title if empty)",
+    }),
+    defineField({
+      name: "metaDescription",
+      title: "Meta Description",
+      type: "text",
+      description: "SEO description (defaults to excerpt if empty)",
+    }),
   ],
 });

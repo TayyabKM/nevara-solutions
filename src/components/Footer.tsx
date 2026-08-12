@@ -98,7 +98,11 @@ function Header() {
         className="md:max-w-sm dark:text-gray-300 text-gray-600"
       >
         Nevara Solutions – a growing software house in Pakistan, collaborating
-        with startups to enterprises worldwide.
+        with startups to enterprises worldwide. Proud member of the{" "}
+        <Link href="/mmt-group" className="text-gradient font-semibold">
+          MMT Group
+        </Link>
+        , with MMT Consulting as our parent company.
       </motion.div>
     </motion.div>
   );

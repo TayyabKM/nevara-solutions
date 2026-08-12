@@ -17,7 +17,9 @@ export const SINGLE_BLOG_QUERY = `
     excerpt,
     publishedAt,
     "coverImage": coverImage.asset->url,
-    content
+    content,
+    metaTitle,
+    metaDescription
   }
 `;
 

@@ -11,6 +11,7 @@ export const metadata = {
 
 import HomepageSchema from "@/components/HomepageSchema";
 import Hero from "@/components/Hero";
+import GroupAnnouncementBanner from "@/components/GroupAnnouncementBanner";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks/index";
 import Testimonials from "@/components/Testimonials";
@@ -21,6 +22,7 @@ export default function HomePage() {
     <div>
       <HomepageSchema />
       <Hero />
+      <GroupAnnouncementBanner />
       <Services />
       <HowItWorks />
       <Testimonials />
