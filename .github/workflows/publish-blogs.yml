@@ -1,0 +1,47 @@
+name: Sanity blog publishing
+on:
+  push:
+    branches: [dev, codex/sanity-publishing]
+    paths: ['content/blogs/**', 'scripts/publish-blogs*', '.github/workflows/publish-blogs.yml']
+  pull_request:
+    paths: ['content/blogs/**', 'scripts/publish-blogs*', '.github/workflows/publish-blogs.yml']
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Check access or publish new articles
+        type: choice
+        options: [check, publish]
+        default: check
+permissions:
+  contents: read
+concurrency:
+  group: sanity-blog-publishing
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/publish-blogs.test.mjs
+      - run: node scripts/publish-blogs.mjs validate
+  sanity:
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check or publish
+        env:
+          SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'check' }}
+        run: node scripts/publish-blogs.mjs "$MODE"
