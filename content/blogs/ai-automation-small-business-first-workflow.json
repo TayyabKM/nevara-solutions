@@ -1,0 +1,1089 @@
+{
+  "title": "AI Automation for Small Businesses: How to Choose Your First Workflow",
+  "slug": {
+    "_type": "slug",
+    "current": "ai-automation-small-business-first-workflow"
+  },
+  "excerpt": "Choose your first business automation with a practical framework, an enquiry-handling example and a clear way to calculate costs and time saved.",
+  "metaTitle": "AI Automation for Small Businesses: Where to Start",
+  "metaDescription": "Learn how to choose your first AI automation workflow, compare practical use cases, calculate time savings and run a pilot with human review.",
+  "publishedAt": "2026-09-08T00:00:00Z",
+  "tags": [
+    "AI automation",
+    "Small business",
+    "Workflow automation"
+  ],
+  "content": [
+    {
+      "_type": "block",
+      "_key": "b0",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "By Team Nevara | Published 8 September 2026",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "An enquiry arrives through your website. Someone copies it into a spreadsheet, forwards it to a colleague and writes a reply. If that colleague is busy, the enquiry waits. Buying another AI subscription will not, by itself, fix that handover.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "The best starting point for AI automation for small businesses is a frequent, clearly defined task with usable data, a measurable outcome and a manageable cost if something goes wrong. Choose one workflow, establish how it performs today and test an improvement before expanding it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "This guide explains how to make that choice, using enquiry handling as a practical example.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b4",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "What is AI automation, and when do you need it?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Ordinary automation follows rules: when a customer submits a form, create a contact record and notify the assigned team member. It works well when the inputs and next steps are predictable.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "AI adds interpretation. It can summarise a long enquiry, suggest a category or draft a response from approved information. Its output still needs checking because a plausible answer can contain mistakes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "For example, copying an email address from a form into your customer relationship management system (CRM) does not require AI. Interpreting a customer's free-text explanation of a complicated request might benefit from it. Keeping those jobs separate makes the system easier to test and maintain.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b8",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.anthropic.com/engineering/building-effective-agents"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "In its guidance on ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "building effective agents",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": ", Anthropic recommends starting with the simplest effective solution and adding complexity when the task requires it. Its distinction between predictable workflows and more autonomous agents is useful for business owners too: a fixed enquiry process usually does not need an AI system deciding every step for itself.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b9",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/ai-automation-tools-every-business-should-use-in-2026"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "If you are still comparing software, our ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "guide to AI automation tools for business",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": " provides a starting point. Choose the process before choosing the platform.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b10",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "What the research tells us about business value",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b11",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.oecd.org/en/publications/generative-ai-and-the-sme-workforce_2d08b99d-en.html"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "The ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "OECD's Generative AI and the SME Workforce report",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": " draws on a late-2024 survey of more than 5,000 small and medium-sized enterprises across seven countries. It found that 31% used generative AI. Among businesses using it, 65% reported improved employee performance, while 26% reported increased revenue.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "These are self-reported findings about generative AI use, not proof that a particular automated workflow will increase sales. They also do not represent every country or industry. The practical lesson is to measure the operational benefit first. Faster handling, fewer missed tasks and less repetitive work are useful outcomes even when the effect on revenue takes longer to establish.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b13",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Five questions to choose your first workflow",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b14",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "1. Does the task happen often enough?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b15",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Record how often the task occurs and how many minutes of active work it takes. A small daily task can consume more time than an impressive but occasional project. Use a typical week or month, including quiet periods, rather than your busiest day.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b16",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Separate working time from waiting time. An enquiry might take five minutes to process but sit in an inbox for six hours. Automation could help with either problem, but you should know which one you are trying to solve.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b17",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "2. Can you describe the steps clearly?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b18",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Write down the trigger, the information needed, the person responsible and what counts as complete. If colleagues disagree about who owns the task, resolve that first. Software will otherwise repeat the confusion faster.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b19",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Start with the part everyone agrees on. A system can register an enquiry and assign an owner while leaving pricing and service recommendations to a person.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b20",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "3. Is the information ready to use?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b21",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Check whether required fields are present, customer records are consistent and your tools can exchange data. Look for duplicate contacts, missing identifiers and information trapped in attachments.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b22",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "For an AI response draft, identify the approved source material: service descriptions, business hours, delivery terms or an internal knowledge base. If those sources are outdated, the draft may be outdated too.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b23",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "4. What happens when the system is wrong?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b24",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "An incorrect internal category is easier to correct than an incorrect quotation sent to a customer. Choose a first workflow where mistakes are visible and reversible.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b25",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Keep a person responsible for commitments such as prices, refunds and delivery promises. Send ambiguous requests to a review queue. Decide who receives failure alerts and how staff can continue manually when an integration stops working.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b26",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "5. Can you measure success?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b27",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Choose a primary measure before the pilot: handling time, time to first useful response, missing records or the number of requests left unassigned. Also track quality, such as the proportion of AI drafts that need substantial correction.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b28",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "An acknowledgement email is not the same as a useful response. Measure both separately if customer responsiveness is the goal.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b29",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Three workflows worth considering",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b30",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Website enquiry handling",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b31",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "A form submission creates a lead, assigns an owner and starts a follow-up task. AI can summarise the customer's message and suggest a service category. A team member reviews any tailored reply. This is a useful candidate when enquiries are regularly copied between inboxes, spreadsheets and a CRM.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b32",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Customer support triage",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b33",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Incoming messages are grouped by topic and routed to the relevant person. AI can propose a response based on approved help content, while unclear requests and complaints go to staff. Measure incorrect routing and resolution quality as well as speed.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b34",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Document intake",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b35",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "A system extracts selected details from incoming documents into a review queue. AI can help interpret variable layouts or wording, but staff should verify consequential fields against the original. Begin with one document type and a small set of fields before attempting a broad document-processing system.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b36",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "These are possible starting points, not a universal ranking. A business receiving ten enquiries a month and hundreds of documents a week may reasonably choose document intake first.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b37",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Worked example: from website enquiry to assigned lead",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b38",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Consider a fictional service business that manually handles website enquiries. The following is an illustrative design, not a Nevara client case study.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b39",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "First, the form checks required contact details and records the submission with a unique identifier. That identifier prevents retries from creating multiple leads.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b40",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Next, ordinary automation creates or updates the CRM record and assigns an owner using agreed rules. An acknowledgement confirms receipt without promising a price or response time the business cannot meet.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b41",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "AI then prepares a short summary: what the customer needs, any stated deadline and which details are missing. It should preserve the original request alongside the summary, avoid inventing facts and flag uncertainty. Customer text is treated as input to summarise, not as instructions to change the system's rules.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b42",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "The assigned employee checks the summary and approves or edits a reply. If key information is missing, they ask for it. Pricing and delivery commitments remain with the team.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b43",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Finally, the workflow records the outcome and alerts someone if a step fails or the enquiry remains unassigned. A manager can see which requests still need attention without searching several inboxes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b44",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Pilot this with a limited set of enquiries. Test duplicates, incomplete forms, unusual requests and a disconnected CRM before relying on the workflow for all incoming leads.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b45",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "How to calculate whether automation is worth it",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b46",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Use a simple estimate of capacity released:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b47",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Monthly hours saved = tasks per month \u00d7 minutes saved per task \u00f7 60.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b48",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Suppose a workflow handles 200 enquiries each month and reduces active handling time from six minutes to two minutes, including review. That releases about 13.3 hours a month. At an illustrative staff cost of $20 per hour, the time is worth roughly $267.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b49",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "If software, AI usage and maintenance cost $100 a month, the remaining estimated capacity value is about $167. A $1,000 setup cost would take around six months to recover on those assumptions, before other costs or benefits.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b50",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "This is a planning example, not a price quote or a forecast. Released staff time is not automatically cash saved: it becomes valuable when people use it for worthwhile work, avoid overtime or reduce another real cost. Include training, corrections, monitoring and occasional repairs in your own calculation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b51",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/the-roi-on-custom-software-development-what-to-expect"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "For a broader investment discussion, see our article on ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "the ROI of custom software development",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": ".",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b52",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Run a small pilot before expanding",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b53",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Record the current process, choose one owner and write down the result you want to improve. Agree on the review rules and keep a manual fallback available.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b54",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Run the new workflow on a limited workload and compare similar tasks with the baseline. Check both average performance and awkward exceptions. A few fast demonstrations are not enough to show that the process works reliably.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b55",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Expand only when the results justify it. If staff spend more time correcting drafts than they previously spent writing replies, simplify the AI step or remove it. A useful automation project can succeed with very little AI.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b56",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Frequently asked questions",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b57",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Do I need custom software to start?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b58",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Not always. Your existing CRM, form tool or automation platform may already support the basic steps. Custom development becomes relevant when integrations, permissions or business rules cannot be handled adequately by the tools you have. Review those requirements before commissioning a build.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b59",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Should customer replies be fully automated?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b60",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Begin with approved acknowledgements and human-reviewed drafts. Wider automation should depend on tested accuracy, clear boundaries and a reliable way to hand the conversation to a person. A routine FAQ and a negotiated quotation deserve different treatment.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b61",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "How much does AI automation cost?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b62",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "The cost depends on the systems involved, task volume, data quality, review requirements and ongoing support. Ask for a breakdown of setup, subscriptions, usage charges and maintenance. A low subscription price does not tell you the total operating cost.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b63",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "What should I automate first?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b64",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Choose a repetitive process with clear ownership, available information and an outcome you can measure. For many service businesses, registering and assigning website enquiries is worth examining. Check your actual workload before deciding.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b65",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Choose a process your team will actually use",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b66",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Start with one recurring problem and a practical improvement you can verify. The right first workflow should make daily work easier, give staff visibility into what happened and leave customers with a dependable experience.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b67",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/services"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/contact"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "Nevara Solutions builds ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "websites, applications and custom software",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": " for businesses that need their systems to work together. If your team is repeatedly copying enquiries or chasing handovers, ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s3",
+          "text": "tell us how the process works today",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s4",
+          "text": ". We can discuss where an integration, a simple automation or an AI-assisted step may fit.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}

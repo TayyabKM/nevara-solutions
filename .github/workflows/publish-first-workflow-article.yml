@@ -1,0 +1,28 @@
+name: Publish approved first-workflow article
+on:
+  push:
+    branches: [dev]
+    paths:
+      - content/blogs/ai-automation-small-business-first-workflow.json
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sanity-blog-publishing
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/publish-blogs.test.mjs
+      - run: node scripts/publish-blogs.mjs validate
+      - name: Upload cover and publish approved article
+        env:
+          SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}
+        run: node scripts/publish-first-workflow-article.mjs
