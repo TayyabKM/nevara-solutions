@@ -43,5 +43,10 @@ jobs:
       - name: Check or publish
         env:
           SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}
-          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'check' }}
-        run: node scripts/publish-blogs.mjs "$MODE"
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'publish' }}
+        run: |
+          if [ "$MODE" = "publish" ]; then
+            node scripts/publish-article-with-cover.mjs
+          else
+            node scripts/publish-blogs.mjs "$MODE"
+          fi
