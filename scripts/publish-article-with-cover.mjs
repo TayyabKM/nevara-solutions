@@ -32,7 +32,7 @@ for (const file of files) {
   assert(upload.ok, `Cover upload failed for ${slug}: HTTP ${upload.status}`);
   const asset = (await upload.json()).document;
   assert(asset?._id?.startsWith('image-'), `Missing image asset ID for ${slug}`);
-  post.coverImage = { _type: 'image', asset: { _type: 'reference', _ref: asset._id }, alt: 'A business workflow map with review, approval, delivery and measurement steps connected across a navy desk' };
+  post.coverImage = { _type: 'image', asset: { _type: 'reference', _ref: asset._id }, alt: post.coverImageAlt || post.title };
   const directory = await mkdtemp(join(tmpdir(), 'nevara-publish-'));
   try {
     await writeFile(join(directory, file), JSON.stringify(post));

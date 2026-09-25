@@ -46,7 +46,7 @@ jobs:
           MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'publish' }}
         run: |
           if [ "$MODE" = "publish" ]; then
-            node scripts/publish-test-automation-pilot.mjs
+            node scripts/publish-article-with-cover.mjs
           else
             node scripts/publish-blogs.mjs "$MODE"
           fi
