@@ -1,0 +1,1290 @@
+{
+  "title": "No-Code Automation or Custom Software: How to Choose",
+  "slug": {
+    "_type": "slug",
+    "current": "no-code-vs-custom-automation"
+  },
+  "excerpt": "Compare no-code automation, configurable SaaS and custom software using workflow fit, integrations, risk, ownership, cost and growth requirements.",
+  "metaTitle": "No-Code vs Custom Automation: How to Choose",
+  "metaDescription": "Choose between no-code automation, SaaS and custom software with a practical framework for workflow fit, integrations, security, cost and growth.",
+  "publishedAt": "2026-10-06T05:00:00Z",
+  "coverImageAlt": "A decision compass between modular no-code workflow blocks and a tailored custom software platform with connected data and integrations",
+  "tags": [
+    "No-code automation",
+    "Custom software",
+    "Business automation"
+  ],
+  "content": [
+    {
+      "_type": "block",
+      "_key": "b1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "By Team Nevara | Published 6 October 2026",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": "The question is rarely whether no-code tools are good or custom software is better. The useful question is which option fits the process, risk and stage of the business.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s4",
+          "text": "A simple workflow with standard steps may be handled well by a configurable tool. A process built around unusual rules, several systems, sensitive data or a differentiated customer experience may justify custom software. Many businesses need a hybrid: proven products for common functions and custom development for the parts that make the operation distinct.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b11",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/business-process-map-before-automation"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/blog/automation-requirements"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s6",
+          "text": "Make this decision after you ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s7",
+          "text": "map the current process",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s8",
+          "text": " and prepare clear ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s9",
+          "text": "automation requirements",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s10",
+          "text": ". Otherwise, product demonstrations can replace evidence with attractive features.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b13",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s12",
+          "text": "Understand the three practical options",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b15",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s14",
+          "text": "1. Configurable SaaS",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b17",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s16",
+          "text": "A software-as-a-service product provides a finished system for a common business need such as customer relationship management, accounting, scheduling or help desk work. You configure fields, permissions and workflows inside the product. This is often the fastest route when the process can adapt to the product.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b19",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s18",
+          "text": "2. No-code or low-code automation",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b21",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s20",
+          "text": "No-code and low-code platforms connect apps, move data and apply rules through visual builders. They are useful for focused workflows such as creating a CRM record from a form, notifying an owner and scheduling a follow-up. Complexity grows when the automation contains many branches, workarounds or fragile dependencies.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b23",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s22",
+          "text": "3. Custom software",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b25",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s24",
+          "text": "Custom software is designed around the required users, workflow, data and integrations. It can provide tighter control and a more specific experience, but it also creates responsibility for design, testing, security, hosting, maintenance and future changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b27",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s26",
+          "text": "The options are not mutually exclusive. A custom customer portal might use an established payment provider, a managed identity service and a no-code notification workflow. Buying standard capabilities and building only the differentiating layer can reduce unnecessary work.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b29",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s28",
+          "text": "Use seven decision tests",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b31",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s30",
+          "text": "1. Workflow fit",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b33",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s32",
+          "text": "Write down the required steps, decisions, exceptions and approvals. Then separate essential requirements from preferences. If a product supports the essential flow with reasonable configuration, buying is usually worth testing. If the team must maintain spreadsheets, duplicate entry or manual corrections around the product, the apparent fit may be misleading.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b35",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s34",
+          "text": "2. Business differentiation",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b37",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s36",
+          "text": "Ask whether the workflow is a standard support function or part of how the business wins and serves customers. There is little strategic value in rebuilding commodity email delivery. There may be real value in a tailored quoting, dispatch, onboarding or client portal experience when that process is central to service quality.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b39",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s38",
+          "text": "3. Integration and data control",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b41",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s40",
+          "text": "List every system that must send or receive information. Confirm that the required APIs, webhooks, export formats, rate limits and authentication methods actually exist. A feature described as an integration may cover only a small set of fields or actions.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b45",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.gov.uk/service-manual/technology/choosing-technology-an-introduction"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s42",
+          "text": "GOV.UK guidance on ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s43",
+          "text": "choosing technology",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s44",
+          "text": " recommends retaining control of stored data, reducing lock-in, considering existing systems and using open standards so decisions can change as needs evolve. These are useful commercial checks for any organisation, not only government services.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b47",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s46",
+          "text": "4. Security, privacy and operational risk",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b49",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s48",
+          "text": "Classify the data and consequences before choosing a platform. Consider personal information, financial records, health data, privileged business information and actions that could affect customers. Check access control, audit logs, encryption, backups, incident handling, data location, deletion and vendor support.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b53",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains-guidance"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s50",
+          "text": "NIST guidance on ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s51",
+          "text": "software security in supply chains",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s52",
+          "text": " covers the acquisition, use and maintenance of third-party software and services. Buying software transfers some technical work to a supplier, but it does not remove the customer’s responsibility to assess and manage supplier risk.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b57",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://owasp.org/projects/asvs/"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s54",
+          "text": "For web applications, the ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s55",
+          "text": "OWASP Application Security Verification Standard",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s56",
+          "text": " provides a structured basis for specifying and testing technical security controls. A custom build proposal should state which security requirements and verification activities are included.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b59",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s58",
+          "text": "5. Total cost of ownership",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b61",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s60",
+          "text": "Compare costs over a realistic period, not only the initial quote or monthly subscription. Include setup, licenses, usage charges, implementation, data migration, training, support, internal administration, monitoring, upgrades and the cost of leaving the solution later.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b65",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/automation-roi"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s62",
+          "text": "Use the same baseline and outcome measures in an ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s63",
+          "text": "automation ROI calculation",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s64",
+          "text": ". The cheaper option is not the one with the lowest visible fee. It is the option that reaches the required outcome at an acceptable full cost and risk.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b67",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s66",
+          "text": "6. Speed and uncertainty",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b69",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s68",
+          "text": "If the process or demand is still uncertain, avoid a large irreversible commitment. A configured product or no-code pilot can test whether the workflow creates value. Custom development becomes easier to justify after the team has evidence about users, volume, exceptions and integration limits.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b75",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.gov.uk/service-manual/service-standard/point-11-choose-the-right-tools-and-technology"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/blog/test-automation-pilot"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s70",
+          "text": "The ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s71",
+          "text": "GOV.UK Service Standard",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s72",
+          "text": " says teams should make sound build-versus-buy decisions, understand total cost of ownership and minimise the cost of changing direction. It also recommends prototypes when choosing technology. A ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s73",
+          "text": "controlled automation pilot",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s74",
+          "text": " can expose practical constraints before a full rollout.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b77",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s76",
+          "text": "7. Ownership and exit",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b79",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s78",
+          "text": "Before signing or building, decide who owns the data, configuration, source code, domains, cloud accounts and documentation. Confirm how information can be exported, what happens when the agreement ends and which party is responsible for security updates, backups and incident response.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b83",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.gov.uk/government/publications/software-security-code-of-practice"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s80",
+          "text": "The UK ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s81",
+          "text": "Software Security Code of Practice",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s82",
+          "text": " sets expectations for secure development and maintenance, vulnerability management, incident communication and end-of-life planning. These subjects belong in supplier evaluation and contracts, not only in technical discussions.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b85",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s84",
+          "text": "A simple decision scorecard",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b87",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s86",
+          "text": "Score each option from 1 to 5 against the factors below. Weight factors that carry real business risk. The score is a discussion tool, not an automatic answer.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b89",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s88",
+          "text": "Essential workflow fit: can the option support the required process and exceptions without recurring manual workarounds?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b91",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s90",
+          "text": "Integration fit: can it reliably exchange the required data and actions with current systems?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b93",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s92",
+          "text": "Security and compliance: can the controls, evidence and contractual duties meet the risk level?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b95",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s94",
+          "text": "Time to useful outcome: how quickly can the team test and use a valuable first release?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b97",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s96",
+          "text": "Three-year cost: what are the likely implementation, usage, support and change costs?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b99",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s98",
+          "text": "Changeability: how easily can the workflow, provider or architecture change later?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b101",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s100",
+          "text": "Ownership and exit: can the business retrieve its data, documentation and critical assets without disruption?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b103",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s102",
+          "text": "Reject any option that fails a non-negotiable requirement even if its total score is high. A solution that cannot meet a mandatory security or data requirement is not rescued by a low price.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b105",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s104",
+          "text": "An illustrative example",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b107",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s106",
+          "text": "Consider a fictional maintenance company that receives service requests, assigns technicians, records site evidence and invoices completed jobs. The example is illustrative and is not a Nevara client result.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b109",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s108",
+          "text": "A no-code setup may work for the first stage: a standard form creates a job, sends an acknowledgement and notifies a dispatcher. As volume grows, the company may need route-aware assignment, offline technician access, customer-specific pricing, approval rules, photo evidence and accounting integration. Those requirements may justify a custom operational layer while retaining standard products for payments, maps and email.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b111",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s110",
+          "text": "The right decision is not determined by company size alone. It depends on the gap between the required operating model and what existing products can support safely and economically.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b113",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s112",
+          "text": "Red flags in a proposed solution",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b115",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s114",
+          "text": "The demonstration shows ideal cases but not exceptions, failures or recovery.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b117",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s116",
+          "text": "Critical integration claims are not tested with the real systems and account permissions.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b119",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s118",
+          "text": "Pricing excludes usage tiers, implementation, migration, support or future changes.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b121",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s120",
+          "text": "No one can explain how data is exported, backed up or deleted.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b123",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s122",
+          "text": "The proposal has features but no acceptance criteria, owner or success measures.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b125",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s124",
+          "text": "A custom build recreates mature commodity functions without a business reason.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b127",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s126",
+          "text": "Make the decision through a short discovery",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b129",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s128",
+          "text": "A focused discovery should produce a current process map, priority requirements, data and integration inventory, risk notes, option scorecard, cost range and pilot recommendation. It should also identify assumptions that need proof.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b131",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s130",
+          "text": "Test the riskiest assumption first. This might be whether a legacy system exposes the required data, whether staff can use the workflow on mobile devices, whether an AI step performs reliably on real documents or whether a vendor can meet a required retention rule.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b135",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/monitor-business-automation"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s132",
+          "text": "After launch, keep the decision honest with an ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s133",
+          "text": "automation monitoring plan",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s134",
+          "text": " covering outcomes, exceptions, alerts, ownership and review. A tool that looked right during selection can become unsuitable as volume, pricing or process complexity changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b137",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s136",
+          "text": "Frequently asked questions",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b139",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s138",
+          "text": "Is no-code automation only for small businesses?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b141",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s140",
+          "text": "No. Larger organisations also use configurable platforms for suitable workflows. The deciding factors are process fit, governance, integration, scale and risk, not company size alone.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b143",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s142",
+          "text": "When should we move from no-code to custom software?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b145",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s144",
+          "text": "Consider custom software when essential requirements require repeated workarounds, the workflow differentiates the business, integration limits block reliable operation, or subscription and administration costs no longer match the value. Validate the case with requirements, cost and a pilot.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b147",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s146",
+          "text": "Can a business use no-code and custom software together?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b149",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s148",
+          "text": "Yes. A hybrid architecture is common. Custom software can manage the core workflow while established services handle identity, payments, communication or analytics. Define ownership and interfaces clearly.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b151",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s150",
+          "text": "What should we ask a software vendor before choosing?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b153",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s152",
+          "text": "Ask for a live demonstration of your important cases and exceptions, API and export documentation, security evidence, pricing at expected volume, support terms, data ownership, incident responsibilities and an exit process.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b155",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s154",
+          "text": "Should we build a prototype first?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b157",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s156",
+          "text": "Usually, yes, when a key assumption is uncertain. Keep the prototype narrow, use representative data safely and define what result will support, change or stop the project.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b159",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s158",
+          "text": "Choose the smallest solution that can grow safely",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b161",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s160",
+          "text": "Start with the business outcome and constraints. Buy standard capabilities when they fit. Configure or connect tools when the workflow is clear and the risks are manageable. Build custom software when it creates necessary control, integration or differentiation that products cannot provide economically.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b167",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/services"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/contact"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s162",
+          "text": "Nevara Solutions helps businesses evaluate, prototype and deliver automation, SaaS products, web platforms and mobile applications. ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s163",
+          "text": "Explore our software development services",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s164",
+          "text": " or ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s165",
+          "text": "contact us",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s166",
+          "text": " to turn your process and requirements into a practical build-versus-buy plan.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}
