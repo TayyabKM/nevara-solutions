@@ -1,0 +1,1730 @@
+{
+  "title": "Business Automation Integration Checklist: Connect Systems Safely",
+  "slug": {
+    "_type": "slug",
+    "current": "automation-integration-checklist"
+  },
+  "excerpt": "Plan reliable business system integrations with clear data ownership, API checks, security, validation, error handling, monitoring and change control.",
+  "metaTitle": "Business Automation Integration Checklist",
+  "metaDescription": "Use this business automation integration checklist to plan APIs, data mapping, security, error handling, monitoring, testing and ownership.",
+  "publishedAt": "2026-10-09T05:00:00Z",
+  "coverImageAlt": "A secure integration hub connecting business forms, CRM, finance, support, cloud storage and operations with validation and monitoring checkpoints",
+  "tags": [
+    "System integration",
+    "Business automation",
+    "API integration"
+  ],
+  "content": [
+    {
+      "_type": "block",
+      "_key": "b1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s0",
+          "text": "By Team Nevara | Published 9 October 2026",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": "An automation is only as reliable as the systems it connects. A form may need to create a customer record, assign an owner, start a task, send a message and update finance data. Each connection introduces rules, limits and failure points that must be understood before launch.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s4",
+          "text": "This checklist helps business owners and delivery teams plan integrations without treating them as invisible technical plumbing. It focuses on the practical questions that affect service, risk, cost and day-to-day ownership.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b13",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/business-process-map-before-automation"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/blog/automation-requirements"
+        },
+        {
+          "_type": "link",
+          "_key": "l2",
+          "href": "/blog/no-code-vs-custom-automation"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s6",
+          "text": "Use it after you ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s7",
+          "text": "map the business process",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s8",
+          "text": " and write the ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s9",
+          "text": "automation requirements",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s10",
+          "text": ". If the tools are not yet selected, first compare ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s11",
+          "text": "no-code automation and custom software",
+          "marks": [
+            "l2"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s12",
+          "text": " against the same requirements.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b15",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s14",
+          "text": "1. Define the outcome and the complete journey",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b17",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s16",
+          "text": "Describe the business outcome before listing systems. “Connect the website to the CRM” is incomplete. A useful outcome might be: every valid enquiry creates one customer record, is assigned to the correct team within two minutes, receives an acknowledgement and appears in the follow-up queue.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b19",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s18",
+          "text": "Draw the journey from the first trigger to the final confirmed result. Include approvals, customer messages, documents, payments, reporting and manual steps. A connection that moves data but leaves the process unfinished is not a complete automation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b21",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s20",
+          "text": "2. Name every system and its role",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b23",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s22",
+          "text": "Create a simple inventory for each application, database, spreadsheet and external service involved.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b25",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s24",
+          "text": "Business purpose and process owner",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b27",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s26",
+          "text": "Vendor and plan or license level",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b29",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s28",
+          "text": "Production account and test environment",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b31",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s30",
+          "text": "Data received and data sent",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b33",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s32",
+          "text": "Available API, webhook, export or import method",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b35",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s34",
+          "text": "Support contact, documentation and known limits",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b37",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s36",
+          "text": "Do not assume a familiar product exposes every action you see in its interface. API availability often depends on the plan, account type, region or permissions.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b39",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s38",
+          "text": "3. Choose the source of truth for each record",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b41",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s40",
+          "text": "Decide which system owns each important type of information. The CRM may own customer details, the finance platform may own invoice status and the operational system may own job progress. Other systems can receive copies, but ownership must be clear.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b43",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s42",
+          "text": "Without a source of truth, two-way updates can create conflicts. If an email address changes in two systems at the same time, the integration needs a rule for which value wins, whether the change is merged or whether a person must review it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b45",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s44",
+          "text": "4. Confirm the real integration capability",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b47",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s46",
+          "text": "Review the current API or integration documentation, then prove the specific actions the workflow needs. Check authentication, endpoints, fields, webhooks, pagination, search, file handling, rate limits and sandbox access.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b51",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.gov.uk/service-manual/technology/application-programming-interfaces-apis"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s48",
+          "text": "The GOV.UK Service Manual explains that ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s49",
+          "text": "APIs let applications share data",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s50",
+          "text": " without sharing their internal code. Its guidance also recommends examining third-party API documentation, reliability, security, change notices and support before making a service dependent on that API.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b53",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s52",
+          "text": "If there is no suitable API, document the alternative and its risk. Scheduled file imports may be acceptable for daily reporting but unsuitable for real-time stock, dispatch or payment decisions. Browser automation can be fragile when interfaces change.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b55",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s54",
+          "text": "5. Map fields and business meaning",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b57",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s56",
+          "text": "Create a field map that shows the source field, destination field, format, required status, transformation rule and example. Include identifiers, dates, currencies, units, status values, addresses, consent fields and document links.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b59",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s58",
+          "text": "Matching names do not guarantee matching meaning. “Customer,” “active,” “amount” or “completed” may mean different things in separate systems. Agree on definitions before development.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b61",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s60",
+          "text": "How are existing customers matched without creating duplicates?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b63",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s62",
+          "text": "Which identifier remains stable if a name or email changes?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b65",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s64",
+          "text": "Which fields are mandatory in each system?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b67",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s66",
+          "text": "How are time zones, currencies and decimal values handled?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b69",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s68",
+          "text": "What happens to blank, invalid or unexpected values?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b71",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s70",
+          "text": "Is historical data migrated, referenced or left in the old system?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b73",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s72",
+          "text": "6. Minimise the data that crosses the connection",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b75",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s74",
+          "text": "Transfer only the information required for the business outcome. Extra fields increase privacy exposure, access complexity and the impact of mistakes. Record why sensitive data is needed, where it is stored, how long it is retained and who can see it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b79",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://www.gov.uk/service-manual/technology/working-with-open-standards"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s76",
+          "text": "Using ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s77",
+          "text": "open standards",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s78",
+          "text": " can make data exchange easier, reduce supplier lock-in and preserve flexibility as the service changes. This is especially useful when a business expects to replace or add systems later.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b81",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s80",
+          "text": "7. Design access and authentication deliberately",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b83",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s82",
+          "text": "Use dedicated service accounts where the platform supports them. Grant only the permissions required for the integration. Keep credentials outside source code, rotate them safely and assign an owner for renewals, revoked access and staff changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b86",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://csrc.nist.gov/pubs/sp/800/207/final"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s84",
+          "text": "NIST Zero Trust guidance",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s85",
+          "text": " says trust should not be granted simply because a user, device or service is on a familiar network. Authentication and authorisation should protect the actual resource. For integrations, this supports explicit identities, narrow permissions and verification for every connection.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b88",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s87",
+          "text": "Also decide how development and test environments access data. Real customer records should not be copied into testing by default. Use representative, safely prepared test data whenever possible.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b90",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s89",
+          "text": "8. Address common API security risks",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b94",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s91",
+          "text": "The ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s92",
+          "text": "OWASP API Security Top 10",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s93",
+          "text": " highlights risks including broken object-level authorisation, broken authentication, unrestricted resource consumption, security misconfiguration and unsafe consumption of third-party APIs. These risks should influence requirements and tests, not be added after the workflow is complete.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b96",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s95",
+          "text": "Verify that each user or service can access only the correct records and actions.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b98",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s97",
+          "text": "Validate incoming and outgoing data rather than trusting another system automatically.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b100",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s99",
+          "text": "Protect public endpoints with authentication, rate limits and abuse controls.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b102",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s101",
+          "text": "Avoid returning or logging secrets and unnecessary personal data.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b104",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s103",
+          "text": "Review third-party responses before using them in a sensitive action.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b106",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s105",
+          "text": "Keep an inventory of integrations, endpoints, versions and owners.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b108",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s107",
+          "text": "9. Plan for duplicates, retries and partial failure",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b110",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s109",
+          "text": "Networks time out and vendors return temporary errors. A safe integration must know whether to retry, stop or request human review. Repeating a request must not accidentally create a second invoice, charge, booking or customer.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b112",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s111",
+          "text": "Where supported, use a stable event or idempotency key so the destination can recognise repeated attempts. Store the processing state and external record identifier. Define a maximum retry policy and move unresolved items to an exception queue rather than retrying forever.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b114",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s113",
+          "text": "What if the first step succeeds but the second fails?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b116",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s115",
+          "text": "Can the workflow continue later from the failed step?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b118",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s117",
+          "text": "Can an operator safely replay an item?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b120",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s119",
+          "text": "How is a duplicate detected and resolved?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b122",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s121",
+          "text": "Which failures require customer communication?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b124",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s123",
+          "text": "10. Decide between real-time and scheduled transfer",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b126",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s125",
+          "text": "Real-time processing is useful when delay affects the customer or operation. Scheduled batches may be simpler and cheaper for reporting, reconciliation or low-priority updates. State the acceptable delay and choose the simplest method that meets it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b128",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s127",
+          "text": "Check volume and cost limits. APIs may cap requests per minute or charge for calls, messages, storage or data transfer. Estimate normal volume, peaks and retry traffic. A workflow that works during testing can fail under a campaign spike or month-end batch.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b130",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s129",
+          "text": "11. Create a visible exception process",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b132",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s131",
+          "text": "Not every case should be forced through automation. Define which situations stop for human review, who owns the queue, what information they receive and how the corrected result returns to the process.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b134",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s133",
+          "text": "Common exceptions include missing customer identifiers, conflicting records, unsupported files, unusual prices, failed consent checks, rejected payments and actions above an approval limit.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b136",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s135",
+          "text": "12. Make the integration observable",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b138",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s137",
+          "text": "A success message from the first system does not prove the business outcome completed. Monitor the complete journey.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b140",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s139",
+          "text": "Number of items started, completed, rejected and waiting",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b142",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s141",
+          "text": "Processing time from trigger to confirmed result",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b144",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s143",
+          "text": "Failures by system, step and reason",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b146",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s145",
+          "text": "Retry volume and duplicate prevention",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b148",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s147",
+          "text": "Data-quality exceptions and manual corrections",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b150",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s149",
+          "text": "API response time, rate-limit warnings and authentication failures",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b152",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s151",
+          "text": "Alerts must lead to an owner and action. A dashboard nobody checks does not protect the process. Set thresholds for urgent failures and a review schedule for slower trends.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b156",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/monitor-business-automation"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s153",
+          "text": "Our guide to ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s154",
+          "text": "monitoring business automation after launch",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s155",
+          "text": " explains how to combine technical signals with outcome measures and an exception queue.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b158",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s157",
+          "text": "13. Agree how changes will be managed",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b160",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s159",
+          "text": "Vendors change fields, authentication, limits and API versions. Your own team changes forms, statuses and business rules. Record dependencies and decide who reviews release notices, tests updates and approves production changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b162",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s161",
+          "text": "Use versioned configurations and separate test credentials. Keep a rollback or disable option for material changes. If an integration controls a customer-facing or financial action, avoid unreviewed changes directly in production.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b164",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s163",
+          "text": "14. Test the whole process with realistic cases",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b166",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s165",
+          "text": "Test normal, boundary and failure cases across every connected system. Confirm both the system result and the business result. A record appearing in the CRM is not enough if it has the wrong owner, missing consent or no follow-up task.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b168",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s167",
+          "text": "Valid new record and valid existing record",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b170",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s169",
+          "text": "Missing, malformed and duplicate data",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b172",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s171",
+          "text": "Permission denied and expired credential",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b174",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s173",
+          "text": "Timeout, rate limit and unavailable vendor",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b176",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s175",
+          "text": "File too large or unsupported format",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b178",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s177",
+          "text": "Partial completion and safe replay",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b180",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s179",
+          "text": "Audit trail, alert and manual recovery",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b184",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/blog/test-automation-pilot"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s181",
+          "text": "Run these checks inside a ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s182",
+          "text": "controlled automation pilot",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s183",
+          "text": " with defined acceptance criteria before full rollout.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b186",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s185",
+          "text": "An illustrative example",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b188",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s187",
+          "text": "Consider a fictional property maintenance company connecting a website form, CRM, scheduling tool and accounting system. This example is illustrative and is not a Nevara client result.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b190",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s189",
+          "text": "The enquiry first creates or matches a CRM contact. A valid service request creates a job and assigns a coordinator. Scheduling happens only after postcode and service checks. A completed visit can request an invoice, but a price change above the agreed limit stops for approval. Each system returns its record identifier, while failed or conflicting items enter one visible review queue.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b192",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s191",
+          "text": "The valuable design is not simply four systems connected by arrows. It is the agreed ownership, validation, security, exception handling and evidence that the final business action occurred.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b194",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s193",
+          "text": "Frequently asked questions",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b196",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s195",
+          "text": "What is the first thing to check before integrating two systems?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b198",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s197",
+          "text": "Confirm the business outcome and the exact capabilities available in both systems. Check current documentation, account permissions and plan limits before assuming the connection is possible.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b200",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s199",
+          "text": "Should integrations update data in both directions?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b202",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s201",
+          "text": "Only when there is a clear ownership and conflict rule. One-way transfer is often easier to control. Two-way sync can be appropriate, but it needs stable identifiers, loop prevention and a defined source of truth.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b204",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s203",
+          "text": "Is a native app integration automatically reliable?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b206",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s205",
+          "text": "No. A native connector can reduce implementation work, but its supported fields, triggers, delays, error handling, security and monitoring still need to match the process.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b208",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s207",
+          "text": "How should integration errors be handled?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b210",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s209",
+          "text": "Classify errors as temporary, permanent or requiring review. Use limited safe retries for temporary failures, prevent duplicates and route unresolved items to an owned exception queue with enough context to act.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b212",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s211",
+          "text": "How often should integrations be reviewed?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b214",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s213",
+          "text": "Review operational health continuously through alerts and scheduled reports. Review business fit, access, vendor changes, costs and data handling at planned intervals and whenever the process or a connected product changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b216",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s215",
+          "text": "Turn the checklist into an owned integration plan",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b218",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s217",
+          "text": "For every connection, document the outcome, system owners, source of truth, data map, authentication, limits, failure policy, monitoring, test cases and change owner. This creates a buildable plan and makes supplier proposals easier to compare.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b224",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l0",
+          "href": "/services"
+        },
+        {
+          "_type": "link",
+          "_key": "l1",
+          "href": "/contact"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s219",
+          "text": "Nevara Solutions designs and delivers business automation, custom web platforms, mobile applications and SaaS products with the required integrations and operational controls. ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s220",
+          "text": "Explore our development services",
+          "marks": [
+            "l0"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s221",
+          "text": " or ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s222",
+          "text": "contact us",
+          "marks": [
+            "l1"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s223",
+          "text": " to turn a process and system inventory into a practical integration plan.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}
