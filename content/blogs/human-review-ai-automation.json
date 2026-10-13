@@ -1,0 +1,1554 @@
+{
+  "title": "Human Review in AI Automation: What Should Stay Manual?",
+  "slug": {
+    "_type": "slug",
+    "current": "human-review-ai-automation"
+  },
+  "excerpt": "Use a practical risk framework to decide which AI automation actions can run automatically and which need human review, escalation or approval.",
+  "metaTitle": "Human Review in AI Automation: Practical Guide",
+  "metaDescription": "Learn when AI automation needs human review, how to set escalation triggers, design useful review queues and keep decisions accountable.",
+  "publishedAt": "2026-10-13T05:00:00Z",
+  "coverImageAlt": "An AI decision hub routing routine business records automatically while uncertain and high-impact cases move to a human review checkpoint",
+  "tags": [
+    "AI automation",
+    "Human review",
+    "AI governance"
+  ],
+  "content": [
+    {
+      "_type": "block",
+      "_key": "b1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s2",
+          "text": "By Team Nevara | Published 13 October 2026",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s4",
+          "text": "AI automation does not have to mean removing people from every decision. In many workflows, the safer and more useful design is to let software handle routine work while a person reviews exceptions, high-impact actions or uncertain outputs.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s6",
+          "text": "The goal is not to add approval steps everywhere. It is to place human judgment where an error would be difficult, expensive or unfair to reverse, then give the reviewer enough context and authority to make a real decision.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b17",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l8",
+          "href": "/blog/business-process-map-before-automation"
+        },
+        {
+          "_type": "link",
+          "_key": "l11",
+          "href": "/blog/automation-requirements"
+        },
+        {
+          "_type": "link",
+          "_key": "l14",
+          "href": "/blog/automation-integration-checklist"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s7",
+          "text": "This guide fits after you ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s9",
+          "text": "map the process",
+          "marks": [
+            "l8"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s10",
+          "text": ", document the ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s12",
+          "text": "automation requirements",
+          "marks": [
+            "l11"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s13",
+          "text": " and plan the ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s15",
+          "text": "system integrations",
+          "marks": [
+            "l14"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s16",
+          "text": ". It helps decide which actions can run automatically and which should pause for review.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b18",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s19",
+          "text": "Human review is a control, not a sign of failure",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b20",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s21",
+          "text": "A good human-review step has a defined purpose. It might verify an unusual invoice, approve a refund above a limit, check an AI-written response involving a complaint, or confirm that a document belongs to the correct customer before data is updated.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b22",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s23",
+          "text": "A vague rule such as “a manager checks important cases” is not enough. The workflow needs to define what makes a case important, who can review it, what evidence they see, how quickly they must respond and what happens if nobody is available.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b28",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l25",
+          "href": "https://airc.nist.gov/airmf-resources/playbook/"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s24",
+          "text": "The ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s26",
+          "text": "NIST AI Risk Management Framework Playbook",
+          "marks": [
+            "l25"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s27",
+          "text": " treats governance, measurement and management as connected activities. Its governance guidance calls for documented responsibilities, review processes, monitoring, incident response, and ways for people to appeal or override problematic outcomes. That is a useful operating model even when a business is starting with one modest workflow.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b29",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s30",
+          "text": "1. Classify the decision before choosing the review model",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b31",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s32",
+          "text": "Start with the action the automation may take, not with the model or software vendor. Score each action using four practical questions.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b33",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s34",
+          "text": "Impact: Could a wrong result affect money, employment, access to a service, safety, legal rights, reputation or a customer relationship?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b35",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s36",
+          "text": "Reversibility: Can the action be corrected quickly without lasting harm, or does it create a difficult commitment?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b37",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s38",
+          "text": "Uncertainty: Does the system produce a reliable rule-based answer, or an estimate, classification or generated response that can vary?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b39",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s40",
+          "text": "Sensitivity: Does the decision use personal, confidential, financial, health or other restricted information?",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b41",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s42",
+          "text": "High impact, low reversibility, high uncertainty or sensitive data should move a decision toward stronger human review. Low-impact, reversible and well-tested actions are better candidates for full automation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b43",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s44",
+          "text": "This is a business risk decision. It is not legal advice. Sector-specific rules, contracts and local law may require additional controls.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b45",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s46",
+          "text": "2. Choose one of three operating modes",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b47",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s48",
+          "text": "Most workflows can be designed around three simple modes. Mixing them within one process is often better than forcing every case through the same path.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b49",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s50",
+          "text": "Automatic action",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b51",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s52",
+          "text": "The system completes the task without prior approval. Use this for low-risk, reversible work with clear rules, such as categorising a routine enquiry, drafting an internal summary, or sending a receipt after a confirmed transaction. Monitoring and an audit record are still required.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b53",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s54",
+          "text": "Review by exception",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b55",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s56",
+          "text": "The system completes normal cases and pauses only when a rule, confidence threshold or anomaly is triggered. This is often the best balance for invoice extraction, lead routing, document classification and customer-service triage.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b57",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s58",
+          "text": "Approval before action",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b59",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s60",
+          "text": "Every proposed action waits for an authorised person. Reserve this for decisions where a mistake carries material consequences, such as releasing a large payment, rejecting an application, changing employment status or sending sensitive advice.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b61",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s62",
+          "text": "3. Define the exact review triggers",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b63",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s64",
+          "text": "A reviewer should not have to guess why a case reached them. Create explicit triggers that can be tested.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b65",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s66",
+          "text": "The amount exceeds an approved financial limit.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b67",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s68",
+          "text": "Required fields or supporting documents are missing.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b69",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s70",
+          "text": "The result conflicts with a business rule or another system.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b71",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s72",
+          "text": "The AI confidence score falls below a validated threshold.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b73",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s74",
+          "text": "The customer disputes the result or requests a person.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b75",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s76",
+          "text": "The case involves a restricted category, sensitive data or a high-risk action.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b77",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s78",
+          "text": "The same item has failed, changed or been retried more than the allowed number of times.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b79",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s80",
+          "text": "Do not copy a confidence threshold from a product demo. Test it against representative cases and review both false approvals and unnecessary escalations. The useful threshold is the one that fits the consequences and workload of your process.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b81",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s82",
+          "text": "4. Give reviewers the information needed to decide",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b83",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s84",
+          "text": "Human review becomes theatre when the person only sees an “approve” button. The review screen should explain the case in plain language and make supporting evidence easy to inspect.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b85",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s86",
+          "text": "The original source data, not only an AI summary",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b87",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s88",
+          "text": "The proposed action and the business rule it affects",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b89",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s90",
+          "text": "Why the case was escalated",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b91",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s92",
+          "text": "Relevant history, attachments and system records",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b93",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s94",
+          "text": "Known uncertainty, missing information and model limitations",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b95",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s96",
+          "text": "Clear choices to approve, edit, reject, request information or escalate",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b101",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l98",
+          "href": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/explaining-decisions-made-with-artificial-intelligence/"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s97",
+          "text": "The UK Information Commissioner’s Office guidance on ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s99",
+          "text": "explaining decisions made with AI",
+          "marks": [
+            "l98"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s100",
+          "text": " recommends designing systems so relevant information can be extracted and translated into useful reasons. The guidance is under review following changes in UK law, so organisations should confirm current requirements for their context.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b102",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s103",
+          "text": "5. Make the reviewer capable of changing the outcome",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b104",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s105",
+          "text": "A reviewer needs more than visibility. They need suitable training, enough time, access to evidence and authority to disagree with the system. If staff are expected to approve the recommendation by default, the control is not meaningful.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b106",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s107",
+          "text": "Define who can override which actions, when a second approver is required and when the case must move to a specialist. Include a route for the affected customer or employee to challenge the outcome where appropriate.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b112",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l109",
+          "href": "https://www.gov.uk/data-ethics-guidance/explaining-decisions-made-with-ai"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s108",
+          "text": "For decisions affecting individuals, the joint ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s110",
+          "text": "UK government guidance on explaining decisions made with AI",
+          "marks": [
+            "l109"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s111",
+          "text": " provides a useful starting point for planning explanations, responsibilities and communication. Applicable obligations still depend on the decision and jurisdiction.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b113",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s114",
+          "text": "6. Design the queue for real operating conditions",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b115",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s116",
+          "text": "A review queue is part of the service, not an administrative afterthought. Set an owner, response target, priority order and backup reviewer. Decide what happens overnight, during leave and when volume suddenly rises.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b117",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s118",
+          "text": "Track queue size, oldest-item age, review time, approval rate, override rate and common escalation reasons. If every case needs manual correction, the automation is not ready. If almost nothing is reviewed, confirm that the triggers are not too weak.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b123",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l120",
+          "href": "/blog/monitor-business-automation"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s119",
+          "text": "After launch, include these measures in the wider ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s121",
+          "text": "automation monitoring plan",
+          "marks": [
+            "l120"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s122",
+          "text": " rather than reporting only how many tasks the system processed.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b124",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s125",
+          "text": "7. Keep an audit trail and a safe fallback",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b126",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s127",
+          "text": "Record the input, system recommendation, trigger, reviewer, evidence viewed, decision, edits, reason, time and final downstream result. Protect the log from unauthorised changes and set an appropriate retention policy.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b128",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s129",
+          "text": "Create a fallback for outages or uncertain behaviour. Depending on the process, that may mean stopping automatic actions, returning all cases to manual handling, using a last-known rule set or holding items safely until service is restored. The fallback should be tested before it is needed.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b130",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s131",
+          "text": "8. Test the people and the workflow together",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b132",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s133",
+          "text": "Technical accuracy alone does not prove that human review will work. A pilot should include normal cases, boundary cases, missing information, misleading inputs, duplicates, conflicting records, delayed reviewers and deliberate mistakes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b134",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s135",
+          "text": "Observe whether reviewers understand the explanation, find the evidence, notice the error and use the correct override. Measure the full time from escalation to resolved action. Then adjust the triggers, screen, training and staffing before wider rollout.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b140",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l137",
+          "href": "/blog/test-automation-pilot"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s136",
+          "text": "Use the ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s138",
+          "text": "automation pilot testing guide",
+          "marks": [
+            "l137"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s139",
+          "text": " to plan the wider test, including acceptance criteria and rollback.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b141",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s142",
+          "text": "Illustrative example: AI-assisted invoice processing",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b143",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s144",
+          "text": "Consider a fictional distributor processing supplier invoices. This example is illustrative and is not a Nevara client result.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b145",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s146",
+          "text": "The system extracts supplier, purchase order, amount, tax and bank details from each invoice.",
+          "marks": []
+        }
+      ],
+      "listItem": "number",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b147",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s148",
+          "text": "Invoices with a recognised supplier, matching purchase order, expected totals and unchanged bank details move to the normal finance queue.",
+          "marks": []
+        }
+      ],
+      "listItem": "number",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b149",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s150",
+          "text": "A mismatch, missing purchase order, duplicate invoice number, changed bank account or amount above the approval limit creates a review case.",
+          "marks": []
+        }
+      ],
+      "listItem": "number",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b151",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s152",
+          "text": "The reviewer sees the original invoice, extracted fields, purchase-order record, previous supplier details and the exact reason for escalation.",
+          "marks": []
+        }
+      ],
+      "listItem": "number",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b153",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s154",
+          "text": "The reviewer can correct data, reject the invoice, request information or send a high-value case to a second approver. Every action is logged.",
+          "marks": []
+        }
+      ],
+      "listItem": "number",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b155",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s156",
+          "text": "This design does not ask a person to recheck every field on every invoice. It concentrates human attention on the cases where context and authority matter.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b157",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s158",
+          "text": "A practical human-review checklist",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b159",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s160",
+          "text": "Each automated action has an impact, reversibility, uncertainty and sensitivity rating.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b161",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s162",
+          "text": "The automatic, exception-review and prior-approval paths are documented.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b163",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s164",
+          "text": "Escalation triggers are measurable and tested with representative cases.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b165",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s166",
+          "text": "Reviewers can inspect source evidence and understand why a case was escalated.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b167",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s168",
+          "text": "Reviewers have training, time and authority to change the outcome.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b169",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s170",
+          "text": "Customers or staff have an appropriate route to challenge important outcomes.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b171",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s172",
+          "text": "Queues have owners, response targets, backup coverage and overload rules.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b173",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s174",
+          "text": "Decisions, edits, overrides and final outcomes are logged securely.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b175",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s176",
+          "text": "A manual or safe-stop fallback has been tested.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b177",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s178",
+          "text": "Monitoring measures both system performance and human-review performance.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b179",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s180",
+          "text": "Frequently asked questions",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b181",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s182",
+          "text": "Does every AI automation need human approval?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b183",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s184",
+          "text": "No. Low-risk and reversible actions can often run automatically when rules, testing, monitoring and recovery are adequate. Human review should increase with impact, uncertainty, sensitivity and difficulty of reversal.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b185",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s186",
+          "text": "Is a confidence score enough to trigger review?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b187",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s188",
+          "text": "Not by itself. Confidence can be one signal, but business rules, financial limits, missing evidence, sensitive categories, customer disputes and unusual patterns may be equally important.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b189",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s190",
+          "text": "What is the difference between human in the loop and human on the loop?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b191",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s192",
+          "text": "Human in the loop usually means a person participates in the decision before the action is completed. Human on the loop usually means the system acts while a person monitors, reviews exceptions and can intervene. The right model depends on risk and reversibility.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b193",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s194",
+          "text": "How do we stop reviewers from approving everything?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b195",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s196",
+          "text": "Show the source evidence, explain the escalation, require a reason for material decisions, test reviewer performance, sample approved cases and give reviewers genuine authority and sufficient time.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b197",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s198",
+          "text": "Can human review be added after launch?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b199",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s200",
+          "text": "It can, but designing it early is safer. Late changes may require new data, permissions, screens, logs, queues and service commitments that the original architecture did not support.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b201",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s202",
+          "text": "Build the control before scaling the automation",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b203",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s204",
+          "text": "The strongest automation is not the one that removes the most people. It is the one that handles routine work reliably, recognises its limits and brings the right person into the right decision with usable evidence.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b212",
+      "style": "normal",
+      "markDefs": [
+        {
+          "_type": "link",
+          "_key": "l206",
+          "href": "/services"
+        },
+        {
+          "_type": "link",
+          "_key": "l209",
+          "href": "/contact"
+        }
+      ],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s205",
+          "text": "Nevara Solutions designs custom AI automation, business software and connected workflows with approvals, exception handling, audit trails and monitoring built around real operating needs. Explore our ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s207",
+          "text": "services",
+          "marks": [
+            "l206"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s208",
+          "text": " or ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "s210",
+          "text": "contact us",
+          "marks": [
+            "l209"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "s211",
+          "text": " to discuss a workflow that needs a safer path from pilot to production.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}
