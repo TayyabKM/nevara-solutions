@@ -139,7 +139,7 @@ function ServiceBox({ service, index }: { service: IServiceBox; index: number })
       <div className="font-bold text-2xl">{service.heading}</div>
       <div className="dark:text-gray-400 text-gray-500">{service.description}</div>
 
-      <Link href={serviceLinks[service.heading] || "/services"} passHref>
+      <Link href={serviceLinks[service.heading] || "/services"} passHref aria-label={`Learn more about ${service.heading}`}>
         <div className="mt-2 flex items-center gap-2">
           <div
             className="flex items-center justify-center size-10 rounded-full p-2 border border-black/60 dark:border-white/60 group-hover:bg-background-gradient

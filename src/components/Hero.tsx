@@ -75,9 +75,9 @@ export default function Hero() {
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p className="mt-4 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl" variants={itemVariants}>
+          <p className="mt-4 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
             At Nevara Solutions, we build custom websites, SaaS platforms, mobile apps, and digital marketing systems that increase revenue and drive sustainable business growth.
-          </motion.p>
+          </p>
 
           {/* Call-to-Action Buttons */}
           <motion.div className="mt-8 flex space-x-4" variants={itemVariants}>
@@ -94,16 +94,20 @@ export default function Hero() {
             </motion.button>
 
             {/* Discover More Button */}
-            <motion.button
-              className="px-6 py-3 text-black dark:text-white border border-black text-sm sm:text-base
-                dark:border-white rounded-lg hover:bg-black hover:text-white 
-                dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+            <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/about">Discover More</Link>
-            </motion.button>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center min-h-12 px-6 py-3 text-black dark:text-white border border-black text-sm sm:text-base
+                  dark:border-white rounded-lg hover:bg-black hover:text-white
+                  dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              >
+                Discover More
+              </Link>
+            </motion.div>
           </motion.div>
           <motion.p
             className="text-m text-black dark:text-gray-400 mt-8"

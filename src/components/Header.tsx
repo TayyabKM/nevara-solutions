@@ -74,8 +74,8 @@ export default function Header() {
         {/* Left Section: Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <Image src={"/logo-dark.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:flex hidden" />
-            <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} className="dark:hidden flex" />
+            <Image src={"/logo-dark.png"} alt="Nevara Solutions Logo" width={100} height={40} priority className="dark:flex hidden" />
+            <Image src={"/logo-light.png"} alt="Nevara Solutions Logo" width={100} height={40} priority className="dark:hidden flex" />
           </Link>
         </div>
 

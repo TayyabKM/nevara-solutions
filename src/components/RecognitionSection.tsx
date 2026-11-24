@@ -23,6 +23,9 @@ export default function RecognitionSection() {
             >
                 <img
                     src="/designrush.svg"
+                    width={201}
+                    height={270}
+                    loading="lazy"
                     alt="Nevara Solutions rating on DesignRush, the industry-leading B2B Marketplace connecting brands with agencies"
                     className="mx-auto w-32 md:w-40 hover:scale-105 transition-transform mt-3"
                 />
